@@ -1,0 +1,41 @@
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+
+  &__item {
+    margin-left: scaleVW(8, 1920);
+    display: flex;
+    width: scaleVW(64, 1920);
+    height: scaleVW(56, 1920);
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family-serif;
+    font-size: scaleVW(12, 1920);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: $primary;
+    border: solid rgba($primary, .1);
+    border-width: 1px 0;
+
+    @include transition;
+
+    @include media-breakpoint-down(lg) {
+      margin-left: 8px;
+      width: 64px;
+      height: 56px;
+      font-size: 12px;
+    }
+
+    &:hover {
+      border-color: $primary;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &--active {
+      border-color: $primary;
+    }
+  }
+}

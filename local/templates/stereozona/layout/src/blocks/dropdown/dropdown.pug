@@ -1,0 +1,8 @@
+mixin dropdown(data)
+  .dropdown&attributes(attributes)
+    a.dropdown__header(href="#" data-no-swup)= data.title
+    .dropdown__content
+      if block
+        block
+      else
+        p Содержимое списка

@@ -1,0 +1,32 @@
+.catalog-page {
+  &__top {
+    background: $gray;
+
+    h1 {
+      padding-bottom: scaleVW(40, 1920);
+
+      @include media-breakpoint-down(lg) {
+        padding-bottom: 40px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 24px;
+      }
+    }
+  }
+
+  &__sections-list {
+    padding: scaleVW(40, 1920) 0;
+    display: flex;
+    align-items: stretch;
+
+    @include media-breakpoint-down(lg) {
+      padding: 40px 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 35px 0 20px;
+      display: block;
+    }
+  }
+}

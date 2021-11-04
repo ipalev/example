@@ -1,0 +1,151 @@
+mixin brand-letter(data)
+  .brand-letter&attributes(attributes)
+  
+    case data.letter
+    
+      when 'A'
+        - var brands = ['Accustic Arts', 'Acoustic Energy', 'Astell&Kern', 'Atlas', 'Audeze', 'Audia Flight', 'Audio Physic', 'Audio Pro', 'Audio-Technica', 'AURALiC', 'Aurender']
+        .brand-letter__header A
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'B'
+        - var brands = ['Bello', 'Bowers & Wilkins', 'Bryston']
+        .brand-letter__header B
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'C'
+        - var brands = ['Cambridge Audio', 'Campfire Audio', 'Canton', 'Chario', 'Copland', 'Creek']
+        .brand-letter__header C
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'D'
+        - var brands = ['Dali', 'DENON', 'Densen', 'DLS', 'Dual', 'Dune', 'Dunu', 'Dynaudio']
+        .brand-letter__header D
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'F'
+        - var brands = ['Fiio', 'FOCAL', 'Fostex']
+        .brand-letter__header F
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'H'
+        - var brands = ['HECO', 'HiFiMAN']
+        .brand-letter__header H
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'I'
+        - var brands = ['Inakustik', 'ISOL-8']
+        .brand-letter__header I
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'J'
+        - var brands = ['Jamo', 'JBL', 'JVC']
+        .brand-letter__header J
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'K'
+        - var brands = ['Kauber', 'KEF', 'Klipsch']
+        .brand-letter__header K
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'L'
+        - var brands = ['Little Lab']
+        .brand-letter__header L
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'M'
+        - var brands = ['M&K Sound', 'Magnat', 'Marantz', 'Martin Logan', 'Melco', 'Meze', 'Mission', 'Monitor Audio', 'Morel', 'Mytek']
+        .brand-letter__header M
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'N'
+        - var brands = ['NAD', 'Naim', 'Neat Acoustics']
+        .brand-letter__header N
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'O'
+        - var brands = ['OPPO']
+        .brand-letter__header O
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'P'
+        - var brands = ['Piega', 'PSB', 'Purist Audio Design']
+        .brand-letter__header P
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'Q'
+        - var brands = ['Quad']
+        .brand-letter__header Q
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'R'
+        - var brands = ['Rega', 'REL', 'Ruark Audio']
+        .brand-letter__header R
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'S'
+        - var brands = ['Sennheiser', 'Shanling', 'Shure', 'Sonance', 'Sonus Faber', 'Sony', 'SpeakerCraft', 'Stax', 'Supravox', 'SVS']
+        .brand-letter__header S
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'T'
+        - var brands = ['T.A.C.', 'T+A', 'Tannoy', 'Totem Acoustic', 'Trafomatic Audio']
+        .brand-letter__header T
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'V'
+        - var brands = ['Van Den Hul', 'Velodyne', 'Vincent', 'VPI']
+        .brand-letter__header V
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'W'
+        - var brands = ['Westone', 'Wharfedale']
+        .brand-letter__header W
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val
+    
+      when 'Z'
+        - var brands = ['Zappiti']
+        .brand-letter__header Z
+        .brand-letter__content
+          each val in brands
+            a.brand-letter__item(href="#" data-brandcode="123" data-no-swup)= val

@@ -1,0 +1,86 @@
+extends ../templates/template.pug
+block content
+  .profile
+    .profile__left
+      .container-fluid
+        .profile__left-wrapper
+          .profile__left-top
+            h2.profile__name Денис
+            .profile__menu
+              a.profile__menu-link(href="#") Профиль
+              a.profile__menu-link(href="#") Личные данные
+              a.profile__menu-link(href="#") Заказы
+              a.profile__menu-link(href="#") Избранное
+              a.profile__menu-link(href="#") Адреса
+              a.profile__menu-link.profile__menu-link--active(data-no-swup href="#") Реквизиты
+              a.profile__menu-back(href="#")
+          .profile__left-bottom
+            a.profile__logout(href="#") Выйти
+    .profile__wrapper
+      .container-fluid
+        .profile__wrapper-top
+          +badge
+        .profile__content
+          .row
+            .col-xl-8.col-lg-11.offset-lg-1
+              .profile__form-header.pb-40.pb-md-60
+                a.profile__form-back(href="#")
+                h4.mb-0 Renaissance Group
+                a.profile__form-edit(href="#")
+              form.form(action="#", method="POST")
+                .form__section
+                  .row
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="text" placeholder="Название компании")
+                  .row
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="text" placeholder="Руководитель")
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="text" placeholder="Контактное лицо")
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="text" placeholder="Юридический адрес")
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="text" placeholder="Фактический адрес")
+                .form__section
+                  .row
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="tel" placeholder="Телефон")
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control.js-mask-email(type="email" placeholder="Email")
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="text" placeholder="ИНН")
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="text" placeholder="КПП")
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="text" placeholder="ОГРН")
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="text" placeholder="Р/С")
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="text" placeholder="К/С")
+                .form__section
+                  .row
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="text" placeholder="Наименование банка")
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="text" placeholder="БИК")
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="text" placeholder="Адрес банка")
+                .profile__form-footer
+                  button.btn.btn-primary.profile__save(type="submit") Сохранить
+                  a.btn.profile__delete(href="#") Удалить реквизиты
+

@@ -1,0 +1,15 @@
+mixin checkbox(data)
+  .checkbox&attributes(attributes)
+    .custom-control.custom-checkbox
+      if data && data.checked && data.required
+        input.custom-control-input(type='checkbox' id=data.id checked required)
+      else if data && data.checked && !data.required
+        input.custom-control-input(type='checkbox' id=data.id checked)
+      else if data && data.required && !data.checked
+        input.custom-control-input(type='checkbox' id=data.id required)
+      else
+        input.custom-control-input(type='checkbox' id=data.id)
+
+      label.custom-control-label(for=data.id)!= data.title
+        if data && data.amount
+          span.checkbox__amount= data.amount

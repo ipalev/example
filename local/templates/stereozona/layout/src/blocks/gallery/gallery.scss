@@ -1,0 +1,155 @@
+.gallery {
+
+  @include media-breakpoint-down(xs) {
+    position: relative;
+  }
+
+  &__slider {
+    padding: scaleVW(60, 1920) 0 scaleVW(14, 1920);
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 60px;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-bottom: 14px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-top: 150px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+
+    &-item {
+
+      &:focus {
+        outline: none;
+      }
+
+      img {
+        margin: auto;
+        max-height: scaleVW(576, 1920);
+
+        @include media-breakpoint-down(lg) {
+          max-height: 576px;
+        }
+      }
+    }
+
+    .slick-dots {
+
+      @include media-breakpoint-down(xs) {
+        padding-top: 125px;
+      }
+    }
+  }
+
+  &__nav {
+    flex: 1;
+
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+
+    &-container {
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+
+      @include media-breakpoint-down(xs) {
+        position: absolute;
+        right: 0;
+        bottom: 144px;
+        left: 0;
+        justify-content: center;
+      }
+    }
+
+    &-item {
+      position: relative;
+      margin: 0 scaleVW(14, 1920);
+      width: scaleVW(80, 1920);
+      height: scaleVW(80, 1920);
+      cursor: pointer;
+
+      //      @include media-breakpoint-down(xl) {
+      //        width: scaleVW(80, 1600);
+      //        height: scaleVW(80, 1600);
+      //      }
+
+      @include media-breakpoint-down(lg) {
+        margin: 0 14px;
+        width: scaleVW(80, 1200);
+        height: scaleVW(80, 1200);
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 80px;
+        height: 80px;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__overview {
+    margin-right: scaleVW(40, 1920);
+    padding-right: scaleVW(17, 1920);
+    padding-left: scaleVW(50, 1920);
+    display: inline-block;
+    height: scaleVW(48, 1920);
+    font-family: $font-family-serif;
+    font-size: scaleVW(12, 1920);
+    line-height: scaleVW(48, 1920);
+    text-align: center;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: $black;
+    background: $light-mint
+      url("data:image/svg+xml,%3Csvg width='22' height='16' viewBox='0 0 22 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='2' width='1' height='11' fill='black'/%3E%3Crect x='9' y='2' width='1' height='11' fill='black'/%3E%3Crect x='3' y='4' width='1' height='8' fill='black'/%3E%3Crect x='12' y='4' width='1' height='8' fill='black'/%3E%3Crect x='18' y='2' width='1' height='11' fill='black'/%3E%3Crect x='21' y='4' width='1' height='8' fill='black'/%3E%3Crect x='6' width='1' height='16' fill='black'/%3E%3Crect x='15' width='1' height='16' fill='black'/%3E%3C/svg%3E%0A")
+      no-repeat;
+    background-position: scaleVW(16, 1920) center;
+    background-size: scaleVW(22, 1920) auto;
+    border-radius: scaleVW(40, 1920);
+
+    @include media-breakpoint-down(lg) {
+      padding-right: 17px;
+      padding-left: 50px;
+      height: 48px;
+      font-size: 12px;
+      line-height: 48px;
+      background-position: 16px center;
+      background-size: 22px auto;
+      border-radius: 40px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-right: 0;
+      padding-right: 12px;
+      padding-left: 35px;
+      height: 36px;
+      font-size: 10px;
+      line-height: 36px;
+      background-position: 10px center;
+      background-size: 17px 12px;
+    }
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,288 @@
+.compare {
+
+  &__top {
+    display: flex;
+    align-items: stretch;
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+
+    &.is-sticky {
+      position: sticky;
+      z-index: 100;
+      top: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 4px 40px rgba(0, 0, 0, .16);
+
+      .breadcrumbs {
+        display: none;
+      }
+
+      .compare__top-items {
+        padding-top: scaleVW(24, 1920);
+        padding-bottom: scaleVW(6, 1920);
+
+        @include media-breakpoint-down(sm) {
+          position: absolute;
+          left: -9999px;
+        }
+      }
+
+      .compare__top-left {
+
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+
+        h1 {
+          margin-top: scaleVW(30, 1920);
+        }
+      }
+
+      .compare__slider-select {
+
+        @include media-breakpoint-down(sm) {
+          position: static;
+          padding: 17px 24px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  &__top-left {
+    padding: 0 scaleVW(80, 1920) scaleVW(32, 1920) scaleVW(80, 1920);
+    min-width: scaleVW(508, 1920);
+    background: $gray4;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 0 32px;
+      min-width: 100%;
+    }
+
+    .breadcrumbs {
+      padding-top: scaleVW(48, 1920);
+      padding-bottom: scaleVW(16, 1920);
+
+      @include media-breakpoint-down(sm) {
+        padding-top: 16px;
+        padding-bottom: 4px;
+      }
+    }
+
+    h1 {
+      margin-bottom: scaleVW(30, 1920);
+      font-size: scaleVW(48, 1920);
+      line-height: 1;
+      color: $black;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 35px;
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__top-items {
+    padding: scaleVW(64, 1920) scaleVW(80, 1920) scaleVW(32, 1920) scaleVW(80, 1920);
+    width: 100%;
+    background: $white;
+
+    @include media-breakpoint-down(sm) {
+      padding: 22px 0 0;
+    }
+  }
+
+  &__items-row {
+    display: flex;
+
+    .item {
+      width: 25%;
+    }
+  }
+
+  &__specs {
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__specs-left {
+    padding: 0 scaleVW(80, 1920) scaleVW(80, 1920) scaleVW(80, 1920);
+    min-width: scaleVW(508, 1920);
+    background: $gray4;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
+    .compare__specs-item--header {
+      padding: scaleVW(12, 1920) 0;
+      display: flex;
+      min-height: scaleVW(44, 1920);
+      align-items: stretch;
+      font-size: scaleVW(18, 1920);
+      line-height: 1;
+      color: $black;
+    }
+  }
+
+  &__specs-right {
+    padding: 0 scaleVW(80, 1920) scaleVW(80, 1920) scaleVW(80, 1920);
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 24px 80px 0;
+    }
+  }
+
+  &__specs-row-wrap {
+    width: 25%;
+  }
+
+  &__specs-row {
+    padding: scaleVW(12, 1920) scaleVW(24, 1920);
+    min-height: scaleVW(44, 1920);
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+
+    @include media-breakpoint-down(sm) {
+      padding: 12px;
+      min-height: inherit;
+    }
+
+    &:hover,
+    &.is-hover {
+      border-top: 1px solid rgba($black, .1);
+      border-bottom: 1px solid rgba($black, .1);
+    }
+  }
+
+  &__specs-item {
+    font-size: scaleVW(18, 1920);
+    line-height: 1;
+    color: $black;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
+  }
+
+  &__specs-item--header {
+    display: none;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 5px;
+      display: flex;
+      color: $gray10;
+    }
+
+    .tooltip__trigger {
+      width: scaleVW(20, 1920);
+      height: scaleVW(20, 1920);
+      background-size: scaleVW(20, 1920) scaleVW(20, 1920);
+
+      @include media-breakpoint-down(sm) {
+        width: 16px;
+        height: 16px;
+        background-size: 16px 16px;
+      }
+    }
+  }
+
+  &__slider-select {
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+    height: 0;
+    justify-content: space-between;
+    background: $gray;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    .select {
+      width: 100%;
+    }
+
+    .slick-slide {
+      margin: 0 scaleVW(8, 1920);
+
+      @include media-breakpoint-down(lg) {
+        margin: 0 8px;
+      }
+    }
+
+    .slick-list {
+      margin: 0 scaleVW(20, 1920) * (-1);
+
+      @include media-breakpoint-down(lg) {
+        margin: 0 -8px;
+      }
+    }
+  }
+
+  &__slider-controls {
+    padding: scaleVW(17, 1920) scaleVW(24, 1920);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $white;
+    border-bottom: 1px solid rgba($black, .1);
+
+    @include media-breakpoint-down(lg) {
+      padding: 17px 24px;
+    }
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  &__slider-info {
+    font-size: scaleVW(16, 1920);
+    color: $black;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+    }
+  }
+
+  &__slider-arrow {
+    position: static;
+    width: scaleVW(20, 1920);
+    height: scaleVW(20, 1920);
+    cursor: pointer;
+
+    @include media-breakpoint-down(lg) {
+      width: 20px;
+      height: 20px;
+    }
+
+    &--prev {
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 1L1 5L5 9' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: scaleVW(6, 1920) scaleVW(10, 1920);
+
+      @include media-breakpoint-down(lg) {
+        background-size: 6px 10px;
+      }
+    }
+
+    &--next {
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 9L5 5L1 1' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: scaleVW(6, 1920) scaleVW(10, 1920);
+
+      @include media-breakpoint-down(lg) {
+        background-size: 6px 10px;
+      }
+    }
+  }
+}

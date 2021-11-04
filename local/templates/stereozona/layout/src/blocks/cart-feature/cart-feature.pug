@@ -1,0 +1,7 @@
+mixin cart-feature(data)
+  .cart-feature&attributes(attributes)
+    .cart-feature__icon
+      img(src="./img/" + data.icon, alt)
+    .cart-feature__content
+      p.sm.font-weight-medium.mb-5= data.title
+      p.mb-0= data.dscr

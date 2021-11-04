@@ -1,0 +1,177 @@
+.order {
+
+  .breadcrumbs {
+    padding-top: scaleVW(30, 1920);
+    padding-bottom: scaleVW(65, 1920);
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__content {
+    padding-right: scaleVW(170, 1920);
+    padding-bottom: scaleVW(200, 1920);
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+      padding-right: 24px;
+      padding-bottom: 64px;
+    }
+  }
+
+  &__header {
+    padding-bottom: scaleVW(80, 1920);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 68px;
+      align-items: flex-start;
+    }
+
+    h1 {
+      font-size: scaleVW(48, 1920);
+      color: $dark2;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 30px;
+      }
+    }
+
+    .btn-sm {
+      padding: scaleVW(8, 1920) scaleVW(16, 1920);
+      font-size: scaleVW(14, 1920);
+      border-radius: scaleVW(16, 1920);
+
+      @include media-breakpoint-down(sm) {
+        padding: 5px 16px;
+        font-size: 10px;
+        border-radius: 16px;
+      }
+    }
+  }
+
+  &__section {
+    padding-top: scaleVW(100, 1920);
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 100px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 65px;
+    }
+
+    h3 {
+      margin-bottom: scaleVW(24, 1920);
+      font-size: scaleVW(36, 1920);
+      font-weight: 500;
+      color: $dark2;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 40px;
+        font-size: 24px;
+      }
+    }
+
+    &--overall {
+
+      .btn-primary {
+        width: 100%;
+        height: scaleVW(56, 1920);
+        font-size: scaleVW(12, 1920);
+        border-radius: scaleVW(8, 1920);
+
+        @include media-breakpoint-down(lg) {
+          height: 56px;
+          font-size: 12px;
+          border-radius: 8px;
+        }
+      }
+
+      p {
+        margin-top: scaleVW(24, 1920);
+        font-size: scaleVW(14, 1920);
+        color: $dark2;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 24px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .form__item {
+    margin-bottom: scaleVW(26, 1920);
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .input {
+    padding: scaleVW(16, 1920) scaleVW(16, 1920) scaleVW(16, 1920) scaleVW(2, 1920);
+    font-size: scaleVW(18, 1920);
+
+    @include media-breakpoint-down(sm) {
+      padding: 12px 12px 12px 2px;
+      font-size: 16px;
+    }
+
+    &::placeholder {
+      font-size: scaleVW(18, 1920);
+
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+      }
+    }
+
+    &--textarea {
+      height: scaleVW(60, 1920) !important;
+
+      @include media-breakpoint-down(sm) {
+        height: 50px !important;
+      }
+    }
+  }
+
+  .checkbox {
+    margin-top: scaleVW(20, 1920);
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 20px;
+    }
+  }
+
+  .checkbox.checkbox--switch {
+
+    .custom-control-label {
+      font-size: scaleVW(18, 1920);
+
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+      }
+
+      &:before {
+        margin-right: scaleVW(12, 1920);
+        width: scaleVW(40, 1920);
+        height: scaleVW(26, 1920);
+
+        @include media-breakpoint-down(sm) {
+          margin-right: 12px;
+          width: 40px;
+          height: 26px;
+        }
+      }
+    }
+  }
+}

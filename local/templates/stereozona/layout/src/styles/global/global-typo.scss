@@ -1,0 +1,222 @@
+h1,
+.h1 {
+  font-family: $font-family-sans-serif;
+  font-size: scaleVW(48, 1920);
+  line-height: 1;
+  font-weight: 500;
+
+  @include media-breakpoint-down(xs) {
+    font-size: scaleVW(30, 375);
+  }
+}
+
+h2,
+.h2 {
+  font-family: $font-family-sans-serif;
+  font-size: scaleVW(42, 1920);
+  line-height: 1;
+  font-weight: 500;
+
+  @include media-breakpoint-down(xs) {
+    font-size: scaleVW(30, 375);
+  }
+}
+
+h3,
+.h3 {
+  font-family: $font-family-sans-serif;
+  font-size: scaleVW(36, 1920);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -.02em;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 30px;
+  }
+}
+
+h4,
+.h4 {
+  font-family: $font-family-sans-serif;
+  font-size: scaleVW(24, 1920);
+  line-height: 1.2;
+  font-weight: 500;
+
+  //  @include media-breakpoint-down(xl) {
+  //    font-size: scaleVW(24, 1600);
+  //  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: scaleVW(24, 1200);
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: scaleVW(24, 992);
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: scaleVW(18, 768);
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: scaleVW(18, 375);
+  }
+}
+
+h5,
+.h5 {
+}
+
+h6,
+.h6 {
+}
+
+p,
+.p {
+  font-size: scaleVW(18, 1920);
+  line-height: 1.4;
+  letter-spacing: .02em;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 18px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+  }
+
+  &.sm {
+    //    font-size: 16px;
+    font-size: scaleVW(16, 1920);
+
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+    }
+  }
+
+  &.xs {
+    //    font-size: 14px;
+    font-size: scaleVW(14, 1920);
+
+    @include media-breakpoint-down(lg) {
+      font-size: 14px;
+    }
+  }
+}
+
+.font-weight-medium {
+  font-weight: 500;
+}
+
+.font-weight-black {
+  font-weight: 900;
+}
+
+.font-serif {
+  font-family: $font-family-serif;
+}
+
+.btn-primary {
+  border: none;
+  background-color: $mint;
+}
+
+.btn-secondary {
+  background-color: $light-mint;
+
+  &:hover {
+    color: $white;
+    background-color: $mint;
+  }
+}
+
+.bg-gray {
+  background: $gray;
+}
+
+.light-underline {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 4px;
+}
+
+.preload-animation {
+  position: relative;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(/assets/img/loading.svg);
+  }  
+}
+
+ul {
+
+  li {
+  }
+}
+
+ol {
+
+  li {
+  }
+}
+
+table {
+}
+
+tr {
+}
+
+th {
+}
+
+td {
+}
+
+a {
+}
+
+input {
+
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+
+  &:focus {
+    outline: none;
+  }
+}
+
+select {
+}
+
+button {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type='submit'] {
+  border: 0;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}

@@ -1,0 +1,146 @@
+-
+  var catalogFiltersModal = [
+    {
+      title: 'Производитель',
+      name: 'manufacturer',
+      items: [
+        {
+          name: 'Accustic Arts12',
+          num: 14,
+          code: `9_123123`
+        },
+        {
+          name: 'Audia Flight25',
+          num: 7,
+          code: `8_3213123`
+        },
+        {
+          name: 'Pied Piper',
+          num: 104,
+          code: `5_512412`
+        },
+      ]
+    },
+    {
+      title: 'Поддержка DSD',
+      name: 'dsd_support',
+      items: [
+        {
+          name: 'DSD-1',
+          num: 32,
+          code: `7_19823`
+        },
+        {
+          name: 'DSD-2',
+          num: 41,
+          code: `7_98723`
+        },
+        {
+          name: 'DSD-3',
+          num: 17,
+          code: `4_9876`
+        },
+        {
+          name: 'DSD-4',
+          num: 10,
+          code: `6_192311`
+        },
+      ]
+    },
+    {
+      isSwitch: true,
+      title: 'Технология TTT',
+      name: 'ttt_tech',
+      items: [
+        {
+          num: 3,
+          code: `2_981723`
+        }
+      ]
+    }
+  ];
+
+mixin catalog-filters-modal
+  .modal__filters-chosen-list(:class="{ 'modal__filters-chosen-list--hidden': selectedFilters.length <= 0 }")
+    .modal__filter-chosen(v-for="filter in selectedFilters" :key="filter.id")
+      template(v-if="filter.isRange")
+        template
+          span(v-if="filter.min") {{ filter.min }}
+          span(v-if="filter.max")
+            |  - 
+            | {{ filter.max }}
+
+      template(v-else)
+        template(v-if="filter.title") {{ filter.title }}: {{ filter.text }}
+
+        template(v-else) {{ filter.text }}
+
+      a.modal__filter-chosen-remove(data-no-swup href="#" @click.prevent="deselectFilter($event, filter)")
+
+    a.modal__filters-chosen-clear(data-no-swup href="#" @click.prevent="deselectAllFilters") Очистить все
+
+  form.modal__filters(action="#", method="POST")
+    .row
+      .col-md-4(
+        data-catalog-filter="priceFilterName"
+        data-filter-range="true"
+        data-value-min="200"
+        data-value-max="300"
+      )
+        +dropdown-catalog({
+          title: 'Цена',
+          name: 'priceFilterName'
+        }).dropdown--big
+          .dropdown__price
+            input.dropdown__price-input(
+              type="number"
+              min="280"
+              max="1500"
+              step="1"
+              v-model="filters.priceFilterName.min"
+              name="price-min"
+              onkeyup="smartFilter.keyup(this)"
+            )
+            .dropdown__price-dash
+            input.dropdown__price-input(
+              type="number"
+              min="280"
+              max="1500"
+              step="1"
+              v-model="filters.priceFilterName.max"
+              name="price-max"
+              onkeyup="smartFilter.keyup(this)"
+            )
+      
+      each filter in catalogFiltersModal
+        if filter.isSwitch
+          .col-md-4(data-catalog-filter=filter.name)
+            each item in filter.items
+              +checkbox-catalog({
+                filterName: filter.name,
+                title: filter.title,
+                id: item.code,
+                amount: item.num
+              }).checkbox--switch
+
+        else
+          .col-md-4(data-catalog-filter=filter.name)
+            +dropdown-catalog({
+              title: filter.title,
+              name: filter.name
+            }).dropdown--big
+              .catalog-filters-list
+                each item in filter.items
+                  +checkbox-catalog({
+                    filterName: filter.name,
+                    id: item.code,
+                    title: item.name,
+                    amount: item.num
+                  })
+    
+    button.btn.btn-primary(
+      type="button"
+      :disabled="isLoading"
+      :data-link="requestResponse.url"
+      @click.prevent="onSubmitClick"
+    ) Применить

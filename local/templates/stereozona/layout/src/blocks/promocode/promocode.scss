@@ -1,0 +1,134 @@
+.promocode {
+  margin-bottom: scaleVW(24, 1920);
+  transform: translateY(64px);
+  transition: transform $transition-base;
+  pointer-events: none;
+  
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 24px;
+  }
+
+  &__field {
+    background: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    width: 100%;
+    transition: $transition-base;
+    pointer-events: auto;
+    cursor: pointer;
+
+    line-height: 1;
+    font-size: scaleVW(18, 1920);
+
+    &,
+    &::placeholder {
+      color: #1F2020;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+    }
+  }
+
+  &__tip {
+    font-size: 14px;
+    line-height: 1;
+    color: $danger;
+    margin-top: 4px;
+    display: none;
+  }
+
+  &__btn-wrap {
+    padding: 16px 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: $transition-base;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: $font-family-serif;
+    text-transform: uppercase;
+    font-size: scaleVW(12, 1920);
+    letter-spacing: 0.04em;
+    color: #000;
+    line-height: 32px;
+
+    height: 30px;
+    padding: 0 16px;
+    white-space: nowrap;
+
+    border-radius: 16px;
+    background: #E3E3E3;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 12px;
+    }
+
+    img {
+      margin-right: 8px;
+      width: 16px;
+      height: 16px;
+      display: none;
+      object-fit: contain;
+    }
+  }
+
+  &__btn-text--success,
+  &__btn-text--error {
+    display: none;
+  }
+
+  &--focused {
+    pointer-events: auto;
+    transform: translateY(0);
+
+    .promocode__field {
+      cursor: auto;
+
+      &::placeholder {
+        color: rgba(#1F2020, 0.4);
+      }
+    }
+
+    .promocode__btn-wrap {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &--success {
+    .promocode__btn img {
+      display: block;
+    }
+    
+    .promocode__btn--default {
+      display: none;
+    }
+
+    .promocode__btn--success {
+      display: block;
+    }
+  }
+  &--error {
+    .promocode__tip {
+      display: block;
+    }
+    .promocode__field {
+      color: $danger;
+    }
+
+    .promocode__btn--default {
+      display: none;
+    }
+    
+    .promocode__btn--error {
+      display: block;
+    }
+  }
+}

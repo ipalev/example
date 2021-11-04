@@ -1,0 +1,21 @@
+.drag {
+  margin-left: scaleVW(-80, 1920);
+  padding-left: scaleVW(80, 1920);
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  @include media-breakpoint-down(sm) {
+    margin-left: -24px;
+    padding-left: 24px;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

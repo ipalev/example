@@ -1,0 +1,31 @@
+mixin checkbox-catalog(data)
+  .checkbox&attributes(attributes)
+    input.u-hidden(
+      type="checkbox"
+      value="Y"
+      name=`arrFilter_${data.id}`
+      :checked=`filters.${data.filterName}.indexOf('arrFilter_${data.id}') !== -1`
+    )
+    .custom-control.custom-checkbox
+      if data.replace
+        input.custom-control-input(
+          type="checkbox"
+          v-model=`filters.${data.filterName}`
+          value=`arrFilter_${data.id}`
+          id=`arrFilter_${data.id}`
+          onclick="smartFilter.click(this, true)"
+        )
+
+      else
+        input.custom-control-input(
+          type="checkbox"
+          v-model=`filters.${data.filterName}`
+          data-model=`${data.filterName}`
+          value=`arrFilter_${data.id}`
+          id=`arrFilter_${data.id}`
+          onclick="smartFilter.click(this)"
+        )
+        
+      label.custom-control-label(for=`arrFilter_${data.id}`)
+        span.custom-control-text!= data.title
+        span.checkbox__amount(class=`num_arrFilter_${data.id}`)= data.amount

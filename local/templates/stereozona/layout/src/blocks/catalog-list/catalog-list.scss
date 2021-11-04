@@ -1,0 +1,23 @@
+.catalog-list {
+  padding-top: scaleVW(80, 1920);
+  display: flex;
+  align-items: stretch;
+  flex-flow: row wrap;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 24px;
+  }
+
+  .slick-dots {
+
+    @include media-breakpoint-down(xs) {
+      padding-top: 10px;
+    }
+  }
+
+  &__slide {
+    display: flex !important;
+    align-items: stretch;
+    flex-flow: row wrap;
+  }
+}

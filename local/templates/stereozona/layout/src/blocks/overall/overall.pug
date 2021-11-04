@@ -1,0 +1,49 @@
+mixin overall(data)
+  .overall&attributes(attributes)
+    .overall__top
+      .overall__item
+        p Сумма
+        p.mb-0.font-weight-medium 1 446 800₽
+      .overall__item
+        p Доставка
+          +tooltip.tooltip--question
+        p.mb-0.font-weight-medium 0₽
+      .overall__item
+        p Скидка
+        p.mb-0.font-weight-medium 15%
+      .overall__item
+        p Итого
+        h4.mb-0 1 126 570₽
+    .overall__bottom
+      p.mb-0
+        if data && data.modifier == 'cart'
+          if !data.noPromo
+            +promocode
+        a.btn.btn-primary(href="#" data-fancybox data-no-swup data-src="#modalOrder" data-touch="false" data-modal="true")= data.btn
+    +modal({
+      modifier: 'order'
+    }).modal--order#modalOrder
+  if data && data.modifier == 'cart'
+    .overall__mobile-overflow
+    .overall__mobile
+      .overall__item.overall__item--hidden.overall__item--first
+        p Сумма
+        p.mb-0.font-weight-medium 1 446 800₽
+      .overall__item.overall__item--hidden
+        p Доставка
+          +tooltip.tooltip--question
+        p.mb-0.font-weight-medium 0₽
+      .overall__item.overall__item--hidden
+        p Скидка
+        p.mb-0.font-weight-medium 15%
+      .overall__item.overall__item--last
+        p Итого
+        h4.mb-0 1 126 570₽
+      .overall__expand-link
+        p Детали заказа
+      .overall__bottom.overall__bottom--hidden
+        p.mb-0
+          +promocode
+          a.btn.btn-primary(href="#" data-fancybox data-no-swup data-src="#modalOrder" data-touch="false" data-modal="true")= data.btn
+      
+      

@@ -1,0 +1,24 @@
+.cart-feature {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    margin-right: scaleVW(16, 1920);
+    width: scaleVW(64, 1920);
+  }
+
+  &__content {
+
+    p {
+      font-size: scaleVW(14, 1920);
+      line-height: 1;
+      color: $dark2;
+
+      &:first-of-type {
+        margin-bottom: scaleVW(3, 1920) !important;
+        font-size: scaleVW(14, 1920);
+        font-weight: 500;
+      }
+    }
+  }
+}

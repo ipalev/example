@@ -1,0 +1,32 @@
+extends ../templates/template.pug
+block content
+  .profile
+    .profile__left
+      .container-fluid
+        .profile__left-wrapper
+          .profile__left-top
+            h2.profile__name Денис
+            .profile__menu
+              a.profile__menu-link(href="#") Профиль
+              a.profile__menu-link(href="#") Личные данные
+              a.profile__menu-link(href="#") Заказы
+              a.profile__menu-link(href="#") Избранное
+              a.profile__menu-link(href="#") Адреса
+              a.profile__menu-link.profile__menu-link--active(data-no-swup href="#") Реквизиты
+              a.profile__menu-back(href="#")
+          .profile__left-bottom
+            a.profile__logout(href="#") Выйти
+    .profile__wrapper
+      .container-fluid
+        .profile__wrapper-top
+          +badge
+        .profile__content
+          .row
+            .col-xl-8.col-lg-11.offset-lg-1
+              +requisites({
+                title: 'Renaissance Group',
+              })
+              +requisites({
+                title: 'Renaissance Group',
+              })
+

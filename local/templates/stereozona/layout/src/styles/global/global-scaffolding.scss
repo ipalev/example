@@ -1,0 +1,32 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a,
+button,
+input {
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.u-hidden {
+  display: none !important
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
+[v-cloak] {
+  visibility: hidden;
+}

@@ -1,0 +1,40 @@
+mixin footer(data)
+  .footer&attributes(attributes)
+    .container-fluid.footer__container
+      .footer__body
+        .footer__top
+          .footer__top-left
+            .footer__sitemap-section
+              a.footer__sitemap-header(data-no-swup href="#") Рассылка stereozona
+              .footer__sitemap-content
+                +subscribe
+          .footer__top-right
+            .footer__sitemap-section
+              a.footer__sitemap-header(data-no-swup href="#") Сообщество
+              .footer__sitemap-content
+                a.footer__sitemap-link(href="#") Новости
+                a.footer__sitemap-link(href="#") Статьи и советы
+                a.footer__sitemap-link(href="#") Обзоры
+                a.footer__sitemap-link(href="#") Форум
+            .footer__sitemap-section
+              a.footer__sitemap-header(data-no-swup href="#") Поддержка
+              .footer__sitemap-content
+                a.footer__sitemap-link(href="#") О компании
+                a.footer__sitemap-link(href="#") Доставка и оплата
+                a.footer__sitemap-link(href="#") Сервис и возврат
+                a.footer__sitemap-link(href="#") Контакты
+            .footer__sitemap-section
+              a.footer__sitemap-header(data-no-swup href="#") Контакты
+              .footer__sitemap-content
+                a.footer__sitemap-link(href="#") +7 800 201-47-67
+                a.footer__sitemap-link(href="#") +7 950 223-37-37
+                a.footer__sitemap-link(href="#") info@stereozona.ru
+        .footer__middle   
+          +socials    
+      .footer__bottom
+        .footer__bottom-left
+          span.footer__text ©Stereozona 2020. Все права защищены
+          a.footer__text(href="#") Конфиденциальность
+        a.footer__bottom-author(href="#")
+          img(src="./img/its.svg", alt)
+    +up

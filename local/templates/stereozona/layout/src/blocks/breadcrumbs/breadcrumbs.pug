@@ -1,0 +1,5 @@
+mixin breadcrumbs(data)
+  .breadcrumbs&attributes(attributes)
+    a.breadcrumbs__link(href="#") Главная
+    each val in data.links
+      a.breadcrumbs__link(href="#")= val

@@ -1,0 +1,8 @@
+mixin picture(data)
+  .picture&attributes(attributes)
+    img(src="./img/" + data.picture, alt)
+    a.picture__btn(href="#" data-no-swup)
+    if data && data.dscr
+      .picture__dscr= data.dscr
+    else
+      .picture__dscr Петербург остается музыкальной столицей России и мы очень гордимся, что родились и живем здесь

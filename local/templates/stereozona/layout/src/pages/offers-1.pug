@@ -1,0 +1,62 @@
+extends ../templates/template.pug
+block content
+  .container-fluid
+    .pt-15.pb-5.pt-md-30.pb-md-15
+      +breadcrumbs({
+        links: ['Акции']
+      })
+    h2.mb-10.mb-md-25 Акции
+    .d-flex.justify-content-between.mb-50.mb-md-80
+      .d-flex.tag__container
+        +tag({
+          title: 'Все'
+        })
+        +tag({
+          title: 'Подарок за покупку'
+        })
+        +tag({
+          title: 'Скидки'
+        })
+        +tag({
+          title: 'Trade in'
+        })
+        +tag({
+          title: 'производитель'
+        }).tag--menu
+        +tag({
+          title: 'Архив'
+        }).d-flex.d-lg-none
+      +tag({
+        title: 'Архив'
+      }).d-none.d-lg-flex
+    .row
+      .col-lg-6.its-fade.js-observe
+        +offer({
+          picture: 'offer-1.jpg',
+          date: '24 июля - 12 октября',
+          title: '<span class="font-weight-bold">Выбери свой подарок</span> – Никаких дисконтных карт, купонов или клубных баллов'
+        })
+      .col-lg-6.its-fade.js-observe
+        +offer({
+          picture: 'offer-2.jpg',
+          date: '16 мая - 22 декабря',
+          title: '<span class="font-weight-bold">Самый выгодный Trade-in </span> – Меняем старое на новое на очень выгодных условиях'
+        })
+      .col-lg-6.its-fade.js-observe
+        +offer({
+          picture: 'offer-3.jpg',
+          date: '10 февраля - 7 октрября',
+          title: '<span class="font-weight-bold">Акция на Rega Planar 3 </span> – Подарим головку ELYS-2 и бесплатно установим её на ваш новый проигрыватель'
+        })
+      .col-lg-6.its-fade.js-observe
+        +offer({
+          picture: 'offer-4.jpg',
+          date: '10 февраля - 7 октрября',
+          title: '<span class="font-weight-bold">Акция на Rega Planar 2</span> – Заменим штатную головку Carbon MM на хорошую BIAS-2 или подарим фонокорректор'
+        })
+    .row.mt-30.mt-md-80.mb-65.mb-md-100.its-fade.js-observe
+      .col-lg-4.offset-lg-4
+        +more
+      .d-none.d-xl-block.col-xl-3.offset-xl-1
+        +pagination
+

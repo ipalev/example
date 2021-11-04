@@ -1,0 +1,58 @@
+extends ../templates/template.pug
+
+block noswupmodals
+  include ../blocks/preloader/preloader.pug
+
+block content
+  +front
+  .container-fluid.its-fade.js-observe
+    +catalog-list
+  +alphabet().its-fade.js-observe
+  +exhibition().its-fade.js-observe
+  .container-fluid
+    .section
+      .section__header.its-fade.js-observe
+        h2.mb-0 
+          a.text-dark(href="#") Новинки
+      .section__content.its-fade.js-observe
+        +slider
+    .section
+      .section__header.its-fade.js-observe
+        h2.mb-0 
+          a.text-dark(href="#") Статьи и обзоры
+      .section__content.its-fade.js-observe
+        .row
+          .col-lg-6
+            .row.card-slider
+              .col-lg-6.mb-0.mb-lg-30
+                +card({
+                  picture: 'card-1.jpg',
+                  title: '<span class="font-weight-medium">Audiozen Lysios</span> – стерео- фонический усилитель мощности с необычными транзисторами',
+                  date: '14 июня'
+                })
+              .col-lg-6.mb-0.mb-lg-30
+                +card({
+                  picture: 'card-2.jpg',
+                  title: '<span class="font-weight-medium">Abbey Road в моей команте</span> – Как сделать дома студию звукозаписи  вместе с ROCKWOOL',
+                  date: '12 июня'
+                })
+              .col-lg-6
+                +card({
+                  picture: 'card-3.jpg',
+                  title: '<span class="font-weight-medium">ULED U7</span> – премиальные телевизоры компании Hisense',
+                  date: '9 июня'
+                })
+              .col-lg-6
+                +card({
+                  picture: 'card-4.jpg',
+                  title: '<span class="font-weight-medium">Lyngdorf The Clic Wall</span> – Мебель со встроенным сабвуфером',
+                  date: '5 июня'
+                })
+          .col-lg-6.d-none.d-lg-inline-flex
+            +card({
+              picture: 'card-5.jpg',
+              title: '<span class="font-weight-medium">Саундбары: разбираемся детально.</span>На что смотреть при покупке и сколько платить',
+              date: '1 июня',
+              modifier: 'big'
+            }).card--big
+

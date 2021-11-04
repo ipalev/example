@@ -1,0 +1,1 @@
+<a class="contact-link" href="mailto:store@stereozona.ru" data-is-goal="click" data-base-goal-name="email_click">store@stereozona.ru</a>

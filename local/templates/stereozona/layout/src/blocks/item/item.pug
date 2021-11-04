@@ -1,0 +1,25 @@
+mixin item(data)
+  .item(data-product-id=data.id)&attributes(attributes)
+    .catalog-compare__overflow
+    .catalog-compare__dropdown
+      a.catalog-compare__item-option(data-no-swup href="#") Перейти к сравнению
+      a.catalog-compare__item-option(data-no-swup href="#") Удалить
+    .item__controls-wrapper
+      if data && data.modifier == 'compare'
+        a.item__remove(data-no-swup href="#")
+      else
+        a.item__control.item__control-compare.js__compare(data-no-swup data-product-id=data.id)
+          img(src="./img/icon-items.svg", alt)
+          span.item__compare-status
+        if data.isInFavorites == true
+          a.item__control.item__control-favorite(data-product-id=data.id data-no-swup href="#")
+            img(src="./img/icon-fav-active.svg", alt)
+        else
+          a.item__control(data-no-swup href="#")
+            img(src="./img/icon-fav.svg", alt)
+    a.item__content(href="#")
+      p.item__title= data.title
+      .item__picture
+        img(src="./img/" + data.picture, alt)
+      .item__price= data.price
+    a.item__plus(data-no-swup href="#")

@@ -1,0 +1,14 @@
+mixin option(data)
+  .option&attributes(attributes)
+    .custom-control.custom-radio
+      input.custom-control-input(type='radio', name=data.name, id=data.id)
+      label.custom-control-label(for=data.id)
+        span.option__top
+          span.option__title= data.title
+          if data && data.dscr
+            span.option__dscr= data.dscr
+        span.option__bottom
+          if data && data.comment
+            span= data.comment
+          if block
+            block

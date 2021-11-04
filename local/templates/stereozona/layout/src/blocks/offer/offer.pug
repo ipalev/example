@@ -1,0 +1,10 @@
+mixin offer(data)
+  .offer&attributes(attributes)
+    .offer__picture
+      img(src="./img/" + data.picture, alt)
+    .offer__content
+      .offer__content-top
+        if data && data.date
+          p.sm.font-weight-medium.offer__date= data.date
+        h4.offer__title!= data.title
+      a.btn.btn-outline-primary.btn-outline-primary--small.btn-sm.offer__btn(href="#") Условия

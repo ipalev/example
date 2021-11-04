@@ -1,0 +1,50 @@
+extends ../templates/template.pug
+block content
+  .article
+    .container-fluid
+      .pt-15.pb-10.pt-md-30.pb-md-40
+        +breadcrumbs({
+          links: ['Статьи и обзоры']
+        })
+      h2 
+        span.font-weight-bold Выбери свой подарок 
+        | <br>— Никаких дисконтных карт, купонов или клубных баллов
+      a.btn.btn-outline-primary.btn-outline-primary--small(href="#") подарок за покупку
+      .row
+        .col-lg-8.mx-auto.py-30.its-fade.js-observe
+          img(src="./img/text-page.jpg", alt)
+      .article__wrapper
+        .row
+          .article__center
+            .article__content
+              p.first-letter Не надоело получать ненужные подарки вместо желаемых вещей или реальной выгоды? Вспомните как часто при покупке чего-либо в качестве подарка Вам предлагают дисконтные или клубные карты, баллы, купоны, которые непонятно как и куда использовать, а если речь заходит о реальных предметах, то выбрать их можно лишь из залежавшегося не ликвидного ассортимента, того самого, от которого магазин уже давно и безуспешно пытается избавиться всеми доступными способами. Мы решили отказаться от этой устаревшей порочной практики!
+              h4 Выбирайте самостоятельно
+              p Единственным ограничительным условием является стоимость подарка, которая не должна превышать 
+                span.font-weight-medium 15% от стоимости* 
+                |приобретённого товара. Например, если стоимость покупки 100 000₽, то стоимость подарка не превышает 15 000₽.
+              p Пожалуйста, свяжитесь с нами для уточнения подробностей и мы обязательно договоримся!
+              .article__footnote.article__footnote--text
+                p * Предложение не суммируется с другими акциями
+          .article__aside.article__aside--right.d-none.d-xl-block
+            .article__sticky
+              .article__sticky-content
+                +addition({
+                  title: 'Идеи для подарка'
+                })
+    .article__next.its-fade.js-observe
+      .container-fluid
+        h3.mb-40 Другие акции
+        .row
+          .col-lg-6
+            +offer({
+              picture: 'offer-3.jpg',
+              date: '10 февраля - 7 октрября',
+              title: '<span class="font-weight-bold">Акция на Rega Planar 3 </span> – Подарим головку ELYS-2 и бесплатно установим её на ваш новый проигрыватель'
+            }).offer--light
+          .col-lg-6
+            +offer({
+              picture: 'offer-4.jpg',
+              date: '10 февраля - 7 октрября',
+              title: '<span class="font-weight-bold">Акция на Rega Planar 2</span> – Заменим штатную головку Carbon MM на хорошую BIAS-2 или подарим фонокорректор'
+            }).offer--light
+

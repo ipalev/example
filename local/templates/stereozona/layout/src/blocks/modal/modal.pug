@@ -1,0 +1,566 @@
+mixin modal(data)
+  .modal&attributes(attributes)
+    a.modal__close(href="#" data-fancybox-close data-no-swup)
+    
+    if data && data.modifier == 'filters'
+      .container-fluid.px-md-0
+        .modal__content#catalog-filters-modal(v-cloak)
+          h2 Все фильтры
+          +catalog-filters-modal
+    
+    if data && data.modifier == 'overview'
+      .container-fluid.px-md-0
+        .modal__content
+          .modal__overview
+            .modal__overview-media
+              img(src="img/overview-media.jpg" alt)
+            .modal__overview-content
+              h3 Обзор T+A SDV 3100 HV
+              p В SDV 3100 HV встроен цифро-аналоговый преобразователь, который является еще более сложным, чем все предыдущие преобразователи, что позволяет удваивать предыдущие уровни разрешения до 32-бит / 768 кГц для PCM и DSD 1024 для данных битового потока. Это улучшение потребовало тщательной доработки предыдущих преобразователей и разработки совершенно нового USB-приемника. SDV 3100 HV и SD 3100 HV идентичны по своей механической и электронной конструкции, за исключением секции предварительного усилителя, которая дополнительно оснащен SDV 3100 HV. Управлять SDV 3100 HV, а также полной системой HV можно с помощью пульта дистанционного управления F 3100 или одного из приложений T + A.
+              a(href="#" data-no-swup).modal__overview-read-more Читать полностью
+    
+    if data && data.modifier == 'city'
+      .container-fluid.px-md-0
+        .modal__content
+          form.modal__city-form(action="#", method="POST")
+            input.modal__city-input(type="text" placeholder="Найти город")
+          div.modal__city-geo-wrapper
+            a.modal__city-geo(data-no-swup href="#") Определить по геолокации
+            span.modal__city-geo-error К сожалению, определить не получилось
+          .modal__city-list
+            a.modal__city-list-item(href="#") Москва
+            a.modal__city-list-item(href="#") Санкт-Петербург
+            a.modal__city-list-item(href="#") Новосибирск
+            a.modal__city-list-item(href="#") Екатеринбург
+            a.modal__city-list-item(href="#") Нижний Новгород
+            a.modal__city-list-item(href="#") Казань
+            a.modal__city-list-item(href="#") Челябинск
+            a.modal__city-list-item(href="#") Омск
+            a.modal__city-list-item(href="#") Самара 
+            a.modal__city-list-item(href="#") Ростов-на-Дону
+            a.modal__city-list-item(href="#") Уфа
+            a.modal__city-list-item(href="#") Красноярск
+            a.modal__city-list-item(href="#") Воронеж
+            a.modal__city-list-item(href="#") Пермь
+            a.modal__city-list-item(href="#") Волгоград
+            a.modal__city-list-item(href="#") Хабаровск
+            a.modal__city-list-item(href="#") Владивосток
+    
+    if data && data.modifier == 'discount'
+      .container-fluid.px-md-0
+        .modal__content
+          form.modal__form-wrapper(action="#", method="POST")
+            .modal__form-top
+              h2 Нашли дешевле?
+              p Пришлите нам ссылку на этот товар в другом магазине и в течение 24-х часов вы получите SMS с уникальным промокодом. В случае отказа информация поступит на указанный Вами E-mail.
+            .modal__form-center
+              .form__item.form-group
+                input.input.form-control(type="text" placeholder="Имя")
+              .form__item.form-group
+                input.input.form-control.js-mask-phone(type="tel" placeholder="Телефон")
+              .form__item.form-group
+                input.input.form-control.js-mask-email(type="email" placeholder="Email")
+              .form__item.form-group
+                input.input.form-control(type="text" placeholder="Ссылка на товар")
+            .modal__form-bottom
+              button.btn.btn-primary(type="submit") Отправить
+              p.sm.mb-0 Нажимая кнопку «Отправить» подтверждаю свое согласие с условиями обработки персональных данных
+    
+    if data && data.modifier == 'click'
+      .container-fluid.px-md-0
+        .modal__content
+          form.modal__form-wrapper(action="#", method="POST")
+            .modal__form-top
+              h2 Купить в 1 клик
+              p Укажите необходимую информацию и наш оператор свяжется с вами для уточнения деталей заказа
+            .modal__form-center
+              .form__item.form-group
+                input.input.form-control(type="text" placeholder="Имя" required)
+              .form__item.form-group
+                input.input.form-control(type="tel" placeholder="Телефон" required)
+              .form__item.form-group
+                input.input.input--comment.form-control(type="text", placeholder="Комментарий")
+            .modal__form-bottom
+              +checkbox({
+                id: 'switch9',
+                title: 'Даю согласие с правилами <a href="#">оплаты и доставки</a>',
+                required: true,
+                checked: true
+              }).checkbox--switch.checkbox--switch-reverse
+              +checkbox({
+                id: 'switch10',
+                title: 'Даю согласие с условиями <a href="#">обмена и возврата</a>',
+                required: true,
+                checked: true
+              }).checkbox--switch.checkbox--switch-reverse
+              +checkbox({
+                id: 'switch-receipt-product-agree',
+                title: 'Даю согласие на <a href="#">обработку данных</a>',
+                required: true,
+                checked: true
+              }).checkbox--switch.checkbox--switch-reverse
+              button.btn.btn-primary.product-receipt-submit-btn(type="submit") Отправить
+    
+    if data && data.modifier == 'cart'
+      .container-fluid.px-md-0
+        .modal__content
+          h2 Корзина
+          .modal__cart-top
+            .modal__cart-header
+              .modal__cart-amount 4 товара
+              a.modal__cart-clear(data-no-swup href="#") Очистить
+            .modal__cart-content
+              +cart-item({
+                picture: 'item-1.png',
+                title: 'T+A SDV 3100 HV',
+                price: '5 104 200₽',
+                amount: '2',
+                break: true
+              })
+              +cart-item({
+                picture: 'item-2.png',
+                title: 'Quad Vena II Lancaster Black',
+                price: '80 289₽',
+                amount: '1',
+                break: true
+              })
+              +cart-item({
+                picture: 'item-3.png',
+                title: 'Bryston BP-6 MM',
+                price: '48 800₽',
+                amount: '1',
+                break: true
+              })
+              +cart-item({
+                picture: 'item-4.png',
+                title: 'Copland CTA 305 Silver',
+                price: '342 000₽',
+                amount: '1',
+                break: true
+              })
+          .modal__cart-bottom
+            .modal__cart-bottom-left
+              p.mb-0 Итого
+              .modal__cart-overall 1 126 570₽
+            .modal__cart-bottom-right
+              a.btn.btn-primary(data-no-swup href="#") В корзину
+    
+    if data && data.modifier == 'order'
+      .container-fluid.px-md-0
+        .modal__content
+          .row
+            .col-md-6
+              h3.modal__order-heading Заказ №24008-2 успешно оформлен
+            .col-md-6
+              .modal__order
+                .modal__order-section
+                  .modal__order-pictures-list
+                    .modal__order-picture
+                      img(src="./img/item-1.png", alt)
+                    .modal__order-picture
+                      img(src="./img/item-2.png", alt)
+                    .modal__order-picture
+                      img(src="./img/item-3.png", alt)
+                    .modal__order-picture
+                      img(src="./img/item-4.png", alt)
+                .modal__order-section
+                  p.font-weight-medium.mb-10 Состав заказа
+                  .modal__order-table
+                    .modal__order-table-item
+                      .modal__order-table-number 1. 
+                      .modal__order-table-title T+A SDV 3100 HV
+                      .modal__order-table-price 2 552 100₽
+                    .modal__order-table-item
+                      .modal__order-table-number 2. 
+                      .modal__order-table-title Quad Vena II Lancaster Black
+                      .modal__order-table-price 80 289₽
+                    .modal__order-table-item
+                      .modal__order-table-number 3. 
+                      .modal__order-table-title Bryston BP-6 MM
+                      .modal__order-table-price 43 400₽
+                    .modal__order-table-item
+                      .modal__order-table-number 4. 
+                      .modal__order-table-title Copland CTA 305 Silver
+                      .modal__order-table-price 342 000₽
+                .modal__order-section
+                  p.font-weight-medium.mb-5 Личные данные
+                  p.mb-5 Себастиан Бах
+                  p.mb-0 +7 (931) 360-26-20
+                  p.mb-5 sebastian@skidrow.com
+                .modal__order-section
+                  p.mb-10 Форма и адрес доставки
+                  p.mb-5 Быстрая доставка
+                  p.mb-0 192288, Санкт-Петербург, ул. Бухарестская д. 130, к.1, кв. 88
+                .modal__order-section
+                  p.font-weight-medium.mb-5 Оплата
+                  p.mb-0 Наличными или картой при получении
+                .modal__order-section
+                  p.font-weight-medium.mb-5 Примечание
+                  p.mb-0 Второй подъезд, спущусь на первый этаж
+                .modal__order-section
+                  p.font-weight-medium.mb-5 К оплате
+                  h3.mb-0 3 017 789₽
+    
+    if data && data.modifier == 'brand'
+      .container-fluid.px-0
+        .modal__content
+          .modal__brand
+            .modal__brand-top о бренде
+            .modal__brand-wrapper
+              h2 Bowers & Wilkins
+              p Bowers & Wilkins — это британский производитель Hi-Fi оборудования. Компания основана Джоном Бауэрсом, Питером Хейуордом и Роем Уилкинсом. Штаб-квартира компании расположена в Уэртинге, там же находится часть производства и учебный центр компании.
+              .modal__brand-info
+                .modal__brand-link
+                  a(href="#") https://www.bowerswilkins.com
+                .modal__brand-country-flag
+                  img(src="./img/britain.png", alt)
+                  p Великобритания
+                .modal__brand-year 1966
+              img.modal__brand-photo(src="./img/brand-page.jpg", alt)
+              .modal__brand-content
+                .modal__brand-logo
+                  img(src="./img/brand-logo.png", alt)
+                .modal__brand-dscr
+                  p Bowers & Wilkins — это британский производитель Hi-Fi оборудования. Компания основана Джоном Бауэрсом, Питером Хейуордом и Роем Уилкинсом. Штаб- квартира компании расположена в Уэртинге, там же находится часть производства и учебный центр компании.
+                  p С 2007 года Bowers & Wilkins сотрудничают с брендом Jaguar в разработке аудиосистем для автомобилей. Тогда компания Bowers & Wilkins создала аудиосистему для автомобиля Jaguar C-XF, и в дальнейшем фирмы продолжили сотрудничество, создавая аудиосистемы для XJ, XK и XF. 
+                  p В настоящее время B&W работает с Maserati, обеспечивая звук для его Quattroporte и нового Ghibli. Bowers & Wilkins также сотрудничали с Volvo в разработке дополнительной премиальной автомобильной аудиосистемы для нового Volvo XC90 2016 года. 
+                  p Продукция более доступных серий выпускается на азиатских площадках: у Bowers & Wilkins есть фабрика в Китае, которая, в отличие от многих конкурентов, размещающих OEM-заказы на китайских предприятиях, полностью принадлежит B&W Group. Часть продукции референсного класса производится на британском предприятии, на неё ставится надпись «Made in Great Britain».
+          .modal__brand-other
+            h3 Другие бренды
+            .drag
+              +other({
+                picture: 'other-1.png'
+              })
+              +other({
+                picture: 'other-2.png'
+              })
+              +other({
+                picture: 'other-3.png'
+              })
+              +other({
+                picture: 'other-4.png'
+              })
+              +other({
+                picture: 'other-1.png'
+              })
+              +other({
+                picture: 'other-2.png'
+              })
+              +other({
+                picture: 'other-3.png'
+              })
+              +other({
+                picture: 'other-4.png'
+              })
+              +other({
+                picture: 'other-1.png'
+              })
+              +other({
+                picture: 'other-2.png'
+              })
+    
+    if data && data.modifier == 'articles'
+      .container-fluid.px-md-0
+        .modal__content
+          .row
+            .col-md-4
+              a.modal__counted-link(href="#") Наушники
+                span.modal__counted-link-number 12
+              a.modal__counted-link(href="#") Портативная аудиотехника
+                span.modal__counted-link-number 26
+              a.modal__counted-link(href="#") Акустические системы
+                span.modal__counted-link-number 19
+              a.modal__counted-link(href="#") Усилители
+                span.modal__counted-link-number 11
+              a.modal__counted-link(href="#") Цифро-аналоговые преобразователи
+                span.modal__counted-link-number 21
+              a.modal__counted-link(href="#") CD-проигрыватели и транспорты
+                span.modal__counted-link-number 15
+              a.modal__counted-link(href="#") Сетевые медиаплееры и стримеры
+                span.modal__counted-link-number 13
+              a.modal__counted-link(href="#") Проигрыватели винила
+                span.modal__counted-link-number 22
+            .col-md-4
+              a.modal__counted-link(href="#") Blu-ray и DVD проигрыватели
+                span.modal__counted-link-number 12
+              a.modal__counted-link(href="#") AV-ресиверы и AV-процессоры
+                span.modal__counted-link-number 26
+              a.modal__counted-link(href="#") Проекторы и экраны
+                span.modal__counted-link-number 19
+              a.modal__counted-link(href="#") Телевизоры
+                span.modal__counted-link-number 11
+              a.modal__counted-link(href="#") Multiroom
+                span.modal__counted-link-number 21
+              a.modal__counted-link(href="#") Умный дом
+                span.modal__counted-link-number 15
+              a.modal__counted-link(href="#") Музыкальные центры и минисистемы
+                span.modal__counted-link-number 13
+              a.modal__counted-link(href="#") Кабели, разъемы, переходники
+                span.modal__counted-link-number 22
+            .col-md-4
+              a.modal__counted-link(href="#") Напольные колонки
+                span.modal__counted-link-number 12
+              a.modal__counted-link(href="#") Полочные колонки
+                span.modal__counted-link-number 26
+              a.modal__counted-link(href="#") Центральные каналы
+                span.modal__counted-link-number 19
+              a.modal__counted-link(href="#") Настенные колонки
+                span.modal__counted-link-number 11
+              a.modal__counted-link(href="#") Сабвуферы
+                span.modal__counted-link-number 21
+              a.modal__counted-link(href="#") Акустика Dolby Atmos
+                span.modal__counted-link-number 15
+              a.modal__counted-link(href="#") Саундбары
+                span.modal__counted-link-number 13
+              a.modal__counted-link(href="#") Активные и беспроводные акустические системы
+                span.modal__counted-link-number 22
+    
+    if data && data.modifier == 'contacts'
+      .container-fluid.px-md-0
+        .modal__content
+          .modal__title Контакты
+          .modal__contacts-tabs
+            a(href="#" data-no-swup).modal__contacts-tab.modal__contacts-tab--contacts.modal__contacts-tab--active Контакты
+            a(href="#" data-no-swup).modal__contacts-tab.modal__contacts-tab--office Офис
+          .modal__contacts-left
+            .modal__contacts-info
+              .modal__contacts-info-item
+                h3
+                  a(href="#") +7 800 201 47 67
+                p.xs.mb-0 Бесплатный номер для России
+              .modal__contacts-info-item
+                h3
+                  a(href="#") +7 950 223 37 37
+                p.xs.mb-0 Мобильный номер в Петербурге
+              .modal__contacts-info-item
+                h3
+                  a(href="#") info@stereozona.ru
+                p.xs.modal__contacts-copy.mb-0 
+                  a(href="#") Скопировать адрес
+              .modal__contacts-info-item
+                h3
+                  a(href="#") @stereozona.ru
+                p.xs.mb-0 Ищите нас в Telegram, Viber, Whatsapp
+            form.form(action="#", method="POST")
+              .form__item.form-group
+                input.input.form-control(type="text" placeholder="Имя")
+              .form__item.form-group
+                input.input.form-control(type="tel" placeholder="Телефон")
+              .form__item.form-group
+                input.input.form-control(type="email" placeholder="Email")
+              .form__item.form-group
+                input.input.input--comment.input.form-control(type="text", placeholder="Привет, StereoZona!")
+              button.btn.btn-primary(type="submit") Отправить
+              p.xs.form__agreement Нажимая «Отправить», я подтверждаю согласие с условиями 
+                a(href="#") обработки персональных данных
+          .modal__contacts-right
+            .modal__address
+              .modal__address-top
+                .modal__address-top-left
+                  h3 Санкт-Петербург, <br>Лиговский проспект, 63<br>10:00 – 20:00
+                  .modal__address-metro
+                    .modal__address-metro-item.modal__address-metro-item--red Пл. Восстания
+                    .modal__address-metro-item.modal__address-metro-item--green Маяковская
+                a.btn.btn-outline-primary.btn-sm.modal__address-btn.modal__address-btn--find(href="#" data-no-swup) 
+                  span Как нас найти?
+                a.btn.btn-outline-primary.btn-sm.modal__address-btn.modal__address-btn--map(href="#" data-no-swup)
+                  span показать карту
+              .modal__address-content
+                .modal__address-content-item.modal__address-content-item--active.modal__address-content-item--map
+                  +map
+                .modal__address-content-item.modal__address-content-item--find
+                  +streetview
+    
+    if data && data.modifier == 'enter'
+      .container-fluid.px-md-0
+        .modal__content
+          form.modal__form-wrapper.modal__form-login(action="#", method="POST")
+            .modal__form-top
+              h2 Войти
+            .modal__form-center
+              .form__item.form-group
+                input.input.form-control.js-mask-email(type="text" placeholder="Email")
+              .form__item.form-group
+                input.input.form-control(type="password" placeholder="Пароль")
+                p.xs.form__item-comment.mb-0
+                  a(href="#") Напомнить пароль
+              .modal__form-footer
+                button.btn.btn-primary(type="submit") Войти
+                +socials({
+                  modifier: 'login'
+                }).socials--black
+            .modal__form-bottom
+              .modal__registration-invite
+                p.mb-0 Получайте скидки и выгодные предложения
+                a.btn.btn-outline-primary(href="#") Создать аккаунт
+    
+    if data && data.modifier == 'lost-password'
+      .container-fluid.px-md-0
+        .modal__content
+          form.modal__form-lost-password.modal__form-wrapper(action="#", method="POST")
+            .modal__form-top
+              h2 Забыли пароль?
+              p Укажите контакты для восстановления
+            .modal__form-center
+              .form__item.form-group
+                input.input.form-control(
+                  type="text" 
+                  autocomplete="off" 
+                  placeholder="Email / Телефон" 
+                )
+              .modal__form-footer
+                button.btn.btn-primary.send-btn(type="submit" disabled) Отправить
+                a.btn.btn-link(href="#") Назад
+    
+    if data && data.modifier == 'confirmation'
+      .container-fluid.px-md-0
+        .modal__content
+          form.modal__form-wrapper(action="#", method="POST")
+            .modal__form-top
+              h2 Подтверждение
+              p Мы отправили сообщение с кодом подтверждения
+            .modal__form-center
+              .form__item.form-group
+                input.input.form-control(type="text" placeholder="Код подтверждения")
+                p.xs.form__item-comment.mb-0
+                  a(href="#") Отправить код еще раз
+              .modal__form-footer
+                button.btn.btn-primary(type="submit") Выслать код
+                a.btn.btn-link(href="#") Назад
+    
+    if data && data.modifier == 'new-password'
+      .container-fluid.px-md-0
+        .modal__content
+          form.modal__form-wrapper(action="#", method="POST")
+            .modal__form-top
+              h2 Новый пароль
+              p Придумайте новый пароль. Используйте надеждныесочетания: не используйте свой логин, номер телефона или день рождения вашей бабушки
+            .modal__form-center
+              .form__item.form-group
+                input.input.form-control(type="password" placeholder="Пароль")
+              .form__item.form-group
+                input.input.form-control(type="password" placeholder="Подтверждение пароля")
+              .modal__form-footer
+                button.btn.btn-primary(type="submit") Далее
+                a.btn.btn-link(href="#") Назад
+    
+    if data && data.modifier == 'password-done'
+      .container-fluid.px-md-0
+        .modal__content
+          form.modal__form-wrapper(action="#", method="POST")
+            .modal__form-top
+              h2 Пароль изменен
+              p Используйте новый пароль при входе в личный кабинет. Никому не сообщайте свой пароль, иначе не получите скидку на новенький 
+                span.font-weight-medium Rega Planar 3
+              a.btn.btn-primary(href="#") Войти
+            .modal__form-bottom
+              +offer({
+                picture: 'offer-3.jpg',
+                title: '<span class="font-weight-bold">Акция на Rega Planar 3 </span> – Подарим головку ELYS-2 и бесплатно установим её на ваш новый проигрыватель'
+              }).offer--sm
+    
+    if data && data.modifier == 'registration'
+      .container-fluid.px-md-0
+        .modal__content
+          form.modal__form-wrapper.modal__form-registration.js__ajax-register(action="#", method="POST")
+            .modal__form-top
+              h2 Регистрация
+            .modal__form-center
+              .form__item.form-group
+                input.input.form-control(type="text" placeholder="Имя")
+              .form__item.form-group
+                input.input.form-control.js-mask-email(
+                  type="text" 
+                  placeholder="Email"
+                  autocomplete="off"
+                )
+              .form__item.form-group
+                input.input.form-control(type="tel" placeholder="Телефон")
+              .form__item.form-group
+                input.input.form-control(type="password" placeholder="Пароль")
+              +checkbox({
+                id: 'switch13',
+                title: 'Даю согласие на <a href="#">обработку данных</a>',
+                checked: true
+              }).checkbox--switch.checkbox--switch-reverse
+              +checkbox({
+                id: 'switch14',
+                title: 'Хочу получать Email-рассылки',
+                checked: true
+              }).checkbox--switch.checkbox--switch-reverse
+            .modal__form-bottom
+              button.btn.btn-primary(type="submit") Создать аккаунт
+    
+    if data && data.modifier == 'registration-done'
+      .container-fluid.px-md-0
+        .modal__content
+          form.modal__form-wrapper(action="#", method="POST")
+            .modal__form-top
+              h2 Регистрация прошла успешно
+              p Следите за скидками, собственными расходами, начислениями баллов и новыми предложениями в личном кабинете. Добро пожаловать в клуб!
+            .modal__form-center.text-center
+              +logo.logo--big
+            .modal__form-bottom
+              a.btn.btn-primary(href="#") Войти в кабинет
+    
+    if data && data.modifier == 'order-info'
+      .container-fluid.px-md-0
+        .modal__content
+          .modal__title n4420-67
+          .modal__order-info__heading
+            h2 Заказ от 28 июня 2020
+          .modal__order-info__dscr
+            p.font-weight-medium.mb-0 Условия доставки
+            p Курьером, 28/06/2020 с 12:00 до 14:00 <br>192288, Санкт-Петерубург, ул. Маяковская д. 9, кв. 21
+          .modal__order-info-payment
+            .modal__order-info-payment-item
+              p.font-weight-medium.mb-0 Способ оплаты
+              p Картой онлайн
+            .modal__order-info-payment-item
+              p.font-weight-medium.mb-0 Электронный чек
+              p 
+                a.modal__order-info-payment-link(href="#") Чек №2020320623687
+          .modal__order-info-cart
+            .modal__order-info-table-header 4 товара
+            .modal__order-info-content
+              +cart-item({
+                modifier: 'order',
+                picture: 'item-1.png',
+                title: 'T+A SDV 3100 HV',
+                price: '2 552 100₽',
+                finalAmount: '1',
+                finalPrice: '2 552 100₽',
+                break: true
+              })
+              +cart-item({
+                modifier: 'order',
+                picture: 'item-2.png',
+                title: 'Quad Vena II Lancaster Black',
+                price: '80 289₽',
+                finalAmount: '2',
+                finalPrice: '160 578₽',
+                break: true
+              })
+              +cart-item({
+                modifier: 'order',
+                picture: 'item-3.png',
+                title: 'Bryston BP-6 MM',
+                price: '43 400₽',
+                finalAmount: '1',
+                finalPrice: '43 400₽',
+                break: true
+              })
+              +cart-item({
+                modifier: 'order',
+                picture: 'item-4.png',
+                title: 'Copland CTA 305 Silver',
+                price: '342 000₽',
+                finalAmount: '1',
+                finalPrice: '342 000₽',
+                break: true
+              })
+          .modal__order-info-footer
+            .modal__order-info-overall
+              p Итого
+              .modal__order-info-overall-price 1 126 570₽
+            a.btn.btn-primary(href="#") Повторить заказ

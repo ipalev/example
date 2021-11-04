@@ -1,0 +1,47 @@
+extends ../templates/template.pug
+block content
+  .profile.profile--home
+    .profile__left
+      .container-fluid
+        .profile__left-wrapper
+          .profile__left-top
+            h2.profile__name Денис
+            .profile__menu
+              a.profile__menu-link.profile__menu-link--active(data-no-swup href="#") Профиль
+              .profile__menu-wrap
+                a.profile__menu-link(href="#") Личные данные
+                a.profile__menu-link(href="#") Заказы
+                a.profile__menu-link(href="#") Избранное
+                a.profile__menu-link(href="#") Адреса
+                a.profile__menu-link(href="#") Реквизиты
+          .profile__left-bottom
+            a.profile__logout(href="#") Выйти
+    .profile__wrapper
+      .container-fluid
+        .profile__wrapper-top
+          +badge
+        .profile__content
+          .row
+            .col-xl-8.col-lg-11.offset-lg-1
+              .row
+                .col-lg-6.profile__short-col
+                  h4.mb-15.mb-sm-25 Личные данные
+                  p Константин Константинопольский <br>denis@gmail.com
+                  a.profile__edit(href="#") Редактировать
+                .col-lg-6.profile__short-col
+                  h4.mb-15.mb-sm-25 Адрес
+                  p 680014, Россия, г. Cанкт-Петербург <br>Литейный пр., д. 41
+                  a.profile__edit(href="#") Редактировать
+                .col-lg-6.profile__short-col
+                  h4.mb-15.mb-sm-25 Заказы
+                  p.mb-0 Заказ №48791-23 от 02/06/2020
+                  p.profile__delivering.profile__delivering--green Ждет доставки
+                  p.font-weight-medium
+                    a(href="#") Подробнее
+                .col-lg-6.profile__short-col
+                  h4.mb-15.mb-sm-25 Помощь и сервис
+                  p.mb-5 Доставка и оплата
+                  p Условия возврата
+                  p.font-weight-medium
+                    a(href="#") Подробнее
+

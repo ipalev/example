@@ -1,0 +1,11 @@
+mixin streetview(data)
+  .streetview&attributes(attributes)
+    img.streetview__picture(src="./img/streetview-1.jpg", alt)
+    .streetview__content
+      .streetview__content-left
+        p.xs.mb-0.text-white Шаг 2. Ориентируйтесь на вывеску магазина «Ботаника»
+      .streetview__content-right
+        p.streetview__btn
+          a.text-white(data-no-swup href="#") Назад
+        p.streetview__btn
+          a.text-white(data-no-swup href="#") Далее

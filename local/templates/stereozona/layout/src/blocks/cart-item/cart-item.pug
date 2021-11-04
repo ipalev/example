@@ -1,0 +1,39 @@
+mixin cart-item(data)
+  .cart-item&attributes(attributes)
+    a.cart-item__picture(href="#")
+      img(src="./img/" + data.picture, alt)
+    .cart-item__info
+      p.mb-0.cart-item__title= data.title
+      if data && data.priceOld
+        .cart-item__price
+          p.text-danger.mb-0= data.priceOld
+          p.xs.cart-item__price-old.mb-0= data.price
+      else
+        .cart-item__price
+          p.mb-0= data.price
+    if data && data.break
+      .cart-item__break
+    if data && data.amount
+      .cart-item__amount
+        a.cart-item__amount-btn.cart-item__amount-btn--less(href="#" data-no-swup)
+        p.mb-0= data.amount
+        a.cart-item__amount-btn.cart-item__amount-btn--more(href="#" data-no-swup)
+    if data && data.finalAmount
+      .cart-item__final-amount= data.finalAmount
+    if data && data.modifier == 'default'
+      .cart-item__price.cart-item__price-overall= data.price
+    if data && data.modifier == 'order'
+      if data && data.status
+        .cart-item__status
+          span= data.status
+          if data && data.statusDate
+            .cart-item__status-date= data.statusDate
+      p.mb-0.cart-item__final-price= data.finalPrice
+    else
+      .cart-item__controls-wrapper
+        if data && data.modifier == 'default'
+          a.cart-item__btn(data-no-swup href="#")
+            img(src="./img/icon-items-white.svg", alt)
+          a.cart-item__btn(data-no-swup href="#")
+            img(src="./img/icon-fav.svg", alt)
+        a.cart-item__remove(data-no-swup href="#")

@@ -1,0 +1,43 @@
+.error {
+  padding: 0 scaleVW(80, 1920) scaleVW(80, 1920);
+  display: flex;
+  height: calc(100vh - #{scaleVW(145, 1920)});
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background: url(../img/error-img.jpg) center no-repeat;
+  background-size: cover;
+
+  //  @include media-breakpoint-down(xxl) {
+  //    padding-right: scaleVW(40, 1920);
+  //    padding-left: scaleVW(40, 1920);
+  //  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 0 24px 40px;
+    height: calc(100vh - 72px);
+  }
+
+  @include media-breakpoint-down(xs) {
+  }
+
+  &__number {
+    font-size: scaleVW(24, 1920);
+    line-height: 100%;
+    font-weight: 500;
+    color: rgba(#ffffff, .4);
+
+    @include media-breakpoint-down(lg) {
+      font-size: 24px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: scaleVW(680, 1920);
+
+    @include media-breakpoint-down(lg) {
+      max-width: 680px;
+    }
+  }
+}

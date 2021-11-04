@@ -1,0 +1,68 @@
+.switch {
+  margin-top: scaleVW(97, 1920);
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 28px;
+  }
+
+  .custom-control {
+    padding: 0;
+  }
+
+  .custom-control-label {
+    padding: scaleVW(4, 1920);
+    display: flex;
+    background: rgba($black, .06);
+    border-radius: scaleVW(8, 1920);
+    cursor: pointer;
+
+    @include media-breakpoint-down(sm) {
+      padding: 4px;
+      border-radius: 8px;
+    }
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+
+    .switch__item {
+
+      &:first-of-type {
+        color: $dark4;
+        background: transparent;
+      }
+
+      &:last-of-type {
+        color: $white;
+        background: $mint;
+      }
+    }
+  }
+
+  &__item {
+    width: 50%;
+    height: 100%;
+    font-size: scaleVW(12, 1920);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: $dark4;
+    background: transparent;
+    border-radius: scaleVW(4, 1920);
+
+    @include media-breakpoint-down(sm) {
+      font-size: 12px;
+      border-radius: 4px;
+    }
+
+    &:first-of-type {
+      color: $white;
+      background: $mint;
+    }
+  }
+}

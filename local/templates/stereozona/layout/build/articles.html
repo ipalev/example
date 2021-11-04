@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ededed">
+    <meta name="msapplication-config" content="img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <div id="swup-modals">
+        <div class="modal modal--bottom" id="modalArticles"><a class="modal__close" href="#" data-fancybox-close data-no-swup></a>
+          <div class="container-fluid px-md-0">
+            <div class="modal__content">
+              <div class="row">
+                <div class="col-md-4"><a class="modal__counted-link" href="#">Наушники<span class="modal__counted-link-number">12</span></a><a class="modal__counted-link" href="#">Портативная аудиотехника<span class="modal__counted-link-number">26</span></a><a class="modal__counted-link" href="#">Акустические системы<span class="modal__counted-link-number">19</span></a><a class="modal__counted-link" href="#">Усилители<span class="modal__counted-link-number">11</span></a><a class="modal__counted-link" href="#">Цифро-аналоговые преобразователи<span class="modal__counted-link-number">21</span></a><a class="modal__counted-link" href="#">CD-проигрыватели и транспорты<span class="modal__counted-link-number">15</span></a><a class="modal__counted-link" href="#">Сетевые медиаплееры и стримеры<span class="modal__counted-link-number">13</span></a><a class="modal__counted-link" href="#">Проигрыватели винила<span class="modal__counted-link-number">22</span></a></div>
+                <div class="col-md-4"><a class="modal__counted-link" href="#">Blu-ray и DVD проигрыватели<span class="modal__counted-link-number">12</span></a><a class="modal__counted-link" href="#">AV-ресиверы и AV-процессоры<span class="modal__counted-link-number">26</span></a><a class="modal__counted-link" href="#">Проекторы и экраны<span class="modal__counted-link-number">19</span></a><a class="modal__counted-link" href="#">Телевизоры<span class="modal__counted-link-number">11</span></a><a class="modal__counted-link" href="#">Multiroom<span class="modal__counted-link-number">21</span></a><a class="modal__counted-link" href="#">Умный дом<span class="modal__counted-link-number">15</span></a><a class="modal__counted-link" href="#">Музыкальные центры и минисистемы<span class="modal__counted-link-number">13</span></a><a class="modal__counted-link" href="#">Кабели, разъемы, переходники<span class="modal__counted-link-number">22</span></a></div>
+                <div class="col-md-4"><a class="modal__counted-link" href="#">Напольные колонки<span class="modal__counted-link-number">12</span></a><a class="modal__counted-link" href="#">Полочные колонки<span class="modal__counted-link-number">26</span></a><a class="modal__counted-link" href="#">Центральные каналы<span class="modal__counted-link-number">19</span></a><a class="modal__counted-link" href="#">Настенные колонки<span class="modal__counted-link-number">11</span></a><a class="modal__counted-link" href="#">Сабвуферы<span class="modal__counted-link-number">21</span></a><a class="modal__counted-link" href="#">Акустика Dolby Atmos<span class="modal__counted-link-number">15</span></a><a class="modal__counted-link" href="#">Саундбары<span class="modal__counted-link-number">13</span></a><a class="modal__counted-link" href="#">Активные и беспроводные акустические системы<span class="modal__counted-link-number">22</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+      <header class="header">
+        <div class="header__top">
+          <div class="header__top-line"></div>
+          <div class="container-fluid">
+            <div class="header__top-wrapper"><a class="header__city" href="#" data-fancybox data-no-swup data-src="#modalCity" data-animation-effect="false" data-touch="false" data-modal="true">Санкт-Петербург</a>
+                <div class="modal modal--left modal--city" id="modalCity"><a class="modal__close" href="#" data-fancybox-close data-no-swup></a>
+                  <div class="container-fluid px-md-0">
+                    <div class="modal__content">
+                      <form class="modal__city-form" action="#" method="POST">
+                        <input class="modal__city-input" type="text" placeholder="Найти город">
+                      </form>
+                      <div class="modal__city-geo-wrapper"><a class="modal__city-geo" data-no-swup href="#">Определить по геолокации</a><span class="modal__city-geo-error">К сожалению, определить не получилось</span></div>
+                      <div class="modal__city-list"><a class="modal__city-list-item" href="#">Москва</a><a class="modal__city-list-item" href="#">Санкт-Петербург</a><a class="modal__city-list-item" href="#">Новосибирск</a><a class="modal__city-list-item" href="#">Екатеринбург</a><a class="modal__city-list-item" href="#">Нижний Новгород</a><a class="modal__city-list-item" href="#">Казань</a><a class="modal__city-list-item" href="#">Челябинск</a><a class="modal__city-list-item" href="#">Омск</a><a class="modal__city-list-item" href="#">Самара </a><a class="modal__city-list-item" href="#">Ростов-на-Дону</a><a class="modal__city-list-item" href="#">Уфа</a><a class="modal__city-list-item" href="#">Красноярск</a><a class="modal__city-list-item" href="#">Воронеж</a><a class="modal__city-list-item" href="#">Пермь</a><a class="modal__city-list-item" href="#">Волгоград</a><a class="modal__city-list-item" href="#">Хабаровск</a><a class="modal__city-list-item" href="#">Владивосток</a></div>
+                    </div>
+                  </div>
+                </div>
+              <div class="header__top-menu"><a class="header__top-link" href="#">Доставка и оплата</a><a class="header__top-link" href="#">Статьи и обзоры</a><a class="header__top-link" href="#">О компании</a><a class="header__top-link" href="#" data-fancybox data-no-swup data-src="#modalContacts" data-animation-effect="false" data-touch="false" data-modal="true" data-base-class="fancybox--modal-contacts">Контакты</a></div>
+              <div class="header__phone-wrapper"><a class="header__phone" href="#">8 800 201 47 67</a>
+                <div class="header__phone-content">
+                  <p class="sm font-weight-medium mb-0">+7 800 201 47 67</p>
+                  <p class="sm font-weight-medium mb-0">+7 950 223 37 37</p>
+                  <p class="sm mb-15">info@stereozona.ru</p>
+                  <p class="xs mb-0">C 10:00 до 20:00 <br>Без обеда и выходных</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="container-fluid pl-0">
+            <div class="header__bottom-wrapper">
+                <div class="menu" id="menu"><a class="menu__btn" id="catalog-btn-mob" href="javascript:;" data-no-swup onclick="catalogMobToggle(this)"></a>
+                  <div class="menu__wrapper d-xl-block" id="catalog-mob">
+                    <div class="menu__header"><a class="menu__close" href="javascript:;" data-no-swup onclick="catalogMobToggle()"></a>
+                      <div class="menu__header-right"><a class="menu__control" href="#"><img src="./img/icon-items.svg" alt></a><a class="menu__control" href="#" data-fancybox data-no-swup data-src="#modalEnter" data-animation-effect="false" data-touch="false" data-modal="true" data-base-class="fancybox--modal-enter"><img src="./img/icon-profile.svg" alt></a><a class="menu__control" href="#"><img src="./img/icon-cart.svg" alt></a></div>
+                    </div>
+                    <div class="menu__container">
+                      <div class="menu__content">
+                        <div class="menu__catalog">
+                            <form class="search search--header" action="#" method="POST" id="search-header">
+                              <input class="search__input" type="text" placeholder="найти товар...">
+                              <button class="search__close" type="button" onclick="searchToggle()"></button>
+                            </form><a class="menu__catalog-link menu__catalog-link--btn" id="catalog-btn" href="javascript:;" data-no-swup onclick="catalogToggle(this)">Каталог</a>
+                          <div class="menu__catalog-content" id="catalog-menu" v-cloak>
+                            <div class="menu__catalog-bg"></div>
+                            <div class="menu__catalog-nav"><a class="menu__back" href="javascript:;" data-no-swup onclick="catalogToggle()">Каталог</a>
+                                <form class="search" action="#" method="POST">
+                                  <input class="search__input" type="text" placeholder="поиск в разделе" v-model="search">
+                                </form>
+                              <div :class="['menu__catalog-section', { 'menu__catalog-section--hovered': i === activeCategory }]" v-for="(category, i) in filteredList" :key="category.path" @mouseover="onMouseover(i)">
+                                <template v-if="category.list &amp;&amp; category.list.length &gt; 0"><a class="menu__catalog-section-btn" :href="category.path" data-no-swup @click.prevent="onSectionBtnClick">{{ category.name }}</a>
+                                  <div class="menu__catalog-section-content">
+                                    <div class="menu__catalog-section-nav"><a class="menu__back" href="javascript:;" data-no-swup @click.prevent="onBackClick">{{ category.name }}</a>
+                                        <form class="search" action="#" method="POST">
+                                          <input class="search__input" type="text" placeholder="поиск в разделе" v-model="listSearch">
+                                        </form><a class="menu__catalog-link" v-for="(subcategory, i) in filterList(category.list, listSearch)" :key="subcategory.path" :href="subcategory.path" :style="{ transitionDelay: `${i*50}ms` }">{{ subcategory.name }}<span class="menu__catalog-link-amount" v-if="subcategory.amount">{{ subcategory.amount }}</span></a>
+                                    </div>
+                                    <div class="menu__catalog-banners" v-if="category.banners &amp;&amp; category.banners.length &gt; 0">
+                                      <div class="menu__catalog-banner"><a class="promo" :href="category.banners[0].url" :target="category.banners[0].url.startsWith('http') ? '_blank' : '_self'">
+                                          <div class="promo__bg" :style="{ backgroundImage: `url(${category.banners[0].image})` }"></div>
+                                          <div class="promo__content">
+                                            <h2 class="text-white mb-10">{{ category.banners[0].title }}</h2>
+                                            <p class="mb-0 text-white">{{ category.banners[0].text }}</p>
+                                          </div></a></div>
+                                    </div>
+                                  </div>
+                                </template>
+                                <template v-else><a class="menu__catalog-section-btn" :href="category.path">{{ category.name }}</a></template>
+                              </div>
+                            </div>
+                            <div class="menu__catalog-banners">
+                              <div class="menu__catalog-banner"><a class="promo" href="#">
+                                    <div class="promo__bg" style="background-image: url(./img/promo-2.jpg);"></div>
+                                    <div class="promo__content">
+                                      <h2 class="text-white mb-10">Sennheiser CX 150BT</h2>
+                                      <p class="mb-0 text-white">Встречайте лето с новым звуком</p>
+                                    </div></a>
+                              </div>
+                              <div class="menu__catalog-banner"><a class="promo" href="#">
+                                    <div class="promo__bg" style="background-image: url(./img/promo-3.jpg);"></div>
+                                    <div class="promo__content">
+                                      <h2 class="text-white mb-10">Technics EAH-AZ70W</h2>
+                                      <p class="mb-0 text-white">Акция с 14 до 21 августа</p>
+                                    </div></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div><a class="menu__link menu__link--desktop" href="#">Бренды</a><a class="menu__link menu__link--desktop" href="#">Акции</a><a class="menu__link" href="#">Доставка и оплата</a><a class="menu__link" href="#">Статьи и обзоры</a><a class="menu__link" href="#">О компании</a><a class="menu__link" href="#" data-fancybox data-no-swup data-src="#modalContacts" data-animation-effect="false" data-touch="false" data-modal="true" data-base-class="fancybox--modal-contacts">Контакты</a><a class="menu__city header__city" href="#" data-fancybox data-no-swup data-src="#modalCity" data-animation-effect="false" data-touch="false" data-modal="true">Санкт-Петербург</a>
+                      </div>
+                    </div>
+                    <div class="menu__contacts">
+                      <p class="font-weight-medium mb-0"><a href="#">+7 800 201 47 67</a></p>
+                      <p class="font-weight-medium mb-0"><a href="#">+7 950 223 37 37</a></p>
+                      <p class="mb-0"><a href="#">info@stereozona.ru</a></p>
+                    </div>
+                  </div>
+                </div><a class="logo" href="index.html">
+                  <svg width="224" height="44" viewbox="0 0 224 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M218.074 16.3494L224 27.6985H222.103L220.773 25.1769H212.745L211.423 27.6985H209.533L215.459 16.3494H218.074ZM6.59515 21.3523C9.21767 21.3523 10.8672 21.507 11.5476 21.8171C12.3938 22.2037 12.8155 23.1317 12.8155 24.6016C12.8155 25.9927 12.3064 26.9028 11.2842 27.3343C10.4495 27.687 8.76458 27.8647 6.21805 27.8647C3.46184 27.8647 1.69178 27.5616 0.903883 26.9523C0.297105 26.4892 0 25.4778 0 23.9205H1.67407C1.67407 24.9928 1.90833 25.6648 2.3837 25.934C2.85678 26.2038 4.13832 26.339 6.23405 26.339C8.28464 26.339 9.61704 26.2401 10.2221 26.0422C10.8335 25.8443 11.1351 25.3633 11.1351 24.6016C11.1351 23.8261 10.9072 23.3474 10.4564 23.1587C9.9987 22.9723 8.71316 22.878 6.59515 22.878C4.00406 22.878 2.26771 22.561 1.37754 21.9316C0.698772 21.4576 0.361673 20.6015 0.361673 19.3652C0.361673 18.0282 0.765617 17.1652 1.58265 16.7723C2.39969 16.3788 4.07548 16.1832 6.59515 16.1832C9.10854 16.1832 10.7575 16.4869 11.5476 17.0933C12.175 17.5812 12.4852 18.5316 12.4852 19.9451H10.8403C10.8403 18.9653 10.5923 18.3474 10.1038 18.0914C9.60618 17.8349 8.43891 17.7071 6.59515 17.7071C5.01764 17.7071 4.04405 17.7296 3.68524 17.7744C2.58253 17.9068 2.04031 18.4326 2.04031 19.3565C2.04031 20.1315 2.33684 20.6596 2.92591 20.9363C3.52011 21.2148 4.74282 21.3523 6.59515 21.3523ZM23.2827 16.3494H35.0469V17.8734H30.0144V27.6985H28.3335V17.8734H23.2827V16.3494ZM45.1307 16.3494H55.9127V17.8734H46.8111V21.1877H55.5979V22.7117H46.8111V26.1745H55.9127V27.6985H45.1307V16.3494ZM91.4858 16.3494H102.262V17.8734H93.1645V21.1877H101.954V22.7117H93.1645V26.1745H102.262V27.6985H91.4858V16.3494ZM138.139 17.8734V16.3494H149.724V17.8757L140.21 26.1745H149.724V27.6985H137.759V26.1722L147.387 17.8734H138.139ZM185.017 16.3494H187.467L197.129 26.2896V16.3494H198.809V27.6985H196.272L186.697 17.8395V27.6985H185.017V16.3494ZM67.2484 16.3494H77.3517C78.3047 16.3494 79.0411 16.6779 79.5548 17.3361C80.0747 17.9948 80.329 18.871 80.329 19.9652C80.329 20.9047 80.1838 21.606 79.8873 22.0691C79.6753 22.4039 79.3445 22.6692 78.8829 22.8688C79.2868 23.0328 79.6079 23.2508 79.8359 23.5137C80.1684 23.894 80.329 24.3588 80.329 24.9094V27.6985H78.6532V24.9048C78.6532 24.5251 78.4698 24.215 78.115 23.9659C77.7625 23.7139 77.3339 23.5902 76.8317 23.5902H68.9287V27.6985H67.2484V16.3494ZM68.9287 22.0645H76.6643C77.2757 22.0645 77.7265 21.961 78.0144 21.7498C78.4367 21.4282 78.6532 20.8328 78.6532 19.9698C78.6532 19.1046 78.4407 18.516 78.0258 18.2059C77.7333 17.9833 77.2757 17.8734 76.6643 17.8734H68.9287V22.0645ZM220.052 23.6552L216.988 17.7071H216.562L213.506 23.6552H220.052Z" fill="#050001"></path>
+                    <path d="M2.58296 7.20707C2.58296 6.97523 2.52069 6.79574 2.40013 6.66744C2.27501 6.53915 2.09846 6.47414 1.87563 6.47414C1.73051 6.47414 1.6008 6.49658 1.46482 6.53916C1.32655 6.5823 1.206 6.6427 1.10316 6.71922L0.600938 6.37115C0.732921 6.21122 0.908898 6.08523 1.12544 5.99549C1.34427 5.90574 1.5831 5.86086 1.85335 5.86086C2.14302 5.86086 2.39556 5.91264 2.60068 6.01562C2.81265 6.11918 2.97149 6.2676 3.07376 6.4655C3.18346 6.66283 3.24117 6.90101 3.24117 7.17774V9.45422H2.58296V7.20707ZM1.71908 9.5037C1.28599 9.5037 0.960317 9.41396 0.75063 9.23388C0.534086 9.05209 0.428955 8.77767 0.428955 8.4089C0.428955 8.05854 0.527233 7.79562 0.721493 7.62245C0.920325 7.44526 1.21686 7.35724 1.61224 7.35724H2.61211L2.66353 7.91931H1.61852C1.43568 7.91931 1.30427 7.95728 1.21228 8.0407C1.12087 8.11951 1.08087 8.24264 1.08087 8.4089C1.08087 8.58897 1.13915 8.72359 1.25913 8.8047C1.37112 8.89445 1.55395 8.93703 1.80192 8.93703C2.05846 8.93703 2.25729 8.90826 2.3887 8.85188C2.51612 8.7955 2.58296 8.70575 2.58296 8.58667L2.65895 9.08546C2.59382 9.17981 2.51611 9.25633 2.42869 9.32134C2.33728 9.38232 2.23501 9.42718 2.11446 9.45882C2.00019 9.48989 1.86877 9.5037 1.71908 9.5037ZM6.97097 5.91264H7.6583V9.45422H6.97097V5.91264ZM5.53801 8.06543C5.53801 8.31282 5.60486 8.50382 5.72541 8.64074C5.85282 8.77536 6.02881 8.84268 6.25678 8.84268C6.48646 8.84268 6.65615 8.78227 6.78299 8.66088C6.90811 8.54179 6.97097 8.36863 6.97097 8.14599L7.01782 8.88812C6.94412 9.06301 6.82813 9.20915 6.66301 9.32824C6.50189 9.44502 6.30362 9.5037 6.06251 9.5037C5.67399 9.5037 5.37746 9.37542 5.1672 9.12803C4.95523 8.87662 4.8461 8.51935 4.8461 8.06543V5.91264H5.53801V8.06543ZM11.9589 5.1889V9.45422H11.267V5.1889H11.9589ZM10.3808 9.51464C10.1266 9.51464 9.90316 9.45883 9.71804 9.34607C9.54206 9.23389 9.4055 9.06762 9.30723 8.85188C9.21124 8.63614 9.16439 8.37783 9.16439 8.07407V7.29453C9.16439 6.98904 9.21125 6.72842 9.30324 6.51268C9.40094 6.29694 9.53064 6.13068 9.70718 6.01792C9.88545 5.90574 10.0974 5.84936 10.3477 5.84936C10.5528 5.84936 10.747 5.90574 10.919 6.01332C11.091 6.12378 11.2338 6.27624 11.3361 6.47414L11.267 7.19787C11.267 7.04714 11.2401 6.91943 11.1824 6.81127C11.131 6.70599 11.0504 6.62487 10.9482 6.56849C10.8453 6.51269 10.7202 6.48564 10.5751 6.48564C10.3477 6.48564 10.1711 6.55755 10.0437 6.70138C9.91915 6.84291 9.8563 7.04484 9.8563 7.30373V8.07407C9.8563 8.33066 9.91915 8.53028 10.0437 8.67008C10.1711 8.8116 10.3477 8.88122 10.5751 8.88122C10.7202 8.88122 10.8453 8.85189 10.9482 8.79321C11.0504 8.7351 11.131 8.65167 11.1824 8.54409C11.2401 8.4319 11.267 8.30132 11.267 8.15059L11.3138 8.89676C11.2447 9.07222 11.131 9.21835 10.9704 9.33744C10.8116 9.45422 10.6111 9.51464 10.3808 9.51464ZM13.5638 5.91264H14.2557V9.45422H13.5638V5.91264ZM17.2171 9.5037C16.9137 9.5037 16.6503 9.44272 16.4315 9.32364C16.2149 9.20225 16.0498 9.02735 15.9429 8.79551C15.8224 8.56653 15.7641 8.28808 15.7641 7.96188V7.38658C15.7641 7.06556 15.8224 6.79113 15.9429 6.56215C16.0498 6.33261 16.2149 6.15945 16.4315 6.04036C16.6503 5.91897 16.9137 5.86086 17.2171 5.86086C17.5187 5.86086 17.7816 5.91897 17.9981 6.04036C18.2146 6.15945 18.3798 6.33261 18.4958 6.56215C18.61 6.79113 18.6677 7.06556 18.6677 7.38658V7.97338C18.6677 8.2944 18.61 8.57113 18.4958 8.8001C18.3798 9.02735 18.2146 9.20225 17.9981 9.32364C17.7816 9.44272 17.5187 9.5037 17.2171 9.5037ZM17.2171 8.84268C17.4605 8.84268 17.6433 8.76673 17.7753 8.6137C17.9067 8.46067 17.9758 8.24723 17.9758 7.97338V7.38658C17.9758 7.11043 17.9067 6.89871 17.7753 6.74856C17.6433 6.59783 17.4605 6.52132 17.2171 6.52132C16.976 6.52132 16.7863 6.59783 16.6571 6.74856C16.5251 6.89871 16.4606 7.11043 16.4606 7.38658V7.97338C16.4606 8.24723 16.5251 8.46067 16.6571 8.6137C16.7863 8.76673 16.976 8.84268 17.2171 8.84268ZM24.071 9.5037C23.7476 9.5037 23.4665 9.44273 23.2386 9.32134C23.0089 9.19822 22.8323 9.01584 22.7118 8.77767C22.5912 8.54179 22.5312 8.25183 22.5312 7.91931V7.51947C22.5312 7.16853 22.5872 6.86765 22.7009 6.62027C22.8192 6.37289 22.9866 6.18418 23.2163 6.05416C23.4328 5.92587 23.7008 5.86086 24.0087 5.86086C24.3076 5.86086 24.5578 5.93507 24.7629 6.0812C24.9686 6.22905 25.1292 6.4448 25.2383 6.72382C25.3457 7.00227 25.4034 7.3394 25.4034 7.73061V7.96188H23.0312V7.40211H24.7452C24.7229 7.11274 24.6561 6.88778 24.5241 6.73072C24.3973 6.56848 24.2253 6.48794 24.0087 6.48794C23.7476 6.48794 23.5465 6.57539 23.4037 6.74856C23.2609 6.92172 23.1849 7.16624 23.1849 7.48093V7.93255C23.1849 8.2248 23.2677 8.44974 23.4151 8.6068C23.5688 8.76444 23.7922 8.84268 24.071 8.84268C24.2093 8.84268 24.3521 8.81391 24.491 8.75753C24.627 8.70115 24.7521 8.62061 24.8612 8.51935L25.312 8.97557C25.14 9.14413 24.9395 9.27415 24.7229 9.36447C24.5133 9.45882 24.2899 9.5037 24.071 9.5037ZM28.9075 5.91264H29.604V10.1216H28.9075V5.91264ZM28.0259 9.51464C27.7694 9.51464 27.546 9.45883 27.37 9.34607C27.1866 9.23389 27.0484 9.06762 26.9524 8.85188C26.8541 8.63614 26.8095 8.37783 26.8095 8.07407V7.29453C26.8095 6.98904 26.8541 6.72842 26.9461 6.51268C27.0375 6.29694 27.1758 6.13068 27.3517 6.01792C27.5283 5.90574 27.7403 5.84936 27.9928 5.84936C28.2048 5.84936 28.3922 5.90574 28.5642 6.01332C28.7356 6.12378 28.8761 6.27624 28.979 6.47414L28.9075 7.19787C28.9075 7.04714 28.883 6.91943 28.8253 6.81127C28.7738 6.70599 28.6933 6.62487 28.5927 6.56849C28.4882 6.51269 28.3699 6.48564 28.2202 6.48564C27.9859 6.48564 27.814 6.55755 27.6888 6.70138C27.5643 6.84291 27.5014 7.04484 27.5014 7.30373V8.07407C27.5014 8.33066 27.5643 8.53028 27.6888 8.67008C27.814 8.8116 27.9859 8.88122 28.2202 8.88122C28.3699 8.88122 28.4882 8.85189 28.5927 8.79321C28.6933 8.7351 28.7738 8.65167 28.8253 8.54409C28.883 8.4319 28.9075 8.30132 28.9075 8.15059L28.9567 8.89676C28.8898 9.07222 28.7738 9.21835 28.615 9.33744C28.4545 9.45422 28.2602 9.51464 28.0259 9.51464ZM33.3333 5.91264H34.0183V9.45422H33.3333V5.91264ZM31.9003 8.06543C31.9003 8.31282 31.9677 8.50382 32.0883 8.64074C32.2128 8.77536 32.3894 8.84268 32.6191 8.84268C32.8493 8.84268 33.0207 8.78227 33.1458 8.66088C33.271 8.54179 33.3333 8.36863 33.3333 8.14599L33.3801 8.88812C33.3041 9.06301 33.1904 9.20915 33.0253 9.32824C32.8647 9.44502 32.6659 9.5037 32.4248 9.5037C32.0369 9.5037 31.7397 9.37542 31.5278 9.12803C31.3158 8.87662 31.2152 8.51935 31.2152 8.06543V5.91264H31.9003V8.06543ZM35.6301 5.91264H36.3151V9.45422H35.6301V5.91264ZM37.9287 5.91264H38.6183V10.1216H37.9287V5.91264ZM39.509 9.5037C39.2879 9.5037 39.0982 9.45193 38.9331 9.34607C38.7657 9.24079 38.6543 9.09006 38.5737 8.89676L38.6183 8.15749C38.6183 8.31052 38.6474 8.43823 38.7057 8.54639C38.7543 8.65167 38.8371 8.73509 38.9377 8.79147C39.0422 8.84727 39.1674 8.87662 39.3102 8.87662C39.5382 8.87662 39.7164 8.8047 39.8415 8.66778C39.9667 8.52625 40.0289 8.33066 40.0289 8.07407V7.30776C40.0289 7.04715 39.9667 6.84751 39.8415 6.70368C39.7164 6.55985 39.5382 6.48794 39.3102 6.48794C39.1674 6.48794 39.0422 6.51671 38.9377 6.57079C38.8371 6.62487 38.7543 6.70599 38.7057 6.81127C38.6474 6.91713 38.6183 7.04255 38.6183 7.19097L38.5491 6.51038C38.6588 6.30097 38.7948 6.14161 38.9668 6.02942C39.1382 5.91666 39.3256 5.86086 39.5382 5.86086C39.7901 5.86086 39.9998 5.91666 40.1786 6.02942C40.3546 6.14161 40.4929 6.30558 40.5849 6.52132C40.6763 6.73706 40.7209 6.99996 40.7209 7.30373V8.07407C40.7209 8.37553 40.6763 8.63384 40.578 8.84728C40.4866 9.06072 40.3438 9.22295 40.1604 9.33514C39.9775 9.44732 39.761 9.5037 39.509 9.5037ZM46.4635 7.30776C46.4635 7.05635 46.4007 6.86074 46.2693 6.72612C46.1442 6.59092 45.9659 6.52132 45.7311 6.52132C45.5151 6.52132 45.3494 6.58862 45.2294 6.71922C45.1151 6.85154 45.0597 7.04081 45.0597 7.27899L44.9146 6.59783C45.0306 6.36426 45.1711 6.18188 45.354 6.05416C45.5374 5.92357 45.7379 5.86086 45.9545 5.86086C46.211 5.86086 46.423 5.91666 46.6064 6.02942C46.7824 6.14161 46.9252 6.30558 47.0189 6.52132C47.1086 6.73706 47.1617 6.99996 47.1617 7.30373V9.45422H46.4635V7.30776ZM42.2629 5.91264H42.9549V9.45422H42.2629V5.91264ZM44.3678 7.30776C44.3678 7.05635 44.3027 6.86074 44.1844 6.72612C44.0576 6.59092 43.8856 6.52132 43.6645 6.52132C43.4348 6.52132 43.2651 6.58229 43.1377 6.70368C43.0171 6.82277 42.9549 6.99365 42.9549 7.21111L42.8857 6.53052C42.9949 6.31478 43.1337 6.15081 43.3097 6.03402C43.4862 5.91896 43.6805 5.86086 43.8924 5.86086C44.1376 5.86086 44.3495 5.91666 44.5215 6.02942C44.6935 6.14161 44.8295 6.30558 44.9209 6.52132C45.006 6.73706 45.0597 6.99996 45.0597 7.30373V9.45422H44.3678V7.30776ZM50.2059 9.5037C49.8802 9.5037 49.5991 9.44273 49.3717 9.32134C49.1438 9.19822 48.9672 9.01584 48.8449 8.77767C48.7267 8.54179 48.6638 8.25183 48.6638 7.91931V7.51947C48.6638 7.16853 48.7198 6.86765 48.8404 6.62027C48.9564 6.37289 49.1261 6.18418 49.3489 6.05416C49.5654 5.92587 49.8357 5.86086 50.1414 5.86086C50.4407 5.86086 50.6904 5.93507 50.8978 6.0812C51.1081 6.22905 51.2641 6.4448 51.3715 6.72382C51.4852 7.00227 51.5366 7.3394 51.5366 7.73061V7.96188H49.166V7.40211H50.8801C50.8624 7.11274 50.7887 6.88778 50.6573 6.73072C50.5322 6.56848 50.3602 6.48794 50.1414 6.48794C49.8871 6.48794 49.6814 6.57539 49.5369 6.74856C49.394 6.92172 49.3203 7.16624 49.3203 7.48093V7.93255C49.3203 8.2248 49.4003 8.44974 49.5546 8.6068C49.7083 8.76444 49.9248 8.84268 50.2059 8.84268C50.3425 8.84268 50.4853 8.81391 50.6236 8.75753C50.7596 8.70115 50.887 8.62061 50.9938 8.51935L51.4469 8.97557C51.2755 9.14413 51.0812 9.27415 50.8624 9.36447C50.6459 9.45882 50.4225 9.5037 50.2059 9.5037ZM53.045 5.91264H53.7369V9.45422H53.045V5.91264ZM55.183 7.30776C55.183 7.05635 55.1184 6.86074 54.9824 6.72612C54.8573 6.59092 54.6791 6.52132 54.4465 6.52132C54.2214 6.52132 54.0448 6.58229 53.9266 6.70368C53.7997 6.82277 53.7369 6.99365 53.7369 7.21111L53.6678 6.53052C53.7769 6.31478 53.9157 6.15081 54.0917 6.03402C54.2682 5.91896 54.4625 5.86086 54.6745 5.86086C55.0561 5.86086 55.3481 5.98686 55.5606 6.23826C55.7658 6.48795 55.8749 6.84291 55.8749 7.30373V9.45422H55.183V7.30776ZM58.3991 9.47206C58.1135 9.47206 57.9015 9.39152 57.7701 9.23388C57.6404 9.07452 57.569 8.84268 57.569 8.53259V5.1889H58.2609V8.53719C58.2609 8.62464 58.2786 8.69252 58.3123 8.73969C58.3546 8.78457 58.3991 8.8047 58.462 8.8047H58.7922V9.47206H58.3991ZM57.2096 5.91264H58.7922V6.53916H57.2096V5.91264ZM63.9698 9.5037C63.7647 9.5037 63.5705 9.48357 63.3876 9.44272C63.2042 9.40245 63.0328 9.34204 62.8786 9.25632C62.718 9.17751 62.5752 9.07452 62.4392 8.95083L62.8494 8.44284C63.0368 8.58897 63.2271 8.69885 63.4145 8.77077C63.6042 8.84268 63.787 8.88122 63.9698 8.88122C64.2447 8.88122 64.4498 8.83635 64.5881 8.75293C64.7246 8.66778 64.7937 8.53719 64.7937 8.36633C64.7937 8.25184 64.7532 8.16899 64.6777 8.11261C64.604 8.05623 64.5126 8.01596 64.4052 7.99812C64.2892 7.97971 64.135 7.96188 63.9344 7.94405C63.9121 7.94405 63.8961 7.94405 63.8784 7.94405C63.8561 7.94405 63.8384 7.93715 63.8207 7.93715C63.8093 7.93715 63.7984 7.93715 63.7916 7.93715C63.7801 7.93484 63.7756 7.93485 63.7647 7.93485C63.535 7.91701 63.3408 7.88307 63.1865 7.83359C63.026 7.78469 62.894 7.69436 62.794 7.55974C62.6843 7.42685 62.6329 7.23412 62.6329 6.97983C62.6329 6.73245 62.6843 6.52362 62.7871 6.35735C62.8831 6.18879 63.0368 6.06739 63.2379 5.98455C63.4391 5.90343 63.6956 5.86086 63.9921 5.86086C64.1755 5.86086 64.3538 5.87869 64.5189 5.91264C64.684 5.946 64.8429 5.99549 64.992 6.0628C65.1463 6.13069 65.2891 6.21582 65.4342 6.31708L65.0143 6.82681C64.8383 6.71232 64.6663 6.62717 64.4943 6.57079C64.3224 6.51269 64.1572 6.48564 63.9921 6.48564C63.7579 6.48564 63.5819 6.52591 63.4676 6.60703C63.3471 6.68527 63.2894 6.80666 63.2894 6.9689C63.2894 7.06555 63.3248 7.13746 63.3922 7.18464C63.4568 7.23181 63.5413 7.26288 63.6442 7.27899C63.747 7.29682 63.8898 7.30776 64.0795 7.31926C64.0904 7.32387 64.1064 7.32616 64.1172 7.32616C64.135 7.32616 64.1464 7.32616 64.1641 7.32846C64.171 7.32846 64.1755 7.32846 64.1864 7.32846C64.1864 7.32846 64.2001 7.32847 64.2041 7.3325C64.4498 7.34631 64.6595 7.37968 64.8314 7.42915C65.0034 7.48093 65.1531 7.57988 65.2668 7.72831C65.3874 7.87443 65.4451 8.08558 65.4451 8.36633C65.4451 8.62291 65.3919 8.83404 65.2845 9.00261C65.1754 9.16887 65.0103 9.29487 64.7937 9.37541C64.5749 9.46343 64.3001 9.5037 63.9698 9.5037ZM67.7979 9.47206C67.5122 9.47206 67.3065 9.39152 67.1751 9.23388C67.0432 9.07452 66.974 8.84268 66.974 8.53259V5.1889H67.6659V8.53719C67.6659 8.62464 67.6836 8.69252 67.7173 8.73969C67.7528 8.78457 67.8042 8.8047 67.8648 8.8047H68.1973V9.47206H67.7979ZM66.6146 5.91264H68.1973V6.53916H66.6146V5.91264ZM71.0541 9.5037C70.7524 9.5037 70.489 9.44272 70.273 9.32364C70.0605 9.20225 69.8891 9.02735 69.7794 8.79551C69.6657 8.56653 69.6034 8.28808 69.6034 7.96188V7.38658C69.6034 7.06556 69.6657 6.79113 69.7794 6.56215C69.8891 6.33261 70.0605 6.15945 70.273 6.04036C70.489 5.91897 70.7524 5.86086 71.0541 5.86086C71.362 5.86086 71.6254 5.91897 71.8374 6.04036C72.0539 6.15945 72.2213 6.33261 72.3396 6.56215C72.4487 6.79113 72.507 7.06556 72.507 7.38658V7.97338C72.507 8.2944 72.4487 8.57113 72.3396 8.8001C72.2213 9.02735 72.0539 9.20225 71.8374 9.32364C71.6254 9.44272 71.362 9.5037 71.0541 9.5037ZM71.0541 8.84268C71.3015 8.84268 71.4849 8.76673 71.614 8.6137C71.746 8.46067 71.8151 8.24723 71.8151 7.97338V7.38658C71.8151 7.11043 71.746 6.89871 71.614 6.74856C71.4849 6.59783 71.3015 6.52132 71.0541 6.52132C70.8152 6.52132 70.6255 6.59783 70.4936 6.74856C70.3622 6.89871 70.2993 7.11043 70.2993 7.38658V7.97338C70.2993 8.24723 70.3622 8.46067 70.4936 8.6137C70.6255 8.76673 70.8152 8.84268 71.0541 8.84268ZM74.0491 5.91264H74.7387V9.45422H74.0491V5.91264ZM75.9843 6.75086C75.9237 6.67664 75.8414 6.61796 75.7517 6.57999C75.658 6.54145 75.5512 6.52132 75.4306 6.52132C75.2141 6.52132 75.0421 6.58229 74.9216 6.70598C74.797 6.8268 74.7387 6.99537 74.7387 7.21111L74.6719 6.53052C74.7787 6.31708 74.917 6.15312 75.089 6.03576C75.2587 5.91897 75.4529 5.86086 75.654 5.86086C75.8191 5.86086 75.962 5.8833 76.0934 5.93047C76.2254 5.97765 76.3391 6.04496 76.4374 6.13701L75.9843 6.75086ZM78.9393 9.5037C78.6131 9.5037 78.3388 9.44273 78.1046 9.32134C77.8766 9.19822 77.7006 9.01584 77.5801 8.77767C77.4595 8.54179 77.4012 8.25183 77.4012 7.91931V7.51947C77.4012 7.16853 77.4595 6.86765 77.5732 6.62027C77.6892 6.37289 77.8612 6.18418 78.0823 6.05416C78.2983 5.92587 78.5685 5.86086 78.8833 5.86086C79.1736 5.86086 79.4255 5.93507 79.6375 6.0812C79.8432 6.22905 80.0015 6.4448 80.1106 6.72382C80.2203 7.00227 80.2694 7.3394 80.2694 7.73061V7.96188H77.8989V7.40211H79.613C79.5975 7.11274 79.5215 6.88778 79.3901 6.73072C79.265 6.56848 79.0953 6.48794 78.8833 6.48794C78.6199 6.48794 78.4148 6.57539 78.272 6.74856C78.1268 6.92172 78.0594 7.16624 78.0594 7.48093V7.93255C78.0594 8.2248 78.1331 8.44974 78.2874 8.6068C78.4411 8.76444 78.6576 8.84268 78.9393 8.84268C79.0822 8.84268 79.2181 8.81391 79.3564 8.75753C79.4924 8.70115 79.6198 8.62061 79.7267 8.51935L80.1843 8.97557C80.0083 9.14413 79.8141 9.27415 79.5975 9.36447C79.3787 9.45882 79.1621 9.5037 78.9393 9.5037Z" fill="#050001"></path>
+                    <rect class="first-top-tube" x="119.75" y="0" width="1.55" fill="#050001"></rect>
+                    <path class="first-letter" transform="translate(0, 0)" d="M120.498 21.2383C118.309 21.2383 116.78 21.0893 115.909 20.7925C115.038 20.494 114.48 19.9319 114.247 19.1022C114.079 18.5289 114 17.3473 114 15.5559C114 13.7312 114.079 12.5497 114.229 12.0095C114.466 11.1685 115.028 10.598 115.909 10.295C116.79 9.99203 118.322 9.84027 120.498 9.84027C122.685 9.84026 124.214 9.98979 125.078 10.286C125.946 10.5823 126.507 11.1511 126.748 11.9943C126.912 12.5676 127 13.7531 127 15.5559C127 17.3698 126.919 18.5441 126.768 19.0843C126.528 19.9252 125.979 20.494 125.099 20.7925C124.229 21.0893 122.695 21.2383 120.498 21.2383ZM120.498 19.7475C122.919 19.7475 124.347 19.5587 124.78 19.1809C125.212 18.8009 125.425 17.589 125.425 15.5469C125.425 13.494 125.212 12.2754 124.784 11.8976C124.362 11.5199 122.929 11.3288 120.498 11.3288C118.064 11.3288 116.636 11.5199 116.209 11.8976C115.786 12.2754 115.573 13.494 115.573 15.5469C115.573 17.5783 115.786 18.7858 116.22 19.1742C116.646 19.5564 118.075 19.7475 120.498 19.7475Z" fill="#050001"></path>
+                    <rect class="first-bottom-tube" x="119.75" width="1.55" fill="#050001"></rect>
+                    <rect class="second-top-tube" x="166.56" y="0" width="1.55" fill="#050001"></rect>
+                    <path class="second-letter" d="M167.502 22.7617C169.691 22.7617 171.22 22.9107 172.091 23.2075C172.962 23.506 173.52 24.0681 173.753 24.8978C173.921 25.4711 174 26.6527 174 28.4441C174 30.2688 173.921 31.4503 173.771 31.9905C173.534 32.8315 172.972 33.402 172.091 33.705C171.21 34.008 169.678 34.1597 167.502 34.1597C165.315 34.1597 163.786 34.0102 162.922 33.714C162.054 33.4177 161.493 32.8489 161.252 32.0057C161.088 31.4324 161 30.2469 161 28.4441C161 26.6302 161.081 25.4559 161.232 24.9157C161.472 24.0748 162.021 23.506 162.901 23.2075C163.771 22.9107 165.305 22.7617 167.502 22.7617ZM167.502 24.2525C165.081 24.2525 163.653 24.4413 163.22 24.8191C162.788 25.1991 162.575 26.411 162.575 28.4531C162.575 30.506 162.788 31.7246 163.216 32.1024C163.638 32.4801 165.071 32.6712 167.502 32.6712C169.936 32.6712 171.364 32.4801 171.791 32.1024C172.214 31.7246 172.427 30.506 172.427 28.4531C172.427 26.4217 172.214 25.2142 171.78 24.8258C171.354 24.4436 169.925 24.2525 167.502 24.2525Z" fill="#050001"></path>
+                    <rect class="second-bottom-tube" x="166.56" width="1.55" fill="#050001"></rect>
+                  </svg></a>
+              <div class="header__controls-wrapper">
+                <div class="header__controls-item"><a class="header__btn" href="javascript:;" data-no-swup onclick="searchToggle()"><img src="./img/icon-search.svg" alt></a></div>
+                <div class="header__controls-item header__controls-item-compare js-header-compare-btn"><a class="header__btn" href="#" data-no-swup><img src="./img/icon-items.svg" alt><span class="header__btn-count"></span></a>
+                  <div class="header__btn-content">
+                    <p class="header__btn-content-title">Cравнение</p>
+                    <p class="header__btn-content-subtitle">Начните выбор с каталога или воспользуйтесь поиском</p>
+                  </div>
+                </div>
+                <div class="header__controls-item"><a class="header__btn" href="#" data-fancybox data-no-swup data-src="#modalEnter" data-animation-effect="false" data-touch="false" data-modal="true"><img src="./img/icon-profile.svg" alt></a></div>
+                <div class="header__controls-item header__controls-item--mobile"><a class="header__btn" href="#" data-fancybox data-no-swup data-src="#modalCart" data-animation-effect="false" data-touch="false" data-modal="true"><img src="./img/icon-cart.svg" alt><span class="header__btn-count">2</span><span class="header__btn-price">4 152 100 ₽</span></a>
+                    <div class="modal modal--right modal--cart" id="modalCart"><a class="modal__close" href="#" data-fancybox-close data-no-swup></a>
+                      <div class="container-fluid px-md-0">
+                        <div class="modal__content">
+                          <h2>Корзина</h2>
+                          <div class="modal__cart-top">
+                            <div class="modal__cart-header">
+                              <div class="modal__cart-amount">4 товара</div><a class="modal__cart-clear" data-no-swup href="#">Очистить</a>
+                            </div>
+                            <div class="modal__cart-content">
+                                <div class="cart-item"><a class="cart-item__picture" href="#"><img src="./img/item-1.png" alt></a>
+                                  <div class="cart-item__info">
+                                    <p class="mb-0 cart-item__title">T+A SDV 3100 HV</p>
+                                    <div class="cart-item__price">
+                                      <p class="mb-0">5 104 200₽</p>
+                                    </div>
+                                  </div>
+                                  <div class="cart-item__break"></div>
+                                  <div class="cart-item__amount"><a class="cart-item__amount-btn cart-item__amount-btn--less" href="#" data-no-swup></a>
+                                    <p class="mb-0">2</p><a class="cart-item__amount-btn cart-item__amount-btn--more" href="#" data-no-swup></a>
+                                  </div>
+                                  <div class="cart-item__controls-wrapper"><a class="cart-item__remove" data-no-swup href="#"></a>
+                                  </div>
+                                </div>
+                                <div class="cart-item"><a class="cart-item__picture" href="#"><img src="./img/item-2.png" alt></a>
+                                  <div class="cart-item__info">
+                                    <p class="mb-0 cart-item__title">Quad Vena II Lancaster Black</p>
+                                    <div class="cart-item__price">
+                                      <p class="mb-0">80 289₽</p>
+                                    </div>
+                                  </div>
+                                  <div class="cart-item__break"></div>
+                                  <div class="cart-item__amount"><a class="cart-item__amount-btn cart-item__amount-btn--less" href="#" data-no-swup></a>
+                                    <p class="mb-0">1</p><a class="cart-item__amount-btn cart-item__amount-btn--more" href="#" data-no-swup></a>
+                                  </div>
+                                  <div class="cart-item__controls-wrapper"><a class="cart-item__remove" data-no-swup href="#"></a>
+                                  </div>
+                                </div>
+                                <div class="cart-item"><a class="cart-item__picture" href="#"><img src="./img/item-3.png" alt></a>
+                                  <div class="cart-item__info">
+                                    <p class="mb-0 cart-item__title">Bryston BP-6 MM</p>
+                                    <div class="cart-item__price">
+                                      <p class="mb-0">48 800₽</p>
+                                    </div>
+                                  </div>
+                                  <div class="cart-item__break"></div>
+                                  <div class="cart-item__amount"><a class="cart-item__amount-btn cart-item__amount-btn--less" href="#" data-no-swup></a>
+                                    <p class="mb-0">1</p><a class="cart-item__amount-btn cart-item__amount-btn--more" href="#" data-no-swup></a>
+                                  </div>
+                                  <div class="cart-item__controls-wrapper"><a class="cart-item__remove" data-no-swup href="#"></a>
+                                  </div>
+                                </div>
+                                <div class="cart-item"><a class="cart-item__picture" href="#"><img src="./img/item-4.png" alt></a>
+                                  <div class="cart-item__info">
+                                    <p class="mb-0 cart-item__title">Copland CTA 305 Silver</p>
+                                    <div class="cart-item__price">
+                                      <p class="mb-0">342 000₽</p>
+                                    </div>
+                                  </div>
+                                  <div class="cart-item__break"></div>
+                                  <div class="cart-item__amount"><a class="cart-item__amount-btn cart-item__amount-btn--less" href="#" data-no-swup></a>
+                                    <p class="mb-0">1</p><a class="cart-item__amount-btn cart-item__amount-btn--more" href="#" data-no-swup></a>
+                                  </div>
+                                  <div class="cart-item__controls-wrapper"><a class="cart-item__remove" data-no-swup href="#"></a>
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="modal__cart-bottom">
+                            <div class="modal__cart-bottom-left">
+                              <p class="mb-0">Итого</p>
+                              <div class="modal__cart-overall">1 126 570₽</div>
+                            </div>
+                            <div class="modal__cart-bottom-right"><a class="btn btn-primary" data-no-swup href="#">В корзину</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="modal modal--right modal--close-outside modal--contacts" id="modalContacts"><a class="modal__close" href="#" data-fancybox-close data-no-swup></a>
+            <div class="container-fluid px-md-0">
+              <div class="modal__content">
+                <div class="modal__title">Контакты</div>
+                <div class="modal__contacts-tabs"><a class="modal__contacts-tab modal__contacts-tab--contacts modal__contacts-tab--active" href="#" data-no-swup>Контакты</a><a class="modal__contacts-tab modal__contacts-tab--office" href="#" data-no-swup>Офис</a></div>
+                <div class="modal__contacts-left">
+                  <div class="modal__contacts-info">
+                    <div class="modal__contacts-info-item">
+                      <h3><a href="#">+7 800 201 47 67</a></h3>
+                      <p class="xs mb-0">Бесплатный номер для России</p>
+                    </div>
+                    <div class="modal__contacts-info-item">
+                      <h3><a href="#">+7 950 223 37 37</a></h3>
+                      <p class="xs mb-0">Мобильный номер в Петербурге</p>
+                    </div>
+                    <div class="modal__contacts-info-item">
+                      <h3><a href="#">info@stereozona.ru</a></h3>
+                      <p class="xs modal__contacts-copy mb-0"> <a href="#">Скопировать адрес</a></p>
+                    </div>
+                    <div class="modal__contacts-info-item">
+                      <h3><a href="#">@stereozona.ru</a></h3>
+                      <p class="xs mb-0">Ищите нас в Telegram, Viber, Whatsapp</p>
+                    </div>
+                  </div>
+                  <form class="form" action="#" method="POST">
+                    <div class="form__item form-group">
+                      <input class="input form-control" type="text" placeholder="Имя">
+                    </div>
+                    <div class="form__item form-group">
+                      <input class="input form-control" type="tel" placeholder="Телефон">
+                    </div>
+                    <div class="form__item form-group">
+                      <input class="input form-control" type="email" placeholder="Email">
+                    </div>
+                    <div class="form__item form-group">
+                      <input class="input input--comment input form-control" type="text" placeholder="Привет, StereoZona!">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Отправить</button>
+                    <p class="xs form__agreement">Нажимая «Отправить», я подтверждаю согласие с условиями <a href="#">обработки персональных данных</a></p>
+                  </form>
+                </div>
+                <div class="modal__contacts-right">
+                  <div class="modal__address">
+                    <div class="modal__address-top">
+                      <div class="modal__address-top-left">
+                        <h3>Санкт-Петербург, <br>Лиговский проспект, 63<br>10:00 – 20:00</h3>
+                        <div class="modal__address-metro">
+                          <div class="modal__address-metro-item modal__address-metro-item--red">Пл. Восстания</div>
+                          <div class="modal__address-metro-item modal__address-metro-item--green">Маяковская</div>
+                        </div>
+                      </div><a class="btn btn-outline-primary btn-sm modal__address-btn modal__address-btn--find" href="#" data-no-swup> <span>Как нас найти?</span></a><a class="btn btn-outline-primary btn-sm modal__address-btn modal__address-btn--map" href="#" data-no-swup><span>показать карту</span></a>
+                    </div>
+                    <div class="modal__address-content">
+                      <div class="modal__address-content-item modal__address-content-item--active modal__address-content-item--map">
+                          <div class="map" id="map"></div>
+                      </div>
+                      <div class="modal__address-content-item modal__address-content-item--find">
+                          <div class="streetview"><img class="streetview__picture" src="./img/streetview-1.jpg" alt>
+                            <div class="streetview__content">
+                              <div class="streetview__content-left">
+                                <p class="xs mb-0 text-white">Шаг 2. Ориентируйтесь на вывеску магазина «Ботаника»</p>
+                              </div>
+                              <div class="streetview__content-right">
+                                <p class="streetview__btn"><a class="text-white" data-no-swup href="#">Назад</a></p>
+                                <p class="streetview__btn"><a class="text-white" data-no-swup href="#">Далее</a></p>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal modal--right-narrow modal--form modal--enter" id="modalEnter"><a class="modal__close" href="#" data-fancybox-close data-no-swup></a>
+            <div class="container-fluid px-md-0">
+              <div class="modal__content">
+                <form class="modal__form-wrapper modal__form-login" action="#" method="POST">
+                  <div class="modal__form-top">
+                    <h2>Войти</h2>
+                  </div>
+                  <div class="modal__form-center">
+                    <div class="form__item form-group">
+                      <input class="input form-control js-mask-email" type="text" placeholder="Email">
+                    </div>
+                    <div class="form__item form-group">
+                      <input class="input form-control" type="password" placeholder="Пароль">
+                      <p class="xs form__item-comment mb-0"><a href="#">Напомнить пароль</a></p>
+                    </div>
+                    <div class="modal__form-footer">
+                      <button class="btn btn-primary" type="submit">Войти</button>
+                        <div class="socials socials--login socials--black"><a class="socials__item socials__item--vk" href="#"></a><a class="socials__item socials__item--fb" href="#"></a><a class="socials__item socials__item--ok" href="#"></a><a class="socials__item socials__item--google" href="#"></a></div>
+                    </div>
+                  </div>
+                  <div class="modal__form-bottom">
+                    <div class="modal__registration-invite">
+                      <p class="mb-0">Получайте скидки и выгодные предложения</p><a class="btn btn-outline-primary" href="#">Создать аккаунт</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal modal--right modal--right-narrow modal--lost-password modal--form" id="modalLostPassword"><a class="modal__close" href="#" data-fancybox-close data-no-swup></a>
+            <div class="container-fluid px-md-0">
+              <div class="modal__content">
+                <form class="modal__form-lost-password modal__form-wrapper" action="#" method="POST">
+                  <div class="modal__form-top">
+                    <h2>Забыли пароль?</h2>
+                    <p>Укажите контакты для восстановления</p>
+                  </div>
+                  <div class="modal__form-center">
+                    <div class="form__item form-group">
+                      <input class="input form-control" type="text" autocomplete="off" placeholder="Email / Телефон">
+                    </div>
+                    <div class="modal__form-footer">
+                      <button class="btn btn-primary send-btn" type="submit" disabled>Отправить</button><a class="btn btn-link" href="#">Назад</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal modal--right modal--right-narrow modal--confirmation modal--form" id="modalConfirmation"><a class="modal__close" href="#" data-fancybox-close data-no-swup></a>
+            <div class="container-fluid px-md-0">
+              <div class="modal__content">
+                <form class="modal__form-wrapper" action="#" method="POST">
+                  <div class="modal__form-top">
+                    <h2>Подтверждение</h2>
+                    <p>Мы отправили сообщение с кодом подтверждения</p>
+                  </div>
+                  <div class="modal__form-center">
+                    <div class="form__item form-group">
+                      <input class="input form-control" type="text" placeholder="Код подтверждения">
+                      <p class="xs form__item-comment mb-0"><a href="#">Отправить код еще раз</a></p>
+                    </div>
+                    <div class="modal__form-footer">
+                      <button class="btn btn-primary" type="submit">Выслать код</button><a class="btn btn-link" href="#">Назад</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal modal--right modal--right-narrow modal--new-password modal--form" id="modalNewPassword"><a class="modal__close" href="#" data-fancybox-close data-no-swup></a>
+            <div class="container-fluid px-md-0">
+              <div class="modal__content">
+                <form class="modal__form-wrapper" action="#" method="POST">
+                  <div class="modal__form-top">
+                    <h2>Новый пароль</h2>
+                    <p>Придумайте новый пароль. Используйте надеждныесочетания: не используйте свой логин, номер телефона или день рождения вашей бабушки</p>
+                  </div>
+                  <div class="modal__form-center">
+                    <div class="form__item form-group">
+                      <input class="input form-control" type="password" placeholder="Пароль">
+                    </div>
+                    <div class="form__item form-group">
+                      <input class="input form-control" type="password" placeholder="Подтверждение пароля">
+                    </div>
+                    <div class="modal__form-footer">
+                      <button class="btn btn-primary" type="submit">Далее</button><a class="btn btn-link" href="#">Назад</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal modal--right modal--right-narrow modal--password-done modal--form" id="modalPasswordDone"><a class="modal__close" href="#" data-fancybox-close data-no-swup></a>
+            <div class="container-fluid px-md-0">
+              <div class="modal__content">
+                <form class="modal__form-wrapper" action="#" method="POST">
+                  <div class="modal__form-top">
+                    <h2>Пароль изменен</h2>
+                    <p>Используйте новый пароль при входе в личный кабинет. Никому не сообщайте свой пароль, иначе не получите скидку на новенький <span class="font-weight-medium">Rega Planar 3</span></p><a class="btn btn-primary" href="#">Войти</a>
+                  </div>
+                  <div class="modal__form-bottom">
+                      <div class="offer offer--sm">
+                        <div class="offer__picture"><img src="./img/offer-3.jpg" alt></div>
+                        <div class="offer__content">
+                          <div class="offer__content-top">
+                            <h4 class="offer__title"><span class="font-weight-bold">Акция на Rega Planar 3 </span> – Подарим головку ELYS-2 и бесплатно установим её на ваш новый проигрыватель</h4>
+                          </div><a class="btn btn-outline-primary btn-outline-primary--small btn-sm offer__btn" href="#">Условия</a>
+                        </div>
+                      </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal modal--right modal--right-narrow modal--registration modal--form" id="modalRegistration"><a class="modal__close" href="#" data-fancybox-close data-no-swup></a>
+            <div class="container-fluid px-md-0">
+              <div class="modal__content">
+                <form class="modal__form-wrapper modal__form-registration js__ajax-register" action="#" method="POST">
+                  <div class="modal__form-top">
+                    <h2>Регистрация</h2>
+                  </div>
+                  <div class="modal__form-center">
+                    <div class="form__item form-group">
+                      <input class="input form-control" type="text" placeholder="Имя">
+                    </div>
+                    <div class="form__item form-group">
+                      <input class="input form-control js-mask-email" type="text" placeholder="Email" autocomplete="off">
+                    </div>
+                    <div class="form__item form-group">
+                      <input class="input form-control" type="tel" placeholder="Телефон">
+                    </div>
+                    <div class="form__item form-group">
+                      <input class="input form-control" type="password" placeholder="Пароль">
+                    </div>
+                      <div class="checkbox checkbox--switch checkbox--switch-reverse">
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="switch13" checked>
+                          <label class="custom-control-label" for="switch13">Даю согласие на <a href="#">обработку данных</a>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="checkbox checkbox--switch checkbox--switch-reverse">
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" type="checkbox" id="switch14" checked>
+                          <label class="custom-control-label" for="switch14">Хочу получать Email-рассылки
+                          </label>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="modal__form-bottom">
+                    <button class="btn btn-primary" type="submit">Создать аккаунт</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal modal--right modal--right-narrow modal--registration-done modal--form" id="modalRegistrationDone"><a class="modal__close" href="#" data-fancybox-close data-no-swup></a>
+            <div class="container-fluid px-md-0">
+              <div class="modal__content">
+                <form class="modal__form-wrapper" action="#" method="POST">
+                  <div class="modal__form-top">
+                    <h2>Регистрация прошла успешно</h2>
+                    <p>Следите за скидками, собственными расходами, начислениями баллов и новыми предложениями в личном кабинете. Добро пожаловать в клуб!</p>
+                  </div>
+                  <div class="modal__form-center text-center"><a class="logo logo--big" href="index.html"><img src="./img/logo.svg" alt></a>
+                  </div>
+                  <div class="modal__form-bottom"><a class="btn btn-primary" href="#">Войти в кабинет</a></div>
+                </form>
+              </div>
+            </div>
+          </div>
+      </header>
+    <main class="page-content" id="swup">
+      <div class="container-fluid">
+        <div class="pt-15 pb-5 pt-md-30 pb-md-60 its-fade js-observe">
+            <div class="breadcrumbs"><a class="breadcrumbs__link" href="#">Главная</a><a class="breadcrumbs__link" href="#">Статьи и обзоры</a>
+            </div>
+        </div>
+        <h2 class="mb-10 mb-md-25 its-fade js-observe">Статьи и обзоры</h2>
+        <div class="d-flex tag__container--wide mb-50 mb-md-80 its-fade js-observe"><a class="tag" href="#">hi-fi аудио</a><a class="tag" href="#">бренды</a><a class="tag" href="#">Советы</a><a class="tag" href="#">Эксперты</a><a class="tag" href="#">События</a><a class="tag tag--menu" href="#" data-fancybox data-no-swup data-src="#modalArticles" data-animation-effect="false" data-touch="false" data-modal="true">обзоры</a>
+        </div>
+        <div class="row mb-0 mb-lg-30 its-fade js-observe">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-6 mb-15 mb-sm-20 mb-lg-30"><a class="card" href="#">
+                    <div class="card__picture" style="background-image: url(./img/card-1.jpg);"></div>
+                    <div class="card__content">
+                      <div class="card__title"><span class="font-weight-medium">Audiozen Lysios</span> – стерео- фонический усилитель мощности с необычными транзисторами</div>
+                      <p class="xs mb-0">14 июня</p>
+                    </div></a>
+              </div>
+              <div class="col-lg-6 mb-15 mb-sm-20 mb-lg-30"><a class="card" href="#">
+                    <div class="card__picture" style="background-image: url(./img/card-2.jpg);"></div>
+                    <div class="card__content">
+                      <div class="card__title"><span class="font-weight-medium">Abbey Road в моей команте</span> – Как сделать дома студию звукозаписи  вместе с ROCKWOOL</div>
+                      <p class="xs mb-0">12 июня</p>
+                    </div></a>
+              </div>
+              <div class="col-lg-6 mb-15 mb-sm-20 mb-lg-0"><a class="card" href="#">
+                    <div class="card__picture" style="background-image: url(./img/card-3.jpg);"></div>
+                    <div class="card__content">
+                      <div class="card__title"><span class="font-weight-medium">ULED U7</span> – премиальные телевизоры компании Hisense</div>
+                      <p class="xs mb-0">9 июня</p>
+                    </div></a>
+              </div>
+              <div class="col-lg-6 mb-15 mb-sm-20 mb-lg-0"><a class="card" href="#">
+                    <div class="card__picture" style="background-image: url(./img/card-4.jpg);"></div>
+                    <div class="card__content">
+                      <div class="card__title"><span class="font-weight-medium">Lyngdorf The Clic Wall</span> – Мебель со встроенным сабвуфером</div>
+                      <p class="xs mb-0">5 июня</p>
+                    </div></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-15 mb-sm-20 mb-lg-0"><a class="card card--big" href="#">
+                <div class="card__picture" style="background-image: url(./img/card-5.jpg);"></div>
+                <div class="card__content">
+                  <div class="card__overview">Обзор</div>
+                  <div class="card__title"><span class="font-weight-medium">Саундбары: разбираемся детально.</span>На что смотреть при покупке и сколько платить</div>
+                  <p class="xs mb-0">1 июня</p>
+                </div></a>
+          </div>
+        </div>
+        <div class="row its-fade js-observe">
+          <div class="col-lg-6 mb-15 mb-sm-20 mb-lg-0"><a class="card card--big" href="#">
+                <div class="card__picture" style="background-image: url(./img/card-6.jpg);"></div>
+                <div class="card__content">
+                  <div class="card__overview">Обзор</div>
+                  <div class="card__title"><span class="font-weight-medium">Саундбар JBL Bar 9.1 </span>с беспроводными тылами и сабом уже в продаже</div>
+                  <p class="xs mb-0">1 июня</p>
+                </div></a>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-6 mb-15 mb-sm-20 mb-lg-30"><a class="card" href="#">
+                    <div class="card__picture" style="background-image: url(./img/card-7.jpg);"></div>
+                    <div class="card__content">
+                      <div class="card__title"><span class="font-weight-medium">Thöress EHT</span> — Новый гибридный моноблок, который оставляет дорогие лампы вне игры</div>
+                      <p class="xs mb-0">14 июня</p>
+                    </div></a>
+              </div>
+              <div class="col-lg-6 mb-15 mb-sm-20 mb-lg-30"><a class="card" href="#">
+                    <div class="card__picture" style="background-image: url(./img/card-8.jpg);"></div>
+                    <div class="card__content">
+                      <div class="card__title"><span class="font-weight-medium">Marantz NR1711</span> — низкопрофильный ресивер с поддержкой 8K и полным набором форматов</div>
+                      <p class="xs mb-0">12 июня</p>
+                    </div></a>
+              </div>
+              <div class="col-lg-6 mb-15 mb-sm-20 mb-lg-0"><a class="card" href="#">
+                    <div class="card__picture" style="background-image: url(./img/card-9.jpg);"></div>
+                    <div class="card__content">
+                      <div class="card__title"><span class="font-weight-medium">Pro-Ject Stream Box S2 Ultra</span> научился копировать компакт-диски</div>
+                      <p class="xs mb-0">9 июня</p>
+                    </div></a>
+              </div>
+              <div class="col-lg-6"><a class="card" href="#">
+                    <div class="card__picture" style="background-image: url(./img/card-10.jpg);"></div>
+                    <div class="card__content">
+                      <div class="card__title"><span class="font-weight-medium">Marshall Emberton</span> — компактная беспроводная аудиосистема</div>
+                      <p class="xs mb-0">5 июня</p>
+                    </div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-30 mt-md-80 mb-65 mb-md-100 its-fade js-observe">
+          <div class="col-lg-4 offset-lg-4"><a class="more" href="#">Показать больше</a>
+          </div>
+          <div class="d-none d-xl-block col-xl-3 offset-xl-1">
+              <div class="pagination"><a class="pagination__item pagination__item--active" href="#">1</a><a class="pagination__item" href="#">2</a><a class="pagination__item" href="#">3</a><a class="pagination__item" href="#">4</a><a class="pagination__item" href="#">...</a><a class="pagination__item" href="#">16</a></div>
+          </div>
+        </div>
+      </div>
+    </main>
+      <div class="footer">
+        <div class="container-fluid footer__container">
+          <div class="footer__body">
+            <div class="footer__top">
+              <div class="footer__top-left">
+                <div class="footer__sitemap-section"><a class="footer__sitemap-header" data-no-swup href="#">Рассылка stereozona</a>
+                  <div class="footer__sitemap-content">
+                      <form class="subscribe" action="#" method="POST">
+                        <div class="form__subscribe-content">
+                          <input class="subscribe__input" type="text" placeholder="ваш email">
+                          <button class="subscribe__btn" type="submit"></button>
+                        </div>
+                        <p class="subscribe__dscr">Подписываясь на рассылку, вы соглашаетесь с условиями оферты и политики конфиденциальности</p>
+                      </form>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__top-right">
+                <div class="footer__sitemap-section"><a class="footer__sitemap-header" data-no-swup href="#">Сообщество</a>
+                  <div class="footer__sitemap-content"><a class="footer__sitemap-link" href="#">Новости</a><a class="footer__sitemap-link" href="#">Статьи и советы</a><a class="footer__sitemap-link" href="#">Обзоры</a><a class="footer__sitemap-link" href="#">Форум</a></div>
+                </div>
+                <div class="footer__sitemap-section"><a class="footer__sitemap-header" data-no-swup href="#">Поддержка</a>
+                  <div class="footer__sitemap-content"><a class="footer__sitemap-link" href="#">О компании</a><a class="footer__sitemap-link" href="#">Доставка и оплата</a><a class="footer__sitemap-link" href="#">Сервис и возврат</a><a class="footer__sitemap-link" href="#">Контакты</a></div>
+                </div>
+                <div class="footer__sitemap-section"><a class="footer__sitemap-header" data-no-swup href="#">Контакты</a>
+                  <div class="footer__sitemap-content"><a class="footer__sitemap-link" href="#">+7 800 201-47-67</a><a class="footer__sitemap-link" href="#">+7 950 223-37-37</a><a class="footer__sitemap-link" href="#">info@stereozona.ru</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__middle">  
+                <div class="socials"><a class="socials__item socials__item--ig-white" href="#"></a><a class="socials__item socials__item--vk-white" href="#"></a><a class="socials__item socials__item--fb-white" href="#"></a><a class="socials__item socials__item--yt" href="#"></a></div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__bottom-left"><span class="footer__text">©Stereozona 2020. Все права защищены</span><a class="footer__text" href="#">Конфиденциальность</a></div><a class="footer__bottom-author" href="#"><img src="./img/its.svg" alt></a>
+          </div>
+        </div><a class="up" href="#" data-no-swup></a>
+      </div>
+      <div class="popup">
+        <div class="popup__wrapper">
+          <div class="popup__icon"><img class="popup__icon-img" src="./img/popup-subscribe.svg" alt></div>
+          <div class="popup__content">
+            <div class="popup__content-top">
+              <p class="popup__content-title font-weight-medium text-white mb-0"> </p>
+              <p class="popup__content-dscr"></p>
+            </div><a class="popup__content-btn btn btn-secondary btn-sm" data-no-swup href="#"></a>
+          </div>
+        </div>
+      </div>
+    <div id="vue-script" data-src="https://unpkg.com/vue@2.6.12/dist/vue.js"></div>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/vendor.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

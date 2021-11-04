@@ -1,0 +1,25 @@
+.more {
+  display: flex;
+  width: 100%;
+  height: scaleVW(56, 1920);
+  justify-content: center;
+  align-items: center;
+  font-family: $font-family-serif;
+  font-size: scaleVW(12, 1920);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: $primary;
+  border: solid rgba($primary, .1);
+  border-width: 1px 0;
+
+  @include transition;
+
+  @include media-breakpoint-down(lg) {
+    height: 56px;
+    font-size: 12px;
+  }
+
+  &:hover {
+    border-color: $primary;
+  }
+}

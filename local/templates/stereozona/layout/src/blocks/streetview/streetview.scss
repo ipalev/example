@@ -1,0 +1,159 @@
+.streetview {
+  position: relative;
+
+  &--panorama {
+    .streetview__slider--panorama {
+      display: block;
+    }
+
+    .streetview__slider--photo {
+      display: none;
+    }
+
+    .streetview__content {
+      display: none;
+    }
+  }
+
+  &--photo {
+    .streetview__slider--panorama {
+      display: none;
+    }
+
+    .streetview__slider--photo {
+      display: block;
+    }
+  }
+
+  &__slider {
+    height: 500px;
+    overflow: hidden;
+
+    &--panorama {
+      display: none;
+
+      img {
+        position: absolute !important;
+        left: 0px !important;
+        width: auto !important;
+        max-width: none;
+      }
+    }
+
+    .slick-list {
+      height: 100%;
+    }
+
+    .slick-track {
+      height: 100%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-prev-btn,
+    &-next-btn {
+      color: $white;
+      font-size: scaleVW(14, 1920);
+      background-color: transparent;
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include media-breakpoint-down(lg) {
+        font-size: scaleVW(14, 1199);
+      }
+
+      @include media-breakpoint-down(md) {
+        font-size: 10px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+        color: $black;
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: scaleVW(40, 1920) scaleVW(64, 1920);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba($black, .6);
+
+    @include media-breakpoint-down(sm) {
+      position: static;
+      padding-top: 24px;
+      flex-direction: column;
+      align-items: flex-start;
+      background: transparent;
+    }
+  }
+
+  &__content-left {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: scaleVW(14, 1920);
+      color: $white;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+        color: $black !important;
+      }
+    }
+  }
+
+  &__content-right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    margin: 0;
+
+    &:first-of-type {
+      margin-right: scaleVW(16, 1920);
+
+      @include media-breakpoint-down(sm) {
+        margin-right: 16px;
+      }
+    }
+
+    a {
+      font-size: scaleVW(14, 1920);
+      color: $white;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+        color: $black !important;
+      }
+    }
+  }
+
+  &-toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+}
+
+
+.streetview-panorama__frame {
+  width: 100%;
+}

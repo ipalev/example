@@ -1,0 +1,71 @@
+extends ../templates/template.pug
+block content
+  .profile
+    .profile__left
+      .container-fluid
+        .profile__left-wrapper
+          .profile__left-top
+            h2.profile__name Денис
+            .profile__menu
+              a.profile__menu-link(href="#") Профиль
+              a.profile__menu-link(href="#") Личные данные
+              a.profile__menu-link(href="#") Заказы
+              a.profile__menu-link(href="#") Избранное
+              a.profile__menu-link.profile__menu-link--active(data-no-swup href="#") Адреса
+              a.profile__menu-link(href="#") Реквизиты
+              a.profile__menu-back(href="#")
+          .profile__left-bottom
+            a.profile__logout(href="#") Выйти
+    .profile__wrapper
+      .container-fluid
+        .profile__wrapper-top
+          +badge
+        .profile__content
+          .row
+            .col-xl-8.col-lg-11.offset-lg-1
+              form.form(action="#", method="POST")
+                .form__item.form-group
+                  label.form__label.form__label--active Адрес в свободной форме
+                  input.input.form-control(type="text", value="Санкт-Петербург, ул. Маяковская д.9, кв. 21")
+                .row.align-items-end
+                  .col-lg-6
+                    .form__item.form__item--inactive.form-group
+                      label.form__label.form__label--active Город
+                      input.input.form-control(type="text", value="Санкт-Петербург")
+                  .col-lg-6
+                    .form__item.form__item--inactive.form-group
+                      label.form__label.form__label--active Район
+                      input.input.form-control(type="text", value="Центральный")
+                  .col-lg-6
+                    .form__item.form__item--inactive.form-group
+                      label.form__label.form__label--active Улица
+                      input.input.form-control(type="text", value="Маяковская")
+                  .col-lg-6
+                    .row
+                      .col-4
+                        .form__item.form__item--inactive.form-group
+                          label.form__label.form__label--active Номер дома
+                          input.input.form-control(type="text", value="9")
+                      .col-4
+                        .form__item.form__item--inactive.form-group
+                          label.form__label.form__label--active Квартира
+                          input.input.form-control(type="text", value="21")
+                      .col-4
+                        .form__item.form-group
+                          label.form__label.form__label--active Подъезд
+                          input.input.form-control(type="text", value="2")
+                  .col-lg-6
+                    .form__item.form__item--inactive.form-group
+                      label.form__label.form__label--active Индекс
+                      input.input.form-control(type="text", value="192288")
+                  .col-lg-6
+                    .form__item.form-group
+                      input.input.form-control(type="text" placeholder="Комментарий для курьера")
+                +checkbox({
+                  id: 'switch15',
+                  title: 'Основной адрес'
+                }).checkbox--switch.checkbox--switch-reverse.mb-20.mb-md-75
+                .profile__form-footer
+                  button.btn.btn-primary.profile__save(type="submit") Сохранить
+                  a.btn.profile__delete(href="#") Удалить адрес
+

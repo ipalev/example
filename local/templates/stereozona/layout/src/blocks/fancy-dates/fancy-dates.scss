@@ -1,0 +1,23 @@
+.fancy-dates {
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    align-items: baseline;
+
+    .h2 {
+      margin-right: scaleVW(7, 1920);
+
+      @include media-breakpoint-down(lg) {
+        margin-right: 7px;
+      }
+    }
+
+    h4 {
+    }
+  }
+}

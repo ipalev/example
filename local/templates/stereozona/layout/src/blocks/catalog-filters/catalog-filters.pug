@@ -1,0 +1,100 @@
+-
+  var catalogFilters = [
+    {
+      title: 'Производитель',
+      name: 'manufacturer',
+      items: [
+        {
+          name: 'Accustic Arts12',
+          num: 14,
+          code: `9_123123`
+        },
+        {
+          name: 'Audia Flight25',
+          num: 7,
+          code: `8_3213123`
+        },
+        {
+          name: 'Pied Piper',
+          num: 104,
+          code: `5_512412`
+        },
+      ]
+    },
+    {
+      title: 'Поддержка DSD',
+      name: 'dsd_support',
+      items: [
+        {
+          name: 'DSD-1',
+          num: 32,
+          code: `7_19823`
+        },
+        {
+          name: 'DSD-2',
+          num: 41,
+          code: `7_98723`
+        },
+        {
+          name: 'DSD-3',
+          num: 17,
+          code: `4_9876`
+        },
+        {
+          name: 'DSD-4',
+          num: 10,
+          code: `6_192311`
+        },
+      ]
+    }
+  ];
+
+mixin catalog-filters
+  form.catalog__filters#catalog-filters-aside(action="#", method="GET" v-cloak)
+    +dropdown-catalog({
+      title: 'Цена',
+      name: 'priceFilterName'
+    })
+      .dropdown__price
+        input.dropdown__price-input(
+          type="number"
+          min="280"
+          max="1500"
+          v-model="filters.priceFilterName.min"
+          name="price-min"
+          onkeyup="smartFilter.keyup(this, true)"
+        )
+        .dropdown__price-dash
+        input.dropdown__price-input(
+          type="number"
+          min="280"
+          max="1500"
+          v-model="filters.priceFilterName.max"
+          name="price-max"
+          onkeyup="smartFilter.keyup(this, true)"
+        )
+
+    each filter in catalogFilters
+      +dropdown-catalog({
+        title: filter.title,
+        name: filter.name
+      })
+        each item in filter.items
+          +checkbox-catalog({
+            filterName: filter.name,
+            id: item.code,
+            title: item.name,
+            amount: item.num,
+            replace: true
+          })
+        //- a.dropdown__more(href="#" data-no-swup) Все бренды
+      
+   
+    //- a.btn.btn-primary.catalog__filters-all(
+    //- href="#"
+    //- data-no-swup
+    //- data-fancybox
+    //- data-src="#modalFilters"
+    //- data-touch="false"
+    //- data-modal="true"
+    //- data-base-class="fancybox--modal-filters") Все фильтры

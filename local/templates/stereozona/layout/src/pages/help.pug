@@ -1,0 +1,81 @@
+extends ../templates/template.pug
+block content
+  .help
+    .container-fluid
+      .pt-15.pb-5.pt-md-30.pb-md-40
+        +breadcrumbs({
+          links: ['Поддержка']
+        })
+      .help-row.row
+        .col-lg-3
+          .help__aside
+            .help__menu
+              a.help__menu-item(href="#") условия Доставки
+              a.help__menu-item.help__menu-item--active(href="#") Оплата заказа
+              a.help__menu-item(href="#") гарантия и сервис
+              a.help__menu-item(href="#") Возврат товара
+              a.help__menu-item(href="#") Конфиденциальность
+              a.help__menu-item(href="#") Публичная оферта
+              a.help__menu-item(href="#") Контакты
+            a.btn.btn-outline-primary.btn-outline-primary--small.btn-sm.help__btn(href="#") напишите нам
+        .col-lg-6
+          h2.help__title Конфиденциальность
+          .help__content
+            p В настоящий момент мы предлагаем наиболее популярные способы оплаты приведённые ниже. Если же среди этого списка Вы не найдёте интересующий Вас или более удобный способ оплаты, дайте нам знать об этом и мы обсудим дополнительные варианты, постараемся прийти к согласию.
+            .help__table
+              .help__table-row
+                .help__table-left
+                  p.mb-0 Онлайн
+                .help__table-right
+                  .d-flex.flex-wrap
+                    +payment({
+                      logo: 'icon-apple-pay.svg'
+                    })
+                    +payment({
+                      logo: 'icon-google-pay.svg'
+                    })
+              .help__table-row
+                .help__table-left
+                  p.mb-0 При получении
+                  p.sm.help__table-comment.mb-0 Наличными или картой
+                .help__table-right
+                  .d-flex.flex-wrap
+                    +payment({
+                      logo: 'icon-visa.svg'
+                    })
+                    +payment({
+                      logo: 'icon-mastercard.svg'
+                    })
+                    +payment({
+                      logo: 'icon-mir.svg'
+                    })
+              .help__table-row
+                .help__table-left
+                  p.mb-0 Безналичный расчет
+            p Товары имеющиеся в наличии могут быть оплачены по факту получения (в офисе или при доставке), товары отсутствующие в наличии и требующие заказа со складов поставщиков или производителей продаются по предоплате. Размер предоплаты обсуждается индивидуально для каждого заказа.
+            
+            h4.pt-30.pt-sm-50.mb-20 Оплата при получении
+            +question({
+              title: 'Почему это может быть выгодно?',
+            })
+            +question({
+              title: 'Что делать, если не могу посетить офис?',
+            })
+            h4.pt-20.pt-sm-40.mb-20 Оплата онлайн
+            +question({
+              title: 'Как сделать заказ на сайте?',
+            })
+            +question({
+              title: 'Когда прийдет ссылка на оплату?',
+            })
+            +question({
+              title: 'Какие карты подходят?',
+            })
+            +question({
+              title: 'Как оплатить заказ?',
+            })
+            h4.pt-20.pt-sm-40.mb-20 Безналичный расчет
+            +question({
+              title: 'Как оплатить по выставленному счету?',
+            })
+

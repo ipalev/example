@@ -1,0 +1,157 @@
+mixin catalog(data)
+  div(id="vuex-script" data-src="https://unpkg.com/vuex@3.5.1/dist/vuex.js")
+  .catalog&attributes(attributes)
+    .container-fluid
+      .catalog__wrapper
+        .catalog__wrapper-header
+          a.catalog__wrapper-header-text.catalog__filters-all(href="#"
+            data-fancybox data-no-swup
+            data-src="#modalFilters"
+            data-touch="false"
+            data-modal="true"
+            data-base-class="fancybox--modal-filters") Все фильтры
+          span.catalog__wrapper-header-text.catalog__count 282 товара
+          .catalog__wrapper-sorting
+            .catalog__sorting-overflow
+            a.catalog__wrapper-header-text.catalog__sorting-btn(href="#" data-no-swup) Сортировать:
+              span.font-weight-normal По популярности
+            .catalog__wrapper-sorting-dropdown
+              a.catalog__wrapper-sorting-option(data-no-swup href="#") Популярные
+              a.catalog__wrapper-sorting-option(data-no-swup href="#") Новинки
+              a.catalog__wrapper-sorting-option(data-no-swup href="#") Сначала дешевые
+              a.catalog__wrapper-sorting-option(data-no-swup href="#") Сначала дорогие
+              a.catalog__wrapper-sorting-option(data-no-swup href="#") По размеру скидки
+              a.catalog__wrapper-sorting-option(data-no-swup href="#") По рейтингу
+        .catalog__content
+          +catalog-filters
+
+          .catalog__items-wrapper
+            .catalog__items-list
+              +item({
+                id: "j4oj08jr0g",
+                title: 'T+A SDV 3100 HV',
+                picture: 'item-1.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "kdsjfygjfyjh89sd8h13",
+                title: 'T+A SDV 3100 HV T+A SDV 3100 HV',
+                picture: 'item-2.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "gh3fdsijvm404",
+                title: 'T+A SDV 3100 HV T+A SDV 3100 HV T+A SDV 3100 HV',
+                picture: 'item-3.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "bmmbmsdf8gv3",
+                title: 'T+A SDV 3100 HV',
+                picture: 'item-4.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "rwmomvvhg",
+                title: 'T+A SDV 3100 HV T+A SDV 3100 HV',
+                picture: 'item-5.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "fokfok29r9934",
+                title: 'T+A SDV 3100 HV T+A SDV 3100 HV T+A SDV 3100 HV',
+                picture: 'item-6.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "zkxkcmskmormomgo",
+                title: 'T+A SDV 3100 HV',
+                picture: 'item-7.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "dmiwm2rg9rff",
+                title: 'T+A SDV 3100 HV T+A SDV 3100 HV',
+                picture: 'item-8.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "nnodmofmoccxvc",
+                title: 'T+A SDV 3100 HV T+A SDV 3100 HV T+A SDV 3100 HV',
+                picture: 'item-9.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "2924t94gjfdc",
+                title: 'T+A SDV 3100 HV',
+                picture: 'item-1.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "sdmo9r92fdf",
+                title: 'T+A SDV 3100 HV T+A SDV 3100 HV',
+                picture: 'item-2.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "k04m300mhm0h3",
+                title: 'T+A SDV 3100 HV T+A SDV 3100 HV T+A SDV 3100 HV',
+                picture: 'item-3.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "dmom0m02m0fmwfg",
+                title: 'T+A SDV 3100 HV',
+                picture: 'item-4.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "924j9fn0nnfn90vfddf",
+                title: 'T+A SDV 3100 HV T+A SDV 3100 HV',
+                picture: 'item-5.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "dnf9290n02dn08dn80nc80d",
+                title: 'T+A SDV 3100 HV T+A SDV 3100 HV T+A SDV 3100 HV',
+                picture: 'item-6.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "xzkndwdffdemmmyu",
+                title: 'T+A SDV 3100 HV',
+                picture: 'item-7.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "02-09j9f9jje9ffd",
+                title: 'T+A SDV 3100 HV T+A SDV 3100 HV',
+                picture: 'item-8.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "x2oxm94vm9vb6",
+                title: 'T+A SDV 3100 HV T+A SDV 3100 HV T+A SDV 3100 HV',
+                picture: 'item-9.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "dpjjw00jddwryt",
+                title: 'T+A SDV 3100 HV',
+                picture: 'item-1.png',
+                price: '2 552 100₽'
+              })
+              +item({
+                id: "p2m0m002m0002rsbd4gfd",
+                title: 'T+A SDV 3100 HV T+A SDV 3100 HV',
+                picture: 'item-2.png',
+                price: '2 552 100₽'
+              })
+
+            .row.mt-30.mt-md-80.mb-65.mb-md-100
+              .col-lg-4.mx-auto
+                +more
+
+    +modal({
+      modifier: 'filters'
+    }).modal--filters.modal--wide#modalFilters

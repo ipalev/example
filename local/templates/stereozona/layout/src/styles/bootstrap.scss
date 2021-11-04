@@ -1,0 +1,145 @@
+/* Custom variables */
+$grid-gutter-width: 16px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px,
+);
+
+$spacer: 10px;
+
+$spacers: (
+  0: 0,
+  5: (
+    $spacer * .5,
+  ),
+  10: $spacer,
+  15: (
+    $spacer * 1.5,
+  ),
+  20: (
+    $spacer * 2,
+  ),
+  25: (
+    $spacer * 2.5,
+  ),
+  30: (
+    $spacer * 3,
+  ),
+  35: (
+    $spacer * 3.5,
+  ),
+  40: (
+    $spacer * 4,
+  ),
+  45: (
+    $spacer * 4.5,
+  ),
+  50: (
+    $spacer * 5,
+  ),
+  55: (
+    $spacer * 5.5,
+  ),
+  60: (
+    $spacer * 6,
+  ),
+  65: (
+    $spacer * 6.5,
+  ),
+  70: (
+    $spacer * 7,
+  ),
+  75: (
+    $spacer * 7.5,
+  ),
+  80: (
+    $spacer * 8,
+  ),
+  85: (
+    $spacer * 8.5,
+  ),
+  90: (
+    $spacer * 9,
+  ),
+  95: (
+    $spacer * 9.5,
+  ),
+  100: (
+    $spacer * 10,
+  ),
+);
+
+$link-hover-decoration: none;
+
+$line-height-sm: 1;
+
+$line-height-lg: 2;
+
+$transition-base: .3s cubic-bezier(.25, .1, .25, 1);
+
+$headings-margin-bottom: $spacer;
+
+/* Project variables */
+$font-family-sans-serif: 'TT Hoves', 'Arial', sans-serif;
+$font-family-serif: 'Micra', 'Times New Roman', serif;
+
+$primary: #000;
+$secondary: #eee;
+$dark: #000;
+$dark2: #1f2020;
+$dark3: #343434;
+$dark4: #202020;
+$gray: #f4f4f4;
+$gray2: #c4c4c4;
+$gray3: #bebebe;
+$gray4: #f2f2f2;
+$gray5: #ecefef;
+$gray6: #e3e3e3;
+$gray7: #d2d2d2;
+$gray8: #e0e0e0;
+$gray9: #dddddd;
+$gray10: #919191;
+$danger: #c53e34;
+$red: #e75251;
+$red2: #d66066;
+$blue: #3e9ed5;
+$green: #54bf89;
+$green2: #008857;
+$mint: #4a8a99;
+$light-mint: #c3dadd;
+
+/* Imports */
+@import 'node_modules/bootstrap/scss/functions';
+
+@import 'node_modules/bootstrap/scss/variables';
+
+@import 'node_modules/bootstrap/scss/mixins';
+
+@import 'node_modules/bootstrap/scss/root';
+
+@import 'node_modules/bootstrap/scss/reboot';
+
+@import 'node_modules/bootstrap/scss/type';
+
+@import 'node_modules/bootstrap/scss/images';
+
+@import 'node_modules/bootstrap/scss/grid';
+
+@import 'node_modules/bootstrap/scss/forms';
+
+@import 'node_modules/bootstrap/scss/buttons';
+
+@import 'node_modules/bootstrap/scss/transitions';
+
+@import 'node_modules/bootstrap/scss/custom-forms';
+
+@import 'node_modules/bootstrap/scss/utilities';
+
+@import 'node_modules/bootstrap/scss/print';
+
+@import 'node_modules/bootstrap/scss/nav';

@@ -1,0 +1,108 @@
+extends ../templates/template.pug
+block content
+  .container-fluid.pr-xl-0
+    .brands
+      .brands__wrapper
+        .pt-15.pb-15.pt-md-20.pb-md-10
+          +breadcrumbs({
+            links: ['Бренды']
+          })
+        form.brands__form(action="#")
+          input.input.brands__form-input.form-control(type="text", placeholder="Найти бренд")
+          .row
+            .col-6.col-xl-3
+              +select({
+                placeholder: "Категория"
+              }).select--brands.js-select-category
+            .col-6.col-xl-3
+              +select({
+                placeholder: "Страна"
+              }).select--brands.js-select-country
+        .row.brands__row
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'A'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'B'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'C'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'D'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'F'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'H'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'I'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'J'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'K'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'L'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'M'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'N'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'O'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'P'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'Q'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'R'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'S'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'T'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'V'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'W'
+            })
+          .col-sm-6.col-xl-3
+            +brand-letter({
+              letter: 'Z'
+            })
+      .brands__aside
+        +brand-preview
+

@@ -1,0 +1,75 @@
+.form {
+
+  &__label {
+    margin: 0;
+    margin-bottom: scaleVW(26, 1920);
+    font-size: scaleVW(14, 1920);
+
+    @include media-breakpoint-down(lg) {
+      font-size: 14px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-comment {
+    margin-top: scaleVW(8, 1920);
+    font-size: scaleVW(14, 1920);
+    color: rgba($black, .4);
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 8px;
+      font-size: 12px;
+    }
+
+    a {
+      font-size: scaleVW(14, 1920);
+      color: rgba($black, .4);
+      transition: $transition-base;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 12px;
+      }
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  &__agreement {
+    margin: 0;
+    padding-top: scaleVW(24, 1920);
+    font-size: scaleVW(14, 1920) !important;
+    color: rgba($black, .4);
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 16px;
+      font-size: 14px !important;
+    }
+
+    a {
+      font-size: scaleVW(14, 1920);
+      text-decoration: underline;
+      color: rgba($black, .4);
+
+      @include media-breakpoint-down(sm) {
+        font-size: 14px;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__section {
+    margin-bottom: scaleVW(60, 1920);
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 60px;
+    }
+  }
+}

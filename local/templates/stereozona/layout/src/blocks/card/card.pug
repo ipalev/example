@@ -1,0 +1,9 @@
+mixin card(data)
+  a.card(href="#")&attributes(attributes)
+    .card__picture(style="background-image: url(./img/" + data.picture + ');')
+    .card__content
+      if data && data.modifier == 'big'
+        .card__overview Обзор
+      .card__title!= data.title
+      if data && data.date
+        p.xs.mb-0= data.date

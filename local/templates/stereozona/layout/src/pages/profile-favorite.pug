@@ -1,0 +1,38 @@
+extends ../templates/template.pug
+block content
+  .profile
+    .profile__left
+      .container-fluid
+        .profile__left-wrapper
+          .profile__left-top
+            h2.profile__name Денис
+            .profile__menu
+              a.profile__menu-link(href="#") Профиль
+              a.profile__menu-link(href="#") Личные данные
+              a.profile__menu-link(href="#") Заказы
+              a.profile__menu-link.profile__menu-link--active(data-no-swup href="#") Избранное
+              a.profile__menu-link(href="#") Адреса
+              a.profile__menu-link(href="#") Реквизиты
+              a.profile__menu-back(href="#")
+          .profile__left-bottom
+            a.profile__logout(href="#") Выйти
+    .profile__wrapper
+      .container-fluid
+        .profile__wrapper-top
+          +badge
+        .profile__content
+          .row
+            .col-xl-10.col-lg-11.offset-lg-1
+              h3.mb-30.mb-sm-55 Избранное
+                sup 8
+              .profile__favorite-list
+                - for(var i = 0; i < 8; i++)
+                  +item({
+                    title: 'T+A SDV 3100 HV',
+                    picture: 'item-5.png',
+                    price: '2 552 100₽',
+                    isInFavorites: true
+                  })
+                .col-lg-6.mx-auto.mt-30.mb-25.mb-md-80
+                  +more
+

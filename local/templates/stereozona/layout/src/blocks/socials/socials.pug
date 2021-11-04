@@ -1,0 +1,30 @@
+mixin socials(data)
+  if data && data.modifier == 'share'
+    .socials.socials--share&attributes(attributes)
+      a.socials__item.socials__item--email(href="mailto:")
+      a.socials__item.socials__item--link.js-copy(data-no-swup href="#")
+      .likely.socials__item.socials__item--vk: .vkontakte
+      .likely.socials__item.socials__item--fb: .facebook
+  else if data && data.modifier == 'login'
+    .socials.socials--login&attributes(attributes)
+      a.socials__item.socials__item--vk(href="#")
+      a.socials__item.socials__item--fb(href="#")
+      a.socials__item.socials__item--ok(href="#")
+      a.socials__item.socials__item--google(href="#")
+  else if data && data.modifier == 'accounts'
+    .socials.socials--accounts&attributes(attributes)
+      .socials__item.socials__item--vk
+        a.socials__item-remove(href="#")
+      .socials__item.socials__item--fb
+        a.socials__item-remove(href="#")
+      .socials__item.socials__item--yandex
+        a.socials__item-remove(href="#")
+      .socials__item.socials__item--google
+        a.socials__item-remove(href="#")
+      a.socials__item.socials__item--more(href="#")
+  else
+    .socials&attributes(attributes)
+      a.socials__item.socials__item--ig-white(href="#")
+      a.socials__item.socials__item--vk-white(href="#")
+      a.socials__item.socials__item--fb-white(href="#")
+      a.socials__item.socials__item--yt(href="#")

@@ -1,0 +1,8 @@
+mixin catalog-section(data)
+  a(href="#").catalog-section&attributes(attributes)
+    span.catalog-section__icon
+      if data.main === true
+        img(src="./img/" + data.icon + data.index + ".svg", alt)
+      else
+        img(src="./img/" + data.icon, alt)
+    p.catalog-section__title= data.title

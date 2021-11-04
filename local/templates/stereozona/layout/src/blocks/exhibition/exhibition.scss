@@ -1,0 +1,57 @@
+.exhibition {
+  padding: scaleVW(80, 1920) scaleVW(25, 1920);
+  display: flex;
+  min-height: scaleVW(480, 1920);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent url(../img/exhibition-bg.jpg) 0 0 no-repeat;
+  background-size: cover;
+
+  @include media-breakpoint-down(sm) {
+    padding: 64px 25px 37px;
+    height: auto;
+  }
+
+  &__img {
+    margin-bottom: scaleVW(25, 1920);
+    width: scaleVW(797, 1920);
+    height: auto;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 25px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    width: scaleVW(220, 1920);
+    height: scaleVW(48, 1920);
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family-serif;
+    font-size: scaleVW(12, 1920);
+    line-height: 1;
+    text-transform: uppercase;
+    color: $white;
+    background: transparent url(../img/exhibition-btn.png) 0 0 no-repeat;
+    background-size: 100% auto;
+    transition: $transition-base;
+
+    @include media-breakpoint-down(lg) {
+      width: 220px;
+      height: 48px;
+      font-size: 12px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 200px;
+      height: 40px;
+      font-size: 10px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+mixin menu(data)
+  .menu#menu&attributes(attributes)
+    a.menu__btn#catalog-btn-mob(href="javascript:;" data-no-swup onclick="catalogMobToggle(this)")
+    .menu__wrapper#catalog-mob.d-xl-block
+      .menu__header
+        a.menu__close(href="javascript:;" data-no-swup onclick="catalogMobToggle()")
+        .menu__header-right
+          a.menu__control(href="#")
+            img(src="./img/icon-items.svg", alt)
+          a.menu__control(href="#" data-fancybox data-no-swup data-src="#modalEnter" data-animation-effect="false" data-touch="false" data-modal="true" data-base-class="fancybox--modal-enter")
+            img(src="./img/icon-profile.svg", alt)
+          a.menu__control(href="#")
+            img(src="./img/icon-cart.svg", alt)
+      .menu__container
+        .menu__content
+          include ./menu-catalog.pug
+          
+          a.menu__link.menu__link--desktop(href="#") Бренды
+          a.menu__link.menu__link--desktop(href="#") Акции
+          a.menu__link(href="#") Доставка и оплата
+          a.menu__link(href="#") Статьи и обзоры
+          a.menu__link(href="#") О компании
+          a.menu__link(href="#" data-fancybox data-no-swup data-src="#modalContacts" data-animation-effect="false" data-touch="false" data-modal="true" data-base-class="fancybox--modal-contacts") Контакты
+          a.menu__city.header__city(href="#" data-fancybox data-no-swup data-src="#modalCity" data-animation-effect="false" data-touch="false" data-modal="true") Санкт-Петербург
+      .menu__contacts
+        p.font-weight-medium.mb-0
+          a(href="#") +7 800 201 47 67
+        p.font-weight-medium.mb-0
+          a(href="#") +7 950 223 37 37
+        p.mb-0
+          a(href="#") info@stereozona.ru

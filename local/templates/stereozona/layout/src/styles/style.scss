@@ -1,0 +1,160 @@
+@import 'bootstrap';
+
+@import 'mixins';
+
+/* Plugins */
+@import 'plugins/slick';
+
+@import 'plugins/jquery.fancybox_fix';
+
+@import 'plugins/select2.min';
+
+@import 'plugins/perfect-scrollbar';
+
+@import 'plugins/plugins-rewrite';
+
+/* Global styles */
+@import 'global/global-fonts';
+
+@import 'global/global-typo';
+
+@import 'global/global-scaffolding';
+
+/* Blocks */
+@import '../blocks/animate/animate';
+
+@import '../blocks/preloader/preloader';
+
+@import '../blocks/header/header';
+
+@import '../blocks/logo/logo';
+
+@import '../blocks/live-logo/live-logo';
+
+@import '../blocks/promo/promo';
+
+@import '../blocks/catalog-section/catalog-section';
+
+@import '../blocks/front/front';
+
+@import '../blocks/alphabet/alphabet';
+
+@import '../blocks/exhibition/exhibition';
+
+@import '../blocks/item/item';
+
+@import '../blocks/section/section';
+
+@import '../blocks/card/card';
+
+@import '../blocks/footer/footer';
+
+@import '../blocks/socials/socials';
+
+@import '../blocks/slider/slider';
+
+@import '../blocks/menu/menu';
+
+@import '../blocks/popup/popup';
+
+@import '../blocks/catalog-list/catalog-list';
+
+@import '../blocks/breadcrumbs/breadcrumbs';
+
+@import '../blocks/dropdown/dropdown';
+
+@import '../blocks/catalog/catalog';
+
+@import '../blocks/more/more';
+
+@import '../blocks/modal/modal';
+
+@import '../blocks/product/product';
+
+@import '../blocks/gallery/gallery';
+
+@import '../blocks/form/form';
+
+@import '../blocks/input/input';
+
+@import '../blocks/cart-item/cart-item';
+
+@import '../blocks/cart-feature/cart-feature';
+
+@import '../blocks/overall/overall';
+
+@import '../blocks/select/select';
+
+@import '../blocks/brand-letter/brand-letter';
+
+@import '../blocks/brand-preview/brand-preview';
+
+@import '../blocks/tag/tag';
+
+@import '../blocks/pagination/pagination';
+
+@import '../blocks/article/article';
+
+@import '../blocks/compare/compare';
+
+@import '../blocks/up/up';
+
+@import '../blocks/question/question';
+
+@import '../blocks/order/order';
+
+@import '../blocks/brand/brand';
+
+@import '../blocks/offer/offer';
+
+@import '../blocks/coupon/coupon';
+
+@import '../blocks/picture/picture';
+
+@import '../blocks/contacts/contacts';
+
+@import '../blocks/map/map';
+
+@import '../blocks/streetview/streetview';
+
+@import '../blocks/profile/profile';
+
+@import '../blocks/requisites/requisites';
+
+@import '../blocks/other/other';
+
+@import '../blocks/search/search';
+
+@import '../blocks/drag/drag';
+
+@import '../blocks/error/error';
+
+@import '../blocks/subscribe/subscribe';
+
+@import '../blocks/checkbox/checkbox';
+
+@import '../blocks/payment/payment';
+
+@import '../blocks/tooltip/tooltip';
+
+@import '../blocks/cart/cart';
+
+@import '../blocks/option/option';
+
+@import '../blocks/brands/brands';
+
+@import '../blocks/catalog-page/catalog-page';
+
+@import '../blocks/addition/addition';
+
+@import '../blocks/switch/switch';
+
+@import '../blocks/help/help';
+
+@import '../blocks/fancy-dates/fancy-dates';
+
+@import '../blocks/badge/badge';
+
+@import '../blocks/order-item/order-item';
+
+@import '../blocks/promocode/promocode';

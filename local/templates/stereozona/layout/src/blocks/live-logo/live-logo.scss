@@ -1,0 +1,151 @@
+.logo {
+  max-width: scaleVW(224, 1920);
+
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+  }
+
+  &--big {
+    display: block;
+
+    img {
+      min-width: scaleVW(320, 1920);
+
+      @include media-breakpoint-down(sm) {
+        min-width: 320px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        min-width: inherit;
+      }
+    }
+  }
+}
+
+/* Animation */
+$wholeCycleDuration: 15s;
+
+.logo svg {
+  max-width: 100%;
+  vertical-align: middle;
+  
+  /* First switch */
+  .first-top-tube {
+    height: 8.5px;
+    animation: $wholeCycleDuration linear infinite firstTopTubeMove;
+  }
+  .first-bottom-tube {
+    height: 21.5px;
+    animation: $wholeCycleDuration linear infinite firstBottomTubeMove;
+  }
+  .first-letter {
+    transform: translate(0, 0);
+    animation: $wholeCycleDuration linear infinite firstLetter;
+  }
+
+  /* Second switch */
+  .second-top-tube {
+    height: 8.5px;
+    animation: $wholeCycleDuration linear infinite secondTopTubeMove;
+  }
+  .second-bottom-tube {
+    height: 21.5px;
+    animation: $wholeCycleDuration linear infinite secondBottomTubeMove;
+  }
+  .second-letter {
+    transform: translate(0, 0);
+    animation: $wholeCycleDuration linear infinite secondLetter;
+  }
+}
+
+/* First switch */
+@keyframes firstTopTubeMove {
+  0% {
+    height: 8.5px;
+  }
+
+  50% {
+    height: 21.5px;
+  }
+
+  100% {
+    height: 8.5px;
+  }
+}
+
+@keyframes firstBottomTubeMove {
+  0% {
+    y: 22.5px;
+    height: 21.5px;
+  }
+
+  50% {
+    y: 35.5px;
+    height: 8.5px;
+  }
+
+  100% {
+    y: 22.5px;
+    height: 21.5px;
+  }
+}
+
+@keyframes firstLetter {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 13px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Second switch */
+@keyframes secondTopTubeMove {
+  0% {
+    height: 21.5px;
+  }
+
+  50% {
+    height: 8.5px;
+  }
+
+  100% {
+    height: 21.5px;
+  }
+}
+
+@keyframes secondBottomTubeMove {
+  0% {
+    y: 35.5px;
+    height: 8.5px;
+  }
+
+  50% {
+    y: 22.5px;
+    height: 21.5px;
+  }
+
+  100% {
+    y: 35.5px;
+    height: 8.5px;
+  }
+}
+
+@keyframes secondLetter {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, -13px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}

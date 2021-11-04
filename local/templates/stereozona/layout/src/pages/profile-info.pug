@@ -1,0 +1,66 @@
+extends ../templates/template.pug
+block content
+  .profile
+    .profile__left
+      .container-fluid
+        .profile__left-wrapper
+          .profile__left-top
+            h2.profile__name Денис
+            .profile__menu
+              a.profile__menu-link(href="#") Профиль
+              a.profile__menu-link.profile__menu-link--active(data-no-swup href="#") Личные данные
+              a.profile__menu-link(href="#") Заказы
+              a.profile__menu-link(href="#") Избранное
+              a.profile__menu-link(href="#") Адреса
+              a.profile__menu-link(href="#") Реквизиты
+              a.profile__menu-back(href="#")
+          .profile__left-bottom
+            a.profile__logout(href="#") Выйти
+    .profile__wrapper
+      .container-fluid
+        .profile__wrapper-top
+          +badge
+        .profile__content
+          .row
+            .col-xl-8.col-lg-11.offset-lg-1
+              .row.mb-30
+                .col-lg-6
+                  .profile__info-item
+                    p.xs.mb-0 Имя
+                    p Денис
+                .col-lg-6
+                  .profile__info-item
+                    p.xs.mb-0 Фамилия
+                    p Давыдов
+                .col-lg-6
+                  .profile__info-item
+                    p.xs.mb-0 Телефон
+                    p +7 931 360-26-20
+                .col-lg-6
+                  .profile__info-item
+                    p.xs.mb-0 Email
+                    p denis@stereozona.ru
+                .col-lg-6
+                  .profile__info-item
+                    p.xs.mb-0 Дата рождения
+                    p 6 декабря 1964
+              .profile__info-password.mb-30.mb-sm-80
+                a.profile__info-password-link#change-password(data-no-swup href="#") Сменить пароль
+                form.profile__info-password-content(action="#", method="POST")
+                  .row
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="password")
+                        label.form__label Старый пароль
+                    .col-lg-6
+                      .form__item.form-group
+                        input.input.form-control(type="password")
+                        label.form__label Новый пароль
+                  button.btn.btn-primary.profile__save#save-password(type="submit") Сохранить
+              .profile__socials
+                h4.mb-5 Социальные профили
+                p.mb-30 Подключите аккаунты социальных сетей для быстрого входа
+                +socials({
+                  modifier: 'accounts'
+                })
+

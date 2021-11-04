@@ -1,0 +1,44 @@
+.badge {
+  position: relative;
+  display: flex;
+  width: scaleVW(272, 1920);
+  height: scaleVW(170, 1920);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $dark3;
+  border-radius: 10px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, .25);
+
+  @include media-breakpoint-down(lg) {
+    width: 272px;
+    height: 170px;
+  }
+
+  &__status {
+    position: absolute;
+    bottom: scaleVW(16, 1920);
+    left: 0;
+    width: 100%;
+    font-family: $font-family-serif;
+    font-size: scaleVW(10, 1920);
+    line-height: 1;
+    text-align: center;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: $white;
+
+    @include media-breakpoint-down(lg) {
+      bottom: 16px;
+      font-size: 10px;
+    }
+  }
+
+  &__logo {
+    max-width: scaleVW(162, 1920);
+
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+    }
+  }
+}

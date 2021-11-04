@@ -1,0 +1,72 @@
+extends ../templates/template.pug
+block content
+  .container-fluid.cart__container
+    .cart
+      .cart__wrapper
+        .cart__content
+          +breadcrumbs({
+            links: ['Корзина']
+          })
+          .cart__left
+            h2 Корзина
+            p Цена доставки будет расчитана при оформлении заказа
+          .cart__center
+            .cart__table
+              .cart__table-header
+                .cart__table-amount 4 товара
+                a.cart__table-clear(data-no-swup href="#") очистить корзину
+              .cart__table-content
+                +cart-item({
+                  modifier: 'default',
+                  picture: 'item-1.png',
+                  title: 'T+A SDV 3100 HV',
+                  price: '2 552 100₽',
+                  amount: '1',
+                  break: true
+                })
+                +cart-item({
+                  modifier: 'default',
+                  picture: 'item-2.png',
+                  title: 'Quad Vena II Lancaster Black',
+                  price: '80 289₽',
+                  amount: '1',
+                  break: true
+                })
+                +cart-item({
+                  modifier: 'default',
+                  picture: 'item-3.png',
+                  title: 'Bryston BP-6 MM',
+                  price: '48 800₽',
+                  priceOld: '43 400₽',
+                  amount: '1',
+                  break: true
+                })
+                +cart-item({
+                  modifier: 'default',
+                  picture: 'item-4.png',
+                  title: 'Copland CTA 305 Silver',
+                  price: '342 000₽',
+                  amount: '1',
+                  break: true
+                })
+            .cart__features-list
+              +cart-feature({
+                icon: 'icon-delivery.svg',
+                title: '30 дней',
+                dscr: 'Возврат или обмен'
+              })
+              +cart-feature({
+                icon: 'icon-moneyback.svg',
+                title: '14 дней',
+                dscr: 'Деньги вернутся на счет'
+              })
+              +cart-feature({
+                icon: 'icon-warranty.svg',
+                title: '1 год',
+                dscr: 'Гарантия на товары'
+              })
+        +overall({
+          modifier: 'cart',
+          btn: 'Оформить заказ'
+        })
+

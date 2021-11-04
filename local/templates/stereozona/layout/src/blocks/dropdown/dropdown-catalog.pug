@@ -1,0 +1,9 @@
+mixin dropdown-catalog(data)
+  //- .dropdown&attributes(attributes)
+  .dropdown(v-if=`filters.${data.name}`)&attributes(attributes)
+    a.dropdown__header(href="#" data-no-swup)= data.title
+    .dropdown__content
+      if block
+        block
+      else
+        p Содержимое списка

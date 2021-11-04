@@ -1,0 +1,43 @@
+.requisites {
+  position: relative;
+  margin-bottom: scaleVW(8, 1920);
+  padding: scaleVW(24, 1920) scaleVW(40, 1920);
+  display: block;
+  width: 100%;
+  background: $gray4;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: scaleVW(8, 1920);
+    padding: scaleVW(24, 1920) scaleVW(40, 1920);
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: scaleVW(24, 1920);
+    bottom: 0;
+    margin: auto;
+    width: scaleVW(30, 1920);
+    height: scaleVW(30, 1920);
+    content: '';
+    background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 4L6 8L10 12' stroke='black' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+      center no-repeat;
+    background-size: scaleVW(16, 1920) auto;
+    transform: rotate(-180deg);
+
+    @include media-breakpoint-down(lg) {
+      right: 24px;
+      width: 30px;
+      height: 30px;
+      background-size: 16px auto;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__left {
+    width: calc(100% - #{scaleVW(80, 1920)});
+  }
+}

@@ -1,0 +1,121 @@
+.option {
+  height: 100%;
+
+  .custom-control {
+    padding-left: 0;
+    height: 100%;
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 23px;
+      border-bottom: 1px solid rgba(#1f2020, .1);
+    }
+  }
+
+  .custom-control-label {
+    z-index: 1;
+    padding: scaleVW(20, 1920) scaleVW(24, 1920);
+    display: flex;
+    height: 100%;
+    min-height: scaleVW(144, 1920);
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #e3e3e3;
+    cursor: pointer;
+
+    @include transition;
+
+    @include media-breakpoint-down(sm) {
+      padding: 10px 0;
+      min-height: 64px;
+      flex-direction: row;
+      align-items: center;
+      border: none;
+    }
+
+    &:before,
+    &:after {
+      display: none;
+
+      @include media-breakpoint-down(sm) {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: block;
+      }
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    background: $gray4;
+    border-color: $primary;
+
+    @include media-breakpoint-down(sm) {
+      background: transparent;
+    }
+  }
+
+  &--last {
+
+    .custom-control {
+
+      @include media-breakpoint-down(sm) {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .payment {
+    margin-right: scaleVW(4, 1920);
+
+    @include media-breakpoint-down(lg) {
+      margin-right: 4px;
+    }
+  }
+
+  &__top {
+    display: block;
+  }
+
+  &__bottom {
+    display: block;
+
+    @include media-breakpoint-down(sm) {
+      text-align: right;
+    }
+
+    p,
+    span {
+      font-size: scaleVW(18, 1920);
+
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    font-size: scaleVW(18, 1920);
+    font-weight: 500;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+    }
+  }
+
+  &__dscr {
+    margin-bottom: scaleVW(30, 1920);
+    display: inline-block;
+    font-size: scaleVW(18, 1920);
+    color: rgba($primary, .4);
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 30px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+      font-size: 16px;
+    }
+  }
+}

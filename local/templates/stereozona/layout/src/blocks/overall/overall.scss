@@ -1,0 +1,306 @@
+.overall {
+  padding: scaleVW(120, 1920) scaleVW(120, 1920) scaleVW(64, 1920) scaleVW(120, 1920);
+  display: flex;
+  width: scaleVW(502, 1920);
+  min-width: scaleVW(502, 1920);
+  flex-direction: column;
+  justify-content: space-between;
+  background: $gray4;
+
+  @include media-breakpoint-down(sm) {
+    margin-left: -24px;
+    padding: 64px 24px;
+    width: calc(100% + 48px);
+    min-width: inherit;
+  }
+
+  &--no-border {
+    padding: scaleVW(184, 1920) scaleVW(120, 1920) scaleVW(64, 1920) scaleVW(120, 1920);
+    justify-content: flex-start;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
+    .overall__item {
+      border: 0 none;
+    }
+
+    .overall__bottom {
+      padding-top: scaleVW(308, 1920);
+    }
+  }
+
+  &__item {
+    padding: scaleVW(16, 1920) 0;
+    border-top: 1px solid rgba($black, .1);
+
+    @include media-breakpoint-down(sm) {
+      padding: 16px 0;
+      border-top: 0 none;
+      border-bottom: 1px solid rgba($black, .1);
+    }
+
+    &:first-of-type {
+
+      @include media-breakpoint-down(sm) {
+        padding-top: 0;
+      }
+    }
+
+    &:last-of-type {
+
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 0;
+        border-bottom: 0 none;
+      }
+    }
+
+    &--hidden {
+      display: none;
+    }
+
+    p {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: scaleVW(18, 1920);
+      line-height: 1;
+      color: $dark2;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+      }
+
+      &:first-of-type {
+        margin-bottom: scaleVW(4, 1920);
+
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 6px;
+        }
+      }
+    }
+
+    .tooltip {
+      margin-left: scaleVW(4, 1920);
+
+      @include media-breakpoint-down(sm) {
+        margin-left: 4px;
+      }
+    }
+
+    h4 {
+      font-size: scaleVW(24, 1920);
+      line-height: 1;
+      font-weight: 500;
+      color: $dark2;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__bottom {
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 64px;
+    }
+
+    &--hidden {
+      display: none;
+    }
+
+    .btn-primary {
+      width: scaleVW(240, 1920);
+      height: scaleVW(56, 1920);
+      font-size: scaleVW(12, 1920);
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        height: 56px;
+        font-size: 12px;
+        border-radius: 8px;
+      }
+
+      &.preload-animation {
+        font-size: 0px;
+
+        &:active,
+        &:focus {
+          background-color: $mint;
+        }
+      }
+    }
+  }
+
+  &__mobile-overflow {
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba($black, .8);
+  }
+
+  &__mobile {
+    position: fixed;
+    z-index: 12;
+    bottom: 0;
+    left: 0;
+    padding: scaleVW(24, 1920);
+    display: none;
+    width: 100%;
+    background: $gray4;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, .16);
+
+    @include media-breakpoint-down(lg) {
+      padding: 24px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &.is-active {
+      padding: scaleVW(64, 1920) scaleVW(24, 1920) scaleVW(48, 1920);
+      display: block;
+      background: $gray3;
+      border-radius: scaleVW(24, 1920) scaleVW(24, 1920) 0 0;
+
+      @include media-breakpoint-down(lg) {
+        padding: 64px 24px 48px;
+        border-top-left-radius: 24px 24px 0 0;
+      }
+
+      .overall__item--hidden {
+        display: block;
+      }
+
+      .overall__item {
+        padding: scaleVW(16, 1920) 0;
+        border-bottom: 1px solid rgba($dark2, .1);
+
+        @include media-breakpoint-down(lg) {
+          padding: 16px 0;
+        }
+
+        &--first {
+          padding-top: 0;
+        }
+
+        &--last {
+          padding-bottom: 0;
+          border-bottom: 0 none;
+        }
+
+        p {
+          margin-bottom: scaleVW(6, 1920);
+          font-size: scaleVW(16, 1920);
+
+          @include media-breakpoint-down(lg) {
+            margin-bottom: 6px;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .overall__bottom--hidden {
+        display: block;
+      }
+
+      .overall__bottom {
+        padding-top: scaleVW(48, 1920);
+
+        @include media-breakpoint-down(lg) {
+          padding-top: 48px;
+        }
+      }
+
+      .overall__expand-link {
+        position: absolute;
+        top: scaleVW(12, 1920);
+        left: calc(50% - #{scaleVW(16, 1920)});
+        width: scaleVW(32, 1920);
+        height: scaleVW(4, 1920);
+        background: rgba($dark2, .4);
+        border-radius: scaleVW(40, 1920);
+
+        @include media-breakpoint-down(lg) {
+          top: 12px;
+          width: 32px;
+          height: 4px;
+          border-radius: 40px;
+        }
+
+        &:after {
+          display: none;
+        }
+
+        p {
+          display: none;
+        }
+      }
+    }
+
+    .overall__item {
+      padding: 0;
+      border: 0 none;
+
+      p {
+        margin-bottom: scaleVW(2, 1920);
+        font-size: scaleVW(14, 1920);
+
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 2px;
+          font-size: 14px;
+        }
+      }
+
+      h4 {
+        font-size: scaleVW(18, 1920);
+
+        @include media-breakpoint-down(lg) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .overall__expand-link {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:after {
+        display: block;
+        width: scaleVW(10, 1920);
+        height: scaleVW(6, 1920);
+        content: '';
+        background: transparent url(../img/overall-arow.svg) 0 0 no-repeat;
+
+        @include media-breakpoint-down(lg) {
+          width: 10px;
+          height: 6px;
+        }
+      }
+
+      p {
+        margin: 0 scaleVW(8, 1920) 0 0;
+        font-family: $font-family-serif;
+        font-size: scaleVW(12, 1920);
+        line-height: 1;
+        text-transform: uppercase;
+        color: $black;
+
+        @include media-breakpoint-down(lg) {
+          margin: 0 8px 0 0;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

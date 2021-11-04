@@ -1,0 +1,51 @@
+/* Стандартный transition для hover-анимаций */
+
+@mixin transition {
+  transition: $transition-base;
+}
+
+/* Миксин замены цвета placeholder у input.
+Нужно добавить в стилях элемента конструкцию вида @include placeholder(#000); */
+@mixin placeholder($color) {
+
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+/* Fix for Fancybox */
+
+@function max($numbers...) {
+
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+
+  @return m#{i}n(#{$numbers});
+}
+
+/* Масштабирование */
+
+@function em($pixels, $base) {
+
+  @return $pixels / $base * 1em;
+}
+
+@function scaleVW($size, $vw) {
+
+  @return (100 / ($vw / $size)) * 1vw;
+}
+
+@function scaleVH($size, $vh) {
+
+  @return (100 / ($vh / $size)) * 1vh;
+}

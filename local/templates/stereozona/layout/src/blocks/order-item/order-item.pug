@@ -1,0 +1,49 @@
+mixin order-item(data)
+  .order-item&attributes(attributes)
+    .order-item__header
+      .order-item__left(data-fancybox data-no-swup data-src="#orderInfo" data-animation-effect="false" data-touch="false" data-modal="true")
+        p.font-weight-medium.mb-0 Заказ № 4420-67 от 28.06.2020
+        p.mb-0 4 товара
+      .order-item__right
+        .order-item__status= data.status
+    .order-item__content
+      +cart-item({
+        modifier: 'order',
+        picture: 'item-1.png',
+        title: 'T+A SDV 3100 HV',
+        price: '2 552 100₽',
+        finalAmount: '1',
+        status: 'в пути',
+        finalPrice: '2 552 100₽',
+        statusDate: 'Доставка: 22/09/2020'
+      })
+      +cart-item({
+        modifier: 'order',
+        picture: 'item-2.png',
+        title: 'Quad Vena II Lancaster Black',
+        price: '80 289₽',
+        finalAmount: '2',
+        status: 'передан в доставку',
+        finalPrice: '160 578₽',
+        statusDate: 'Доставка: 22/09/2020'
+      })
+      +cart-item({
+        modifier: 'order',
+        picture: 'item-3.png',
+        title: 'Bryston BP-6 MM',
+        price: '43 400₽',
+        finalAmount: '1',
+        status: 'ждет отгрузки',
+        finalPrice: '43 400₽',
+        statusDate: 'Отгрузка: 20/09/2020'
+      })
+      +cart-item({
+        modifier: 'order',
+        picture: 'item-4.png',
+        title: 'Copland CTA 305 Silver',
+        price: '342 000₽',
+        finalAmount: '1',
+        status: 'доставлен',
+        finalPrice: '342 000₽',
+        statusDate: 'Доставка: 18/09/2020'
+      })

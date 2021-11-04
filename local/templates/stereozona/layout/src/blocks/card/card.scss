@@ -1,0 +1,243 @@
+.card {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-bottom: 33.5%;
+
+  &--big {
+    padding-bottom: 0;
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 33%;
+    }
+
+    .card__picture {
+      &::before {
+        padding-top: 99.5%;
+
+        @include media-breakpoint-down(md) {
+          padding-top: 65%;
+        }
+      }
+    }
+
+    .card__title {
+      font-size: scaleVW(36, 1920);
+      line-height: 100%;
+      letter-spacing: -.02em;
+
+      @include media-breakpoint-down(md) {
+        font-size: scaleVW(24, 992);
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: scaleVW(18, 576);
+        line-height: 120%;
+      }
+
+      @include media-breakpoint-down(xs) {
+        font-size: scaleVW(18, 375);
+      }
+    }
+
+    .card__content {
+      left: scaleVW(127, 1920);
+      padding: scaleVW(52, 1920) scaleVW(40, 1920) scaleVW(67, 1920) scaleVW(80, 1920);
+      min-height: scaleVW(298, 1920);
+
+      @include media-breakpoint-down(md) {
+        left: scaleVW(52, 992);
+        padding: scaleVW(32, 992) scaleVW(16, 992) scaleVW(30, 992) scaleVW(40, 992);
+        min-height: scaleVW(211, 992);
+      }
+
+      @include media-breakpoint-down(sm) {
+        left: scaleVW(25, 576);
+        padding: scaleVW(32, 576) scaleVW(30, 576);
+        min-height: scaleVW(183, 576);
+      }
+
+      @include media-breakpoint-down(xs) {
+        left: scaleVW(25, 375);
+        padding: scaleVW(32, 375) scaleVW(30, 375);
+        min-height: scaleVW(183, 375);
+      }
+
+      .font-weight-medium {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+
+  &--short {
+    padding: scaleVW(15, 1920) 0;
+    display: flex;
+    border-bottom: 1px solid #e6e6e6;
+
+    @include media-breakpoint-down(lg) {
+      padding: 15px 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .card__content {
+      position: static;
+      padding: 0;
+      min-height: 0;
+      flex: 1;
+      order: 1;
+    }
+
+    .card__picture {
+      margin-left: scaleVW(23, 1920);
+      max-width: scaleVW(96, 1920);
+      height: scaleVW(96, 1920);
+      order: 2;
+
+      &::before {
+        display: none;
+      }
+
+      @include media-breakpoint-down(lg) {
+        margin-left: 23px;
+        max-width: 96px;
+        height: 96px;
+      }
+    }
+
+    .card__title {
+      margin-bottom: 0;
+      font-size: scaleVW(16, 1920);
+
+      @include media-breakpoint-down(lg) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__picture {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      padding-top: 65%;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    left: scaleVW(52, 1920);
+    padding: scaleVW(32, 1920) scaleVW(16, 1920) scaleVW(30, 1920) scaleVW(40, 1920);
+    min-height: scaleVW(211, 1920);
+    background: #ffffff;
+
+    @include media-breakpoint-down(md) {
+      left: scaleVW(52, 992);
+      padding: scaleVW(32, 992) scaleVW(16, 992) scaleVW(30, 992) scaleVW(40, 992);
+      min-height: scaleVW(211, 992);
+    }
+
+    @include media-breakpoint-down(sm) {
+      left: scaleVW(25, 576);
+      padding: scaleVW(32, 576) scaleVW(30, 576);
+      min-height: scaleVW(183, 576);
+    }
+
+    @include media-breakpoint-down(xs) {
+      left: scaleVW(25, 375);
+      padding: scaleVW(32, 375) scaleVW(30, 375);
+      min-height: scaleVW(183, 375);
+    }
+  }
+
+  &__overview {
+    margin-bottom: scaleVW(16, 1920);
+    padding: scaleVW(3, 1920) scaleVW(12, 1920);
+    display: inline-block;
+    font-size: scaleVW(12, 1920);
+    line-height: scaleVW(14, 1920);
+    font-weight: 500;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: $mint;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 16px;
+      padding: 3px 12px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &__title {
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 4;
+    box-orient: vertical;
+
+    margin-bottom: scaleVW(15, 1920);
+    font-size: scaleVW(24, 1920);
+    line-height: 120%;
+    color: $primary;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 16px;
+      font-size: scaleVW(24, 992);
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: scaleVW(18, 576);
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: scaleVW(18, 375);
+    }
+  }
+}
+
+.card-slider {
+
+  [class^='col-lg'] {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      max-width: 312px;
+    }
+  }
+
+  .card {
+    @include media-breakpoint-down(md) {
+      padding-bottom: 52.5%;
+    }
+    
+    &__content {
+      @include media-breakpoint-down(md) {
+        left: 25px;
+        padding: 32px 30px;
+        min-height: 183px;
+      }
+    }
+
+    &__title {
+      @include media-breakpoint-down(md) {
+        font-size: 18px;
+      }
+    }
+  }
+}

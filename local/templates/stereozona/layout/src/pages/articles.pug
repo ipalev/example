@@ -1,0 +1,110 @@
+extends ../templates/template.pug
+
+block modals
+  +modal({
+      modifier: 'articles'
+    }).modal--bottom#modalArticles
+
+
+block content
+  .container-fluid
+    .pt-15.pb-5.pt-md-30.pb-md-60.its-fade.js-observe
+      +breadcrumbs({
+        links: ['Статьи и обзоры']
+      })
+    h2.mb-10.mb-md-25.its-fade.js-observe Статьи и обзоры
+    .d-flex.tag__container--wide.mb-50.mb-md-80.its-fade.js-observe
+      +tag({
+        title: 'hi-fi аудио'
+      })
+      +tag({
+        title: 'бренды'
+      })
+      +tag({
+        title: 'Советы'
+      })
+      +tag({
+        title: 'Эксперты'
+      })
+      +tag({
+        title: 'События'
+      })
+      +tag({
+        title: 'обзоры'
+      })(data-fancybox data-no-swup data-src="#modalArticles" data-animation-effect="false" data-touch="false" data-modal="true").tag--menu
+    .row.mb-0.mb-lg-30.its-fade.js-observe
+      .col-lg-6
+        .row
+          .col-lg-6.mb-15.mb-sm-20.mb-lg-30
+            +card({
+              picture: 'card-1.jpg',
+              title: '<span class="font-weight-medium">Audiozen Lysios</span> – стерео- фонический усилитель мощности с необычными транзисторами',
+              date: '14 июня'
+            })
+          .col-lg-6.mb-15.mb-sm-20.mb-lg-30
+            +card({
+              picture: 'card-2.jpg',
+              title: '<span class="font-weight-medium">Abbey Road в моей команте</span> – Как сделать дома студию звукозаписи  вместе с ROCKWOOL',
+              date: '12 июня'
+            })
+          .col-lg-6.mb-15.mb-sm-20.mb-lg-0
+            +card({
+              picture: 'card-3.jpg',
+              title: '<span class="font-weight-medium">ULED U7</span> – премиальные телевизоры компании Hisense',
+              date: '9 июня'
+            })
+          .col-lg-6.mb-15.mb-sm-20.mb-lg-0
+            +card({
+              picture: 'card-4.jpg',
+              title: '<span class="font-weight-medium">Lyngdorf The Clic Wall</span> – Мебель со встроенным сабвуфером',
+              date: '5 июня'
+            })
+      .col-lg-6.mb-15.mb-sm-20.mb-lg-0
+        +card({
+          picture: 'card-5.jpg',
+          title: '<span class="font-weight-medium">Саундбары: разбираемся детально.</span>На что смотреть при покупке и сколько платить',
+          date: '1 июня',
+          modifier: 'big'
+        }).card--big
+    .row.its-fade.js-observe
+      .col-lg-6.mb-15.mb-sm-20.mb-lg-0
+        +card({
+          picture: 'card-6.jpg',
+          title: '<span class="font-weight-medium">Саундбар JBL Bar 9.1 </span>с беспроводными тылами и сабом уже в продаже',
+          date: '1 июня',
+          modifier: 'big'
+        }).card--big
+      .col-lg-6
+        .row
+          .col-lg-6.mb-15.mb-sm-20.mb-lg-30
+            +card({
+              picture: 'card-7.jpg',
+              title: '<span class="font-weight-medium">Thöress EHT</span> — Новый гибридный моноблок, который оставляет дорогие лампы вне игры',
+              date: '14 июня'
+            })
+          .col-lg-6.mb-15.mb-sm-20.mb-lg-30
+            +card({
+              picture: 'card-8.jpg',
+              title: '<span class="font-weight-medium">Marantz NR1711</span> — низкопрофильный ресивер с поддержкой 8K и полным набором форматов',
+              date: '12 июня'
+            })
+          .col-lg-6.mb-15.mb-sm-20.mb-lg-0
+            +card({
+              picture: 'card-9.jpg',
+              title: '<span class="font-weight-medium">Pro-Ject Stream Box S2 Ultra</span> научился копировать компакт-диски',
+              date: '9 июня'
+            })
+          .col-lg-6
+            +card({
+              picture: 'card-10.jpg',
+              title: '<span class="font-weight-medium">Marshall Emberton</span> — компактная беспроводная аудиосистема',
+              date: '5 июня'
+            })
+    .row.mt-30.mt-md-80.mb-65.mb-md-100.its-fade.js-observe
+      .col-lg-4.offset-lg-4
+        +more
+      .d-none.d-xl-block.col-xl-3.offset-xl-1
+        +pagination
+
+
+  

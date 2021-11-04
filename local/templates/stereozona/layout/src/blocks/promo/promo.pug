@@ -1,0 +1,7 @@
+mixin promo(data)
+  //- a.promo(href="#", style="background-image: url(./img/" + data.picture + ');')&attributes(attributes)
+  a.promo(href="#")&attributes(attributes)
+    .promo__bg(style="background-image: url(./img/" + data.picture + ');')
+    .promo__content
+      h2.text-white.mb-10= data.title
+      p.mb-0.text-white= data.comment

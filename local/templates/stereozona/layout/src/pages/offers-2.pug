@@ -1,0 +1,62 @@
+extends ../templates/template.pug
+block content
+  .container-fluid
+    .pt-15.pb-5.pt-md-30.pb-md-15
+      +breadcrumbs({
+        links: ['Акции']
+      })
+    h2.mb-10.mb-md-25 Акции
+    .d-flex.justify-content-between.mb-50.mb-md-80
+      .d-flex.tag__container
+        +tag({
+          title: 'Все'
+        })
+        +tag({
+          title: 'Подарок за покупку'
+        })
+        +tag({
+          title: 'Скидки'
+        })
+        +tag({
+          title: 'Trade in'
+        })
+        +tag({
+          title: 'производитель'
+        }).tag--menu
+        +tag({
+          title: 'Архив'
+        }).d-flex.d-lg-none
+      +tag({
+        title: 'Архив'
+      }).d-none.d-lg-flex
+  +coupon({
+    title: 'Выбери свой подарок',
+    dscr: 'Никаких дисконтных карт, купонов или клубных баллов. Просто откройте каталог и выберите подарок самостоятельно.',
+    dateNumber1: '24',
+    dateText1: 'июля',
+    dateNumber2: '— 12',
+    dateText2: 'сентября'
+  }).coupon--blue.its-fade.js-observe
+  +coupon({
+    title: 'Самый выгодный Trade-In на свете',
+    dscr: 'Меняем старое на новое на очень выгодных условиях. Не важно, где вы ее покупали и осталась ли коробка.',
+    dateNumber1: '16',
+    dateText1: 'июля',
+    dateNumber2: '— 22',
+    dateText2: 'декабря'
+  }).coupon--violet.its-fade.js-observe
+  +coupon({
+    title: 'Акция на проигрыватели Rega Planar 3',
+    dscr: 'При покупке проигрывателя REGA PLANAR 3 без звукоснимателя мы подарим головку ELYS-2 и бесплатно установим её на ваш новый проигрыватель',
+    dateNumber1: '10',
+    dateText1: 'февраля',
+    dateNumber2: '— 7',
+    dateText2: 'октября'
+  }).coupon--red.its-fade.js-observe
+  .container-fluid.its-fade.js-observe
+    .row.mt-30.mt-md-80.mb-65.mb-md-100
+      .col-lg-4.offset-lg-4
+        +more
+      .d-none.d-xl-block.col-xl-3.offset-xl-1
+        +pagination
+

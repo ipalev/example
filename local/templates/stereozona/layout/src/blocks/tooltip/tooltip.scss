@@ -1,0 +1,64 @@
+.tooltip {
+  margin-left: scaleVW(4, 1920);
+
+  &--question {
+    margin-left: 0;
+
+    .tooltip__trigger {
+      display: block;
+      width: scaleVW(18, 1920);
+      height: scaleVW(18, 1920);
+      background: transparent url(../img/help-circle.svg) 0 0 no-repeat;
+      background-size: 100% auto;
+
+      @include media-breakpoint-down(sm) {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  &__trigger {
+    display: block;
+    width: scaleVW(20, 1920);
+    height: scaleVW(20, 1920);
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0013 18.3337C14.6037 18.3337 18.3346 14.6027 18.3346 10.0003C18.3346 5.39795 14.6037 1.66699 10.0013 1.66699C5.39893 1.66699 1.66797 5.39795 1.66797 10.0003C1.66797 14.6027 5.39893 18.3337 10.0013 18.3337Z' fill='%23ecefef'/%3E%3Cpath d='M10 13.3333V10' stroke='black' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 6.66699H10.0092' stroke='black' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: scaleVW(20, 1920) scaleVW(20, 1920);
+
+    &:hover {
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0013 18.3337C14.6037 18.3337 18.3346 14.6027 18.3346 10.0003C18.3346 5.39795 14.6037 1.66699 10.0013 1.66699C5.39893 1.66699 1.66797 5.39795 1.66797 10.0003C1.66797 14.6027 5.39893 18.3337 10.0013 18.3337Z' fill='%23c3dadd'/%3E%3Cpath d='M10 13.3333V10' stroke='black' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 6.66699H10.0092' stroke='black' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    @include media-breakpoint-down(lg) {
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+    }
+  }
+
+  &__popover {
+    margin-left: scaleVW(10, 1920);
+    padding: scaleVW(17, 1920) scaleVW(24, 1920);
+    max-width: scaleVW(310, 1920);
+    background: rgba($black, .7);
+    border-radius: scaleVW(8, 1920);
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 10px;
+      padding: 17px 24px;
+      max-width: 310px;
+      border-radius: 8px;
+    }
+  }
+
+  &__content {
+    font-size: scaleVW(16, 1920);
+    color: $white;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
+  }
+}

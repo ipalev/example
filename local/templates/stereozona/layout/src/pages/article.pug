@@ -1,0 +1,211 @@
+extends ../templates/template.pug
+
+
+block content
+  .article
+    .article__top.its-fade.js-observe: .container-fluid.pr-lg-0
+      .row.no-gutters
+        .col-lg-6
+          .article__left
+            .article__left-top
+              .pt-15.pb-10.pt-md-30.pb-md-40
+                +breadcrumbs({
+                  links: ['Статьи и обзоры']
+                })
+              h2
+                span.font-weight-medium Tannoy Kensington GR — 
+                | <br>обновлённая классика, которая победила время
+              p.xs 1 июня 2020
+            .article__left-bottom
+              p Классика – всё, к чему применимо это определение, становится практически бессмертным, и не теряет своей актуальности с течением времени.
+        .col-lg-6
+          .article__picture-wrapper
+            img.article__picture(src="./img/article-page.jpg", alt)
+    .container-fluid
+      .article__wrapper.pt-25.pt-md-60.pt-md-80
+        .row.justify-content-between.flex-lg-nowrap.no-gutters
+          .article__aside.article__aside--left
+            .article__sticky
+              .article__sticky-content
+                p 
+                  span.font-weight-medium Текст <br>
+                  | Антон Поддубный
+                p 
+                  span.font-weight-medium Фотографии <br>
+                  | Михаил Браун
+                +socials({
+                  modifier: 'share'
+                })
+          .article__center
+            .article__content
+              h2 Содержание:
+              ul
+                li
+                  a(href='#kak-sdelat-pravilnyj-vybor') Как сделать правильный выбор проигрывателя виниловых пластинок
+                ul
+                  li
+                    a(href='#vidy-vinilovyh-proigryvatelej') Виды виниловых проигрывателей
+                li
+                  a(href='#kak-vybrat-proigryvatel-vinilovyh-plastinok') Как выбрать проигрыватель виниловых пластинок (для дома или профессиональной 
+                  nobr
+                    a(href='#kak-vybrat-proigryvatel-vinilovyh-plastinok') DJ-деятельности
+                  a(href='#kak-vybrat-proigryvatel-vinilovyh-plastinok') )
+                ul
+                  li
+                    a(href='#cena') Цена
+                    br
+                  li
+                    a(href='#ves') Вес
+                    br
+                  li
+                    a(href='#kartridzh') Картридж
+                  li
+                    a(href='#tip-zatochki-igly') Тип заточки иглы
+                    br
+                  li
+                    a(href='funkcional') Функционал
+                    br
+                  li
+                    a(href='#nastrojka') Настройка
+                    br
+                  li
+                    a(href='#komponovka-audiosistemy') Компоновка аудиосистемы
+                    br
+                li
+                  a(href='#kakoj-proigryvatel-vinila-vybrat')
+                    | Какой проигрыватель винила выбрать: еще 3 важных критерия или почему не стоит покупать б/у-аппаратуру
+              p.first-letter Некоторое время назад, я видел какую-то старую рекламу акустических систем Tannoy. На старом постере отец и его маленький сын слушают музыку на акустических системах Tannoy. Казалось бы, ничего необычного, но рекламный слоган говорит о многом «One day, my son, all this will be yours». «Однажды всё это станет твоим» — в этой простой и незамысловатой фразе скрыт очень глубокий смысл, Tannoy прямым текстом намекает на то, что с годами их акустические системы не потеряют своей ценности и актуальности. Пройдут годы, сын вырастет, а акустические системы его отца по-прежнему будут прекрасно звучать и успешно конкурировать с более современными моделями. Несмотря на то, что с тех пор прошло много времени и в компании многое поменялось, приверженность тому самому принципу «вечной ценности» сохраняется в линейке акустических систем Tannoy Prestige.
+              p Любой представитель линейки акустических систем Tannoy Prestige необычен сам по себе. В то время, когда большинство производителей бегут друг с другом на перегонки, чтобы «урвать» свою долю рынка слушателей, постоянно меняющих свои предпочтения в угоду моде и новым тенденциям, Tannoy Prestige остаются непоколебимо стоять в стороне, ожидая своего осознанного слушателя.
+              p Стоит ли улучшать хорошее? – этот вопрос иногда кажется риторическим, но, как оказалось, не для разработчиков Tannoy Prestige. Некоторое время назад, успешная во всех смыслах, благородная линейка Prestige подверглась доработке, после чего к названию каждой модели прибавилось «GR». Эти две буквы являются сокращением от Gold Reference, что уже звучит как заявка на победу. Изменениям подвергся дизайн, отделка и, конечно же, фирменный коаксиальный динамик – всё это мы будем рассматривать на примере имеющейся у нас на прослушивании модели Kensington GR, занимающей среднее положение в модельном ряду серии Prestige.
+            .two-pics.row.py-md-30.pt-30.pb-0.its-fade.js-observe
+              .col-sm-6
+                +picture({
+                  picture: 'article-1.jpg'
+                })
+              .col-sm-6
+                +picture({
+                  picture: 'article-2.jpg',
+                  dscr: 'Панель управления разделена на две части: ENERGY — величина сигнала и ROLL OFF — режим его затухания'
+                })
+            .article__content
+              h4 Настрой правильно
+              p В качестве настоятельной рекомендации производитель предлагает осуществлять раздельную настройку правой и левой акустической системы, подразумевая таким образом возможность установки разного значения регулируемых параметров у акустических систем одного комплекта, в зависимости от особенностей помещения. Тем не менее, не стоит уповать на эти «загадочные настройки» как на нечто кардинально меняющее звучание. Чуть ниже по тексту инструкции производитель честно заявляет, что любые манипуляции с переключателями вносят в звучание еле уловимые изменения, которые на некотором музыкальном материале могут быть и вовсе незаметными. Лично я понимаю это так: акустические системы звучат достойно и не требуют постороннего вмешательства, но если вам нравится крутить ручки, то пожалуйста крутите, это Ваше право.
+            img.img-fluid.my-md-30.mt-30.mb-0.its-fade.js-observe(src="./img/article-3.jpg", alt)
+            .article__content
+              h4 Разберись в технологиях
+              p Самое время разобраться, в чём же суть основных изменений, скрывающихся за двумя заветными буквами «GR». Информация об изменениях весьма скудная. Единственная более менее конкретная информация скрывается на страницах той же самой инструкции по эксплуатации. Вся суть сводится к тому, что новые «GR» разработаны на базе предыдущей версии Prestige SE, но с повсеместным применением технологий, применяемых во флагманских Kingdom Royal. Прежде всего, изменения коснулись новой высокочастотной головки, которая получила новый подвес из материала Mylar™, а также материала диффузора СЧ/НЧ динамика, которые теперь помимо традиционных бумажных волокон имеют в своём составе «усовершенствованные синтетические микронити». Если верить инструкции, то эти загадочные «усовершенствованные синтетические микронити» позволяют получить «динамичные басы с умеренной звуковой окраской в диапазоне средних частот». Что ж, думаю не стоит сейчас глубоко разбираться в написанном и пытаться понять, что именно хотели донести до нас составители инструкции и разработчики Tannoy, всё это мы выясним во время прослушивания.
+            .two-pics.row.py-md-30.pt-30.pb-0.its-fade.js-observe
+              .col-sm-6
+                +picture({
+                  picture: 'article-4.jpg'
+                })
+              .col-sm-6
+                +picture({
+                  picture: 'article-5.jpg'
+                })
+            .article__content
+              h4 Паспорт
+              .row.mb-15.mb-md-0
+                .col-md-7
+                  p.mb-0.article__prop Рекомендуемая мощность
+                .col-md-5 
+                  p.mb-0 20-250 Вт на канал
+              .row.mb-15.mb-md-0
+                .col-md-7
+                  p.mb-0.article__prop Мощность
+                .col-md-5 
+                  p.mb-0 125 Вт (RMS)
+              .row.mb-15.mb-md-0
+                .col-md-7
+                  p.mb-0.article__prop Кратковременная пиковая нагрузка
+                .col-md-5 
+                  p.mb-0 500 Вт
+              .row.mb-15.mb-md-0
+                .col-md-7
+                  p.mb-0.article__prop Чувствительность 
+                .col-md-5 
+                  p.mb-0 93дБ
+              .row.mb-15.mb-md-0
+                .col-md-7
+                  p.mb-0.article__prop Сопротивление
+                .col-md-5 
+                  p.mb-0 5-8 Ом
+              .row.mb-15.mb-md-0
+                .col-md-7
+                  p.mb-0.article__prop Диапазон частот (-6дБ)
+                .col-md-5 
+                  p.mb-0 29Гц–27кГц 
+              .row.mb-15.mb-md-0
+                .col-md-7
+                  p.mb-0.article__prop Коаксиальный динамик
+                .col-md-5 
+                  p.mb-0 СЧ/НЧ: 250мм; ВЧ: 25мм
+              .row.mb-15.mb-md-0
+                .col-md-7
+                  p.mb-0.article__prop Частота разделения кросовера 
+                .col-md-5 
+                  p.mb-0 1,1 кГц
+              .row.mb-15.mb-md-0
+                .col-md-7
+                  p.mb-0.article__prop Тип акустического оформления
+                .col-md-5 
+                  p.mb-0 Distributed Port
+              .row.mb-15.mb-md-0
+                .col-md-7
+                  p.mb-0.article__prop Габариты
+                .col-md-5 
+                  p.mb-0 406x1100x338 мм
+              .row.mb-15.mb-md-0
+                .col-md-7
+                  p.mb-0.article__prop Масса одной колонки
+                .col-md-5 
+                  p.mb-0 37 кг
+              .article__credits
+                table
+                  tr
+                    td 
+                      p.font-weight-medium.pr-20.mb-0.mb-md-15 Текст
+                    td: p.mb-0.mb-md-15 Антон Поддубный
+                  tr
+                    td
+                      p.font-weight-medium.pr-20 Фотографии
+                    td: p Михаил Браун
+                +socials({
+                  modifier: 'share'
+                })
+          .article__aside.article__aside--right.d-none.d-xl-block
+            .article__sticky
+              .article__sticky-content
+                +addition({
+                  title: 'Популярные обзоры'
+                })
+    .article__next.its-fade.js-observe
+      .container-fluid
+        h3.mb-40 Читать далее
+        .row.article__next-row
+          .col-auto.col-md-6.col-lg-3.pb-md-20.pb-lg-0
+            +card({
+              picture: 'card-1.jpg',
+              title: '<span class="font-weight-medium">Audiozen Lysios</span> – стерео- фонический усилитель мощности с необычными транзисторами',
+              date: '14 июня'
+            })
+          .col-auto.col-md-6.col-lg-3.pb-md-20.pb-lg-0
+            +card({
+              picture: 'card-8.jpg',
+              title: '<span class="font-weight-medium">Marantz NR1711</span> — низкопрофильный ресивер с поддержкой 8K и полным набором форматов',
+              date: '12 июня'
+            })
+          .col-auto.col-md-6.col-lg-3.pb-md-20.pb-lg-0
+            +card({
+              picture: 'card-2.jpg',
+              title: '<span class="font-weight-medium">Abbey Road в моей команте</span> – Как сделать дома студию звукозаписи  вместе с ROCKWOOL',
+              date: '14 июня'
+            })
+          .col-auto.col-md-6.col-lg-3.pb-md-20.pb-lg-0
+            +card({
+              picture: 'card-7.jpg',
+              title: '<span class="font-weight-medium">Thöress EHT</span> — Новый гибридный моноблок, который оставляет дорогие лампы вне игры',
+              date: '12 июня'
+            })
+
+

@@ -1,0 +1,57 @@
+extends ../templates/template.pug
+
+
+block content
+  .brand
+    .brand__top
+      .container-fluid.pr-lg-0
+        .row.no-gutters
+          .col-lg-6
+            .brand__left
+              .pt-15.pb-10.pt-md-20.pb-md-15
+                +breadcrumbs({
+                  links: ['Каталог', 'Усилители', 'Bowers & Wilkins']
+                })
+              h2 Bowers & Wilkins
+              div.brand__left-text
+                p Bowers & Wilkins — это британский производитель Hi-Fi оборудования. Компания основана Джоном Бауэрсом, Питером Хейуордом и Роем Уилкинсом. Штаб- квартира компании расположена в Уэртинге, там же находится часть производства и учебный центр компании.
+                p С 2007 года Bowers & Wilkins сотрудничают с брендом Jaguar в разработке аудиосистем для автомобилей. Тогда компания Bowers & Wilkins создала аудиосистему для автомобиля Jaguar C-XF, и в дальнейшем фирмы продолжили сотрудничество, создавая аудиосистемы для XJ, XK и XF. 
+                p С 2007 года Bowers & Wilkins сотрудничают с брендом Jaguar в разработке аудиосистем для автомобилей. Тогда компания Bowers & Wilkins создала аудиосистему для автомобиля Jaguar C-XF, и в дальнейшем фирмы продолжили сотрудничество, создавая аудиосистемы для XJ, XK и XF. 
+                p С 2007 года Bowers & Wilkins сотрудничают с брендом Jaguar в разработке аудиосистем для автомобилей. Тогда компания Bowers & Wilkins создала аудиосистему для автомобиля Jaguar C-XF, и в дальнейшем фирмы продолжили сотрудничество, создавая аудиосистемы для XJ, XK и XF. 
+                p В настоящее время B&W работает с Maserati, обеспечивая звук для его Quattroporte и нового Ghibli. Bowers & Wilkins также сотрудничали с Volvo в разработке дополнительной премиальной автомобильной аудиосистемы для нового Volvo XC90 2016 года. 
+                p Продукция более доступных серий выпускается на азиатских площадках: у Bowers & Wilkins есть фабрика в Китае, которая, в отличие от многих конкурентов, размещающих OEM-заказы на китайских предприятиях, полностью принадлежит B&W Group. Часть продукции референсного класса производится на британском предприятии, на неё ставится надпись «Made in Great Britain».
+              a.btn.btn-secondary.btn-sm.brand-preview__btn(href="#" data-fancybox data-no-swup data-src="#modalBrand" data-animation-effect="false" data-touch="false" data-modal="true") Подробнее
+          .col-lg-6
+            .brand__picture-wrapper
+              img.brand__picture(src="./img/brand-page.jpg", alt)
+        .brand__section-list
+          +catalog-section({
+            icon: 'catalog-section-3.svg',
+            title: 'Интегральные стереоусилители'
+          })
+          +catalog-section({
+            icon: 'catalog-section-4.svg',
+            title: 'Предусилители'
+          })
+          +catalog-section({
+            icon: 'catalog-section-5.svg',
+            title: 'Стерео усилители мощности'
+          })
+          +catalog-section({
+            icon: 'catalog-section-3.svg',
+            title: 'Моно усилители мощности'
+          })
+          +catalog-section({
+            icon: 'catalog-section-4.svg',
+            title: 'Многоканальные усилители'
+          })
+          +catalog-section({
+            icon: 'catalog-section-5.svg',
+            title: 'Усилители для наушников'
+          })
+    +catalog
+    +modal({
+      modifier: 'brand'
+      }).modal--right.modal--brand#modalBrand
+
+

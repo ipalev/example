@@ -1,0 +1,13 @@
+mixin coupon(data)
+  .coupon&attributes(attributes)
+    .coupon__content
+      h3= data.title
+      p.coupon__text= data.dscr
+      a.btn.btn-outline-primary.btn-outline-primary--small.btn-outline-primary--transparent.btn-sm.coupon__btn(href="#") Условия
+    .coupon__right
+      +fancy-dates({
+        dateNumber1: data.dateNumber1,
+        dateText1: data.dateText1,
+        dateNumber2: data.dateNumber2,
+        dateText2: data.dateText2
+      })

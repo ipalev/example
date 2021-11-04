@@ -1,0 +1,50 @@
+mixin popup(data)
+  .popup&attributes(attributes)
+    if !data
+      .popup__wrapper
+        .popup__icon
+          img.popup__icon-img(src="./img/popup-subscribe.svg", alt)
+        .popup__content
+          .popup__content-top
+            p.popup__content-title.font-weight-medium.text-white.mb-0 
+            p.popup__content-dscr
+          a.popup__content-btn.btn.btn-secondary.btn-sm(data-no-swup href="#")
+
+    if data && data.modifier == 'subscribe'
+      .popup__wrapper
+        .popup__icon
+          img.popup__icon-img(src="./img/popup-subscribe.svg", alt)
+        .popup__content
+          .popup__content-top
+            p.popup__content-title.font-weight-medium.text-white.mb-0 Поздравляем!
+            p.popup__content-dscr Вы подписаны на рассылку
+          a.popup__content-btn.btn.btn-secondary.btn-sm(href="#") Открыть почту
+    
+    if data && data.modifier == 'favorite'
+      .popup__wrapper
+        .popup__icon
+          img.popup__icon-img(src="./img/item-1.png", alt)
+        .popup__content
+          .popup__content-top
+            p.popup__content-title.font-weight-medium.text-white.mb-0 T+A SDV 3100 HV
+            p.popup__content-dscr Добавлен в избранное
+    
+    if data && data.modifier == 'cart'
+      .popup__wrapper
+        .popup__icon
+          img.popup__icon-img(src="./img/item-1.png", alt)
+        .popup__content
+          .popup__content-top
+            p.popup__content-title.font-weight-medium.text-white.mb-0 Товар добавлен в корзину
+            p.popup__content-dscr T+A SDV 3100 HV
+          a.popup__content-btn.btn.btn-secondary.btn-sm(href="#") Открыть
+    
+    if data && data.modifier == 'compare'
+      .popup__wrapper
+        .popup__icon
+          img.popup__icon-img(src="./img/item-1.png", alt)
+        .popup__content
+          .popup__content-top
+            p.popup__content-title.font-weight-medium.text-white.mb-0 T+A SDV 3100 HV
+            p.popup__content-dscr Добавлен в сравнение
+          a.popup__content-btn.btn.btn-secondary.btn-sm(href="#") Перейти

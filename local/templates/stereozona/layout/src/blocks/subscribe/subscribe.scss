@@ -1,0 +1,81 @@
+.subscribe {
+
+  &__input {
+    padding-right: scaleVW(55, 1920);
+    width: 100%;
+    height: scaleVW(55, 1920);
+    font-family: $font-family-serif;
+    font-size: scaleVW(14, 1920);
+    line-height: scaleVW(44, 1920);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(#fff, .2);
+
+    @include placeholder(#fff);
+
+    @include media-breakpoint-down(lg) {
+      padding-right: 55px;
+      height: 44px;
+      font-size: 14px;
+      line-height: 44px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: scaleVW(14, 992);
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: scaleVW(40, 1920);
+    height: scaleVW(44, 1920);
+    background: transparent
+      url("data:image/svg+xml,%3Csvg width='33' height='8' viewBox='0 0 33 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32.3536 4.35355C32.5488 4.15829 32.5488 3.84171 32.3536 3.64645L29.1716 0.464466C28.9763 0.269204 28.6597 0.269204 28.4645 0.464466C28.2692 0.659728 28.2692 0.976311 28.4645 1.17157L31.2929 4L28.4645 6.82843C28.2692 7.02369 28.2692 7.34027 28.4645 7.53553C28.6597 7.7308 28.9763 7.7308 29.1716 7.53553L32.3536 4.35355ZM0 4.5H32V3.5H0V4.5Z' fill='white'/%3E%3C/svg%3E%0A")
+      center no-repeat;
+    background-size: scaleVW(33, 1920) auto;
+
+    @include media-breakpoint-down(lg) {
+      width: 40px;
+      height: 44px;
+      background-size: 33px auto;
+    }
+  }
+
+  &__dscr {
+    line-height: 110%;
+    letter-spacing: .02em;
+    color: rgba(#fff, .5);
+
+    @include media-breakpoint-down(lg) {
+      font-size: scaleVW(16, 1200);
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: scaleVW(16, 992);
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+    }
+  }
+}
+
+.form__subscribe-content {
+  position: relative;
+  margin-bottom: scaleVW(23, 1920);
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 23px;
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "success": true,
+  "data": [
+    {
+      "name": "Наушники",
+      "path": "/catalog/headphones/",
+      "banners": [
+        {
+          "url": "https://stereozona.ru",
+          "image": "https://stereozona.devproject.ru/build/img/promo-3.jpg",
+          "title": "Technics EAH-AZ70W",
+          "text": "Акция с 14 до 21 августа"
+        }
+      ]
+    },
+    {
+      "name": "Беспроводные",
+      "path": "/catalog/headphones/wireless/",
+      "parentPath": "/catalog/headphones/",
+      "amount": "290"
+    },
+    {
+      "name": "Внутриканальные",
+      "path": "/catalog/headphones/in-ear/",
+      "parentPath": "/catalog/headphones/",
+      "amount": "113"
+    },
+    {
+      "name": "Накладные",
+      "path": "/catalog/headphones/overhead/",
+      "parentPath": "/catalog/headphones/",
+      "amount": "65"
+    },
+    {
+      "name": "Полноразмерные",
+      "path": "/catalog/headphones/fullsize/",
+      "parentPath": "/catalog/headphones/",
+      "amount": "172"
+    },
+    {
+      "name": "C микрофоном",
+      "path": "/catalog/headphones/with microphone/",
+      "parentPath": "/catalog/headphones/",
+      "amount": "41"
+    },
+    {
+      "name": "Акустические системы",
+      "path": "/catalog/acustic-systems/"
+    },
+    {
+      "name": "Напольные колонки",
+      "path": "/catalog/acustic-systems/floorstanding-speakers/",
+      "parentPath": "/catalog/acustic-systems/"
+    },
+    {
+      "name": "Полочные колонки",
+      "path": "/catalog/acustic-systems/shelf-speakers/",
+      "parentPath": "/catalog/acustic-systems/"
+    },
+    {
+      "name": "Центральные каналы",
+      "path": "/catalog/acustic-systems/central-channels/",
+      "parentPath": "/catalog/acustic-systems/"
+    },
+    {
+      "name": "Настенные колонки",
+      "path": "/catalog/acustic-systems/wall-mounted-speakers/",
+      "parentPath": "/catalog/acustic-systems/"
+    },
+    {
+      "name": "Сабвуферы",
+      "path": "/catalog/acustic-systems/subwoofers/",
+      "parentPath": "/catalog/acustic-systems/"
+    },
+    {
+      "name": "Акустика Dolby Atmos",
+      "path": "/catalog/acustic-systems/dolby-atmos-speakers/",
+      "parentPath": "/catalog/acustic-systems/"
+    },
+    {
+      "name": "Саундбары",
+      "path": "/catalog/acustic-systems/soundbars/",
+      "parentPath": "/catalog/acustic-systems/"
+    },
+    {
+      "name": "Активные и беспроводные акустические системы",
+      "path": "/catalog/acustic-systems/active-and-wireless-speakers/",
+      "parentPath": "/catalog/acustic-systems/"
+    },
+    {
+      "name": "Встраиваемые колонки",
+      "path": "/catalog/acustic-systems/built-in-speakers/",
+      "parentPath": "/catalog/acustic-systems/"
+    },
+    {
+      "name": "Всепогодная и ландшафтная акустика",
+      "path": "/catalog/acustic-systems/all-weather-and-landscape-acoustics/",
+      "parentPath": "/catalog/acustic-systems/"
+    },
+    {
+      "name": "Комплекты акустических систем",
+      "path": "/catalog/acustic-systems/speaker-kits/",
+      "parentPath": "/catalog/acustic-systems/"
+    },
+    {
+      "name": "Bluetooth колонки",
+      "path": "/catalog/acustic-systems/bluetooth-speakers/",
+      "parentPath": "/catalog/acustic-systems/"
+    },
+    {
+      "name": "Портативная аудиотехника",
+      "path": "/catalog/portable-audio-equipment/"
+    },
+    {
+      "name": "Усилители",
+      "path": "/catalog/amplifiers/"
+    },
+    {
+      "name": "Цифро-аналоговые преобразователи",
+      "path": "/catalog/digital-to-analog-converters/"
+    },
+    {
+      "name": "CD-проигрыватели и транспорты",
+      "path": "/catalog/cd-players-and-transports/"
+    },
+    {
+      "name": "Сетевые медиаплееры и стримеры",
+      "path": "/catalog/network-media-players-and-streamers/"
+    },
+    {
+      "name": "Проигрыватели винила",
+      "path": "/catalog/turntables/"
+    },
+    {
+      "name": "Blu-ray и DVD проигрыватели",
+      "path": "/catalog/blu-ray-and-dvd-players/"
+    },
+    {
+      "name": "AV-ресиверы и AV-процессоры",
+      "path": "/catalog/av-receivers-and-av-processors/"
+    },
+    {
+      "name": "Проекторы и экраны",
+      "path": "/catalog/projectors-and-screens/"
+    },
+    {
+      "name": "Телевизоры",
+      "path": "/catalog/televisions/"
+    },
+    {
+      "name": "Multiroom",
+      "path": "/catalog/multiroom/"
+    },
+    {
+      "name": "Умный дом",
+      "path": "/catalog/smart-house/"
+    },
+    {
+      "name": "Музыкальные центры и минисистемы",
+      "path": "/catalog/musical-centers-and-minisystems/"
+    },
+    {
+      "name": "Кабели, разъемы, переходники",
+      "path": "/catalog/cables-connectors-adapters/"
+    },
+    {
+      "name": "Сетевые фильтры и распределители",
+      "path": "/catalog/line-filters-and-distributors/"
+    }
+  ]
+}

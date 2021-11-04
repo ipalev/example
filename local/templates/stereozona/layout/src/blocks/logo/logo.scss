@@ -1,0 +1,23 @@
+.logo {
+  max-width: scaleVW(224, 1920);
+
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+  }
+
+  &--big {
+    display: block;
+
+    img {
+      min-width: scaleVW(320, 1920);
+
+      @include media-breakpoint-down(sm) {
+        min-width: 320px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        min-width: inherit;
+      }
+    }
+  }
+}

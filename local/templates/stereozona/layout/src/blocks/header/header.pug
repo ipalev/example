@@ -1,0 +1,74 @@
+mixin header(data)
+  header.header&attributes(attributes)
+    .header__top
+      .header__top-line
+      .container-fluid
+        .header__top-wrapper
+          a.header__city(href="#" data-fancybox data-no-swup data-src="#modalCity" data-animation-effect="false" data-touch="false" data-modal="true") Санкт-Петербург
+          +modal({
+            modifier: 'city'
+          }).modal--left.modal--city#modalCity
+          .header__top-menu
+            a.header__top-link(href="#") Доставка и оплата
+            a.header__top-link(href="#") Статьи и обзоры
+            a.header__top-link(href="#") О компании
+            a.header__top-link(href="#" data-fancybox data-no-swup data-src="#modalContacts" data-animation-effect="false" data-touch="false" data-modal="true" data-base-class="fancybox--modal-contacts") Контакты
+          .header__phone-wrapper
+            a.header__phone(href="#") 8 800 201 47 67
+            .header__phone-content
+              p.sm.font-weight-medium.mb-0 +7 800 201 47 67
+              p.sm.font-weight-medium.mb-0 +7 950 223 37 37
+              p.sm.mb-15 info@stereozona.ru
+              p.xs.mb-0 C 10:00 до 20:00 <br>Без обеда и выходных
+    .header__bottom
+      .container-fluid.pl-0
+        .header__bottom-wrapper
+          +menu
+          +live-logo
+          .header__controls-wrapper
+            .header__controls-item
+              a.header__btn(href="javascript:;" data-no-swup onclick="searchToggle()")
+                img(src="./img/icon-search.svg", alt)
+            .header__controls-item.header__controls-item-compare.js-header-compare-btn
+              a.header__btn(href="#" data-no-swup)
+                img(src="./img/icon-items.svg", alt)
+                span.header__btn-count
+              .header__btn-content
+                p.header__btn-content-title Cравнение
+                p.header__btn-content-subtitle Начните выбор с каталога или воспользуйтесь поиском
+                //- a.header__btn-content-link(href="/compare.html") Перейти в каталог
+            .header__controls-item
+              a.header__btn(href="#" data-fancybox data-no-swup data-src="#modalEnter" data-animation-effect="false" data-touch="false" data-modal="true")
+                img(src="./img/icon-profile.svg", alt)
+            .header__controls-item.header__controls-item--mobile
+              a.header__btn(href="#" data-fancybox data-no-swup data-src="#modalCart" data-animation-effect="false" data-touch="false" data-modal="true")
+                img(src="./img/icon-cart.svg", alt)
+                span.header__btn-count 2
+                span.header__btn-price 4 152 100 ₽
+              +modal({
+                modifier: 'cart'
+              }).modal--right.modal--cart#modalCart
+    +modal({
+      modifier: 'contacts'
+    }).modal--right.modal--close-outside.modal--contacts#modalContacts
+    +modal({
+      modifier: 'enter'
+    }).modal--right-narrow.modal--form.modal--enter#modalEnter
+    +modal({
+      modifier: 'lost-password'
+    }).modal--right.modal--right-narrow.modal--lost-password.modal--form#modalLostPassword
+    +modal({
+      modifier: 'confirmation'
+    }).modal--right.modal--right-narrow.modal--confirmation.modal--form#modalConfirmation
+    +modal({
+      modifier: 'new-password'
+    }).modal--right.modal--right-narrow.modal--new-password.modal--form#modalNewPassword
+    +modal({
+      modifier: 'password-done'
+    }).modal--right.modal--right-narrow.modal--password-done.modal--form#modalPasswordDone
+    +modal({
+      modifier: 'registration'
+    }).modal--right.modal--right-narrow.modal--registration.modal--form#modalRegistration
+    +modal({
+      modifier: 'registration-done'
+    }).modal--right.modal--right-narrow.modal--registration-done.modal--form#modalRegistrationDone

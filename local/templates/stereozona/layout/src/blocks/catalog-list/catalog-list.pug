@@ -1,0 +1,160 @@
+mixin catalog-list(data)
+  .catalog-list.d-none.d-md-flex&attributes(attributes)
+    each val, index in ['Наушники', 'Портативная аудиотехника', 'Акустические системы', 'Усилители', 'Цифро-аналоговые преобразователи', 'CD-проигрыватели и транспорты', 'Сетевые медиаплееры и стримеры', 'Проигрыватели винила', 'Blu-ray и DVD проигрыватели', 'AV-ресиверы и AV-процессоры', 'Проекторы и экраны', 'Телевизоры', 'Multiroom', 'Умный дом', 'Музыкальные центры и минисистемы', 'Тюнеры', 'Кабели, разъемы, переходники', 'Сетевые фильтры и распределители питания', 'Стойки и AV-мебель', 'Кронштейны и крепления', 'Радиолампы', 'Аксессуары', 'Оборудование для фонового озвучивания', 'Винтаж']
+      +catalog-section({
+        index: index,
+        icon: 'catalog-section-',
+        title: val,
+        main: true
+      }).catalog-section--main
+  .catalog-list.catalog-list--mobile.d-block.d-md-none
+    .catalog-list__slide
+      +catalog-section({
+        index: 0,
+        icon: 'catalog-section-',
+        title: 'Наушники',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 1,
+        icon: 'catalog-section-',
+        title: 'Портативная аудиотехника',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 2,
+        icon: 'catalog-section-',
+        title: 'Акустические системы',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 3,
+        icon: 'catalog-section-',
+        title: 'Усилители',
+        main: true
+      }).catalog-section--main
+    .catalog-list__slide
+      +catalog-section({
+        index: 4,
+        icon: 'catalog-section-',
+        title: 'Цифро-аналоговые преобразователи',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 5,
+        icon: 'catalog-section-',
+        title: 'CD-проигрыватели и транспорты',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 6,
+        icon: 'catalog-section-',
+        title: 'Сетевые медиаплееры и стримеры',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 7,
+        icon: 'catalog-section-',
+        title: 'Проигрыватели винила',
+        main: true
+      }).catalog-section--main
+    .catalog-list__slide
+      +catalog-section({
+        index: 8,
+        icon: 'catalog-section-',
+        title: 'Blu-ray и DVD проигрыватели',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 9,
+        icon: 'catalog-section-',
+        title: 'AV-ресиверы и AV-процессоры',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 10,
+        icon: 'catalog-section-',
+        title: 'Проекторы и экраны',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 11,
+        icon: 'catalog-section-',
+        title: 'Телевизоры',
+        main: true
+      }).catalog-section--main
+    .catalog-list__slide
+      +catalog-section({
+        index: 12,
+        icon: 'catalog-section-',
+        title: 'Multiroom',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 13,
+        icon: 'catalog-section-',
+        title: 'Умный дом',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 14,
+        icon: 'catalog-section-',
+        title: 'Музыкальные центры и минисистемы',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 15,
+        icon: 'catalog-section-',
+        title: 'Тюнеры',
+        main: true
+      }).catalog-section--main
+    .catalog-list__slide
+      +catalog-section({
+        index: 16,
+        icon: 'catalog-section-',
+        title: 'Кабели, разъемы, переходники',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 17,
+        icon: 'catalog-section-',
+        title: 'Сетевые фильтры и распределители питания',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 18,
+        icon: 'catalog-section-',
+        title: 'Стойки и AV-мебель',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 19,
+        icon: 'catalog-section-',
+        title: 'Кронштейны и крепления',
+        main: true
+      }).catalog-section--main
+    .catalog-list__slide
+      +catalog-section({
+        index: 20,
+        icon: 'catalog-section-',
+        title: 'Радиолампы',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 21,
+        icon: 'catalog-section-',
+        title: 'Аксессуары',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 22,
+        icon: 'catalog-section-',
+        title: 'Оборудование для фонового озвучивания',
+        main: true
+      }).catalog-section--main
+      +catalog-section({
+        index: 23,
+        icon: 'catalog-section-',
+        title: 'Винтаж',
+        main: true
+      }).catalog-section--main

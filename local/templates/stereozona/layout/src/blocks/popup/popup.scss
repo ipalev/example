@@ -1,0 +1,123 @@
+.popup {
+  position: fixed;
+  z-index: 99999;
+  top: scaleVW(40, 1920);
+  right: scaleVW(40, 1920);
+  padding: scaleVW(12, 1920);
+  // display: none;
+  min-width: scaleVW(400, 1920);
+  background: rgba($black, .8);
+  border-radius: 4px;
+
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.6s cubic-bezier(0.75, 0, 0.25, 1);
+  
+  &--active {
+    transform: translateX(0%);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @include media-breakpoint-down(sm) {
+    top: 24px;
+    right: 24px;
+    padding: 8px;
+    min-width: 400px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    min-width: inherit;
+    max-width: calc(100% - 48px);
+  }
+
+  &--compare,
+  &--cart,
+  &--subscribe {
+    .popup__content-top {
+      margin-bottom: scaleVW(20, 1920);
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: scaleVW(24, 1920);
+    width: scaleVW(96, 1920);
+    min-width: scaleVW(96, 1920);
+    height: scaleVW(96, 1920);
+    min-height: scaleVW(96, 1920);
+
+    @include media-breakpoint-down(sm) {
+      margin-right: 24px;
+      width: 96px;
+      min-width: 96px;
+      height: 96px;
+      min-height: 96px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-right: 12px;
+      width: 80px;
+      min-width: 80px;
+      height: 80px;
+      min-height: 80px;
+    }
+
+    img {
+      border-radius: scaleVW(4, 1920);
+
+      @include media-breakpoint-down(sm) {
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &__content-top {
+
+    p {
+      margin: 0;
+      font-size: scaleVW(18, 1920);
+      font-weight: 500;
+      color: $white;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__content-dscr {
+    color: rgba($white, .4) !important;
+  }
+
+  .btn-secondary {
+    padding: scaleVW(6, 1920) scaleVW(19, 1920);
+    font-family: $font-family-serif;
+    font-size: scaleVW(12, 1920);
+    text-transform: uppercase;
+    color: $white;
+    background: rgba($white, .2);
+    border: 0 none;
+    border-radius: scaleVW(16, 1920);
+
+    @include media-breakpoint-down(sm) {
+      padding: 6px 19px;
+      font-size: 10px;
+      border-radius: 16px;
+    }
+
+    &:hover {
+      color: $black;
+      background: $white;
+    }
+  }
+}

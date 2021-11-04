@@ -1,0 +1,129 @@
+.cart {
+
+  .breadcrumbs {
+    padding-top: scaleVW(30, 1920);
+    padding-bottom: scaleVW(80, 1920);
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 16px;
+      padding-bottom: 8px;
+    }
+
+    width: 100%;
+  }
+
+  &__container {
+
+    @include media-breakpoint-up(md) {
+      padding-right: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    width: scaleVW(280, 1920);
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: scaleVW(48, 1920);
+      line-height: 1;
+      font-weight: 500;
+      color: $dark2;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 48px;
+        font-size: 30px;
+      }
+    }
+
+    p {
+      font-size: scaleVW(18, 1920);
+      color: $dark4;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__center {
+    margin-right: auto;
+    margin-left: auto;
+    width: scaleVW(743, 1920);
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 60px;
+      width: 100%;
+    }
+  }
+
+  &__table-header {
+    padding: scaleVW(10, 1920) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba($dark2, .1);
+    border-bottom: 1px solid rgba($dark2, .1);
+
+    @include media-breakpoint-down(lg) {
+      padding: 10px 0;
+    }
+  }
+
+  &__table-amount {
+    font-family: $font-family-serif;
+    font-size: scaleVW(10, 1920);
+    line-height: 1;
+    text-transform: uppercase;
+    color: $black;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 10px;
+    }
+  }
+
+  &__table-clear {
+    font-family: $font-family-serif;
+    font-size: scaleVW(10, 1920);
+    line-height: 1;
+    text-transform: uppercase;
+    color: $black;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 10px;
+    }
+  }
+
+  &__features-list {
+    padding-top: scaleVW(190, 1920);
+    padding-bottom: scaleVW(64, 1920);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}

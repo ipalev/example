@@ -1,0 +1,14 @@
+.payment {
+  padding: 0 scaleVW(7, 1920);
+  display: flex;
+  height: scaleVW(32, 1920);
+  align-items: center;
+  background: #ecefef;
+  border-radius: scaleVW(3, 1920);
+
+  @include media-breakpoint-down(lg) {
+    padding: 0 7px;
+    height: 32px;
+    border-radius: 3px;
+  }
+}

@@ -1,0 +1,32 @@
+extends ../templates/template.pug
+
+block modals
+  +modal({
+    modifier: 'overview'
+  }).modal--top#modalOverview
+  +modal({
+    modifier: 'discount'
+  }).modal--right.modal--discount#modalDiscount
+  +modal({
+    modifier: 'click'
+  }).modal--right.modal--click#modalClick
+
+block content
+  .container-fluid.its-fade.js-observe
+    .pt-20.pb-20.pt-md-30.pb-md-60
+      +breadcrumbs({
+        links: ['Каталог', 'Усилители', 'Предварительные усилители', 'T+A SDV 3100 HV']
+      })
+  +product
+  .container-fluid.its-fade.js-observe
+    ul.nav.nav-tabs.nav-tabs--big(role="tablist")
+      li.nav-item
+        a.nav-link.active(href='#slider-similar' data-toggle="tab") Похожие товары
+      li.nav-item
+        a.nav-link(href='#slider-latest' data-toggle="tab") Вы недавно смотрели
+    .tab-content.tab-content--slider
+      .tab-pane.fade.show.active#slider-similar(role="tabpanel")
+        +slider
+      .tab-pane.fade#slider-latest(role="tabpanel")
+        +slider
+

@@ -1,0 +1,10 @@
+mixin promocode
+  form.promocode
+    input.promocode__field(type="text" placeholder="У меня есть промокод")
+    span.promocode__tip Неверный код
+    .promocode__btn-wrap
+      button.promocode__btn(type="button")
+        img(src="./img/check.svg", alt="Check")
+        span.promocode__btn-text.promocode__btn-text--default Проверить
+        span.promocode__btn-text.promocode__btn-text--success Подтверждено
+        span.promocode__btn-text.promocode__btn-text--error Ввести другой

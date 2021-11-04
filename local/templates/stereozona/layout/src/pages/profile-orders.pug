@@ -1,0 +1,57 @@
+extends ../templates/template.pug
+block modals
+  +modal({
+    modifier: 'order-info'
+  }).modal--right.modal--close-outside.modal--order-info#orderInfo
+
+
+block content
+  .profile
+    .profile__left
+      .container-fluid
+        .profile__left-wrapper
+          .profile__left-top
+            h2.profile__name Денис
+            .profile__menu
+              a.profile__menu-link(href="#") Профиль
+              a.profile__menu-link(href="#") Личные данные
+              a.profile__menu-link.profile__menu-link--active(data-no-swup href="#") Заказы
+              a.profile__menu-link(href="#") Избранное
+              a.profile__menu-link(href="#") Адреса
+              a.profile__menu-link(href="#") Реквизиты
+              a.profile__menu-back(href="#")
+          .profile__left-bottom
+            a.profile__logout(href="#") Выйти
+    .profile__wrapper
+      .container-fluid
+        .profile__wrapper-top
+          +badge
+        .profile__content
+          .row
+            .col-xl-8.col-lg-11.offset-lg-1
+              .profile__orders-header
+                +select({
+                  placeholder: 'Год',
+                  modifier: 'simple'
+                })
+                +select({
+                  placeholder: 'Статус',
+                  modifier: 'simple'
+                })
+              +order-item({
+                title: 'Заказ № 4420-67 от 28.06.2020',
+                amount: '4 товара',
+                status: 'В работе'
+              }).order-item--blue
+              h4.profile__content-heading Архив
+              +order-item({
+                title: 'Заказ № 4420-67 от 24.06.2020',
+                amount: '4 товара',
+                status: 'доставлен'
+              }).order-item--green
+              +order-item({
+                title: 'Заказ № 4216-23 от 19.05.2020',
+                amount: '2 товара',
+                status: 'отменен'
+              }).order-item--red
+

@@ -1,0 +1,11 @@
+mixin select(data)
+  .select&attributes(attributes)
+    if data && data.amount
+      select.select__input(data-placeholder=data.placeholder + "<span>" + data.amount + "</span>")
+        each product in data.products
+          option(value=product.id)= product.name
+    else
+      select.select__input(data-placeholder=data.placeholder)
+        option Вариант 1
+        option Вариант 2
+        option Вариант 3

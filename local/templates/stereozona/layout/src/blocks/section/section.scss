@@ -1,0 +1,58 @@
+.section {
+
+  &:last-of-type {
+
+    .section__content {
+      padding-bottom: scaleVW(120, 1920);
+
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  &__header {
+    padding: scaleVW(80, 1920) 0 scaleVW(48, 1920) 0;
+
+    @include media-breakpoint-down(sm) {
+      padding: 49px 0 24px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      font-size: scaleVW(48, 1920);
+      color: $black;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 30px;
+      }
+
+      &:after {
+        margin-left: scaleVW(16, 1920);
+        width: scaleVW(48, 1920);
+        height: scaleVW(48, 1920);
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32.5657 24.5657C32.8781 24.2533 32.8781 23.7467 32.5657 23.4343L27.4745 18.3431C27.1621 18.0307 26.6556 18.0307 26.3431 18.3431C26.0307 18.6556 26.0307 19.1621 26.3431 19.4745L30.8686 24L26.3431 28.5255C26.0307 28.8379 26.0307 29.3444 26.3431 29.6569C26.6556 29.9693 27.1621 29.9693 27.4745 29.6569L32.5657 24.5657ZM16 24.8L32 24.8V23.2L16 23.2V24.8Z' fill='black'/%3E%3Ccircle opacity='0.1' cx='24' cy='24' r='23.5' stroke='black'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: scaleVW(48, 1920) scaleVW(48, 1920);
+
+        @include media-breakpoint-down(sm) {
+          margin-left: 8px;
+          width: 32px;
+          height: 32px;
+          background-size: 32px 32px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    padding-bottom: scaleVW(40, 1920);
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 40px;
+    }
+  }
+}

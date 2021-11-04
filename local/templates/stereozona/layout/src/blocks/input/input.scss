@@ -1,0 +1,54 @@
+.input {
+  padding: scaleVW(16, 1920) scaleVW(16, 1920) scaleVW(16, 1920) scaleVW(2, 1920);
+  height: auto;
+  font-size: scaleVW(18, 1920);
+  color: $black;
+  background-color: transparent;
+  border: 0 none;
+  border-bottom: 1px solid rgba($dark2, .1);
+  border-radius: 0;
+
+  &--invalid {
+    border-bottom-color: $danger;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: scaleVW(24, 1920);
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0D%0A%3Cpath%20d%3D%22M12%2022C17.5228%2022%2022%2017.5228%2022%2012C22%206.47715%2017.5228%202%2012%202C6.47715%202%202%206.47715%202%2012C2%2017.5228%206.47715%2022%2012%2022Z%22%20stroke%3D%22%23D73B30%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0D%0A%3Cpath%20d%3D%22M12%208V12%22%20stroke%3D%22%23D73B30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0D%0A%3Cpath%20d%3D%22M12%2016H12.01%22%20stroke%3D%22%23D73B30%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0D%0A%3C%2Fsvg%3E");
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 12px 12px 12px 2px;
+    font-size: 16px;
+  }
+
+  &::placeholder {
+    opacity: 1;
+    font-size: scaleVW(18, 1920);
+    color: $black;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+    }
+  }
+
+  &:focus {
+    color: $black;
+    background-color: transparent;
+    border-color: rgba($dark2, .1);
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &--textarea {
+    height: scaleVW(60, 1920) !important;
+
+    @include media-breakpoint-down(lg) {
+      height: 60px !important;
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 50px !important;
+      resize: none;
+    }
+  }
+}

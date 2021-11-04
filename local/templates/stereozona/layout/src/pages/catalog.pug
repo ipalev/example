@@ -1,0 +1,40 @@
+extends ../templates/template.pug
+
+block content
+  div(data-header-classlist="header--white")
+
+  .catalog-page
+    .catalog-page__top
+      .container-fluid
+        .pt-15.pb-5.pt-md-45.pb-md-10
+          +breadcrumbs({
+            links: ['Каталог', 'Усилители']
+          })
+        h2 Усилители
+        .catalog-page__sections-list
+          +catalog-section({
+            icon: 'catalog-section-3.svg',
+            title: 'Интегральные стереоусилители'
+          })
+          +catalog-section({
+            icon: 'catalog-section-4.svg',
+            title: 'Предусилители'
+          })
+          +catalog-section({
+            icon: 'catalog-section-5.svg',
+            title: 'Стерео усилители мощности'
+          })
+          +catalog-section({
+            icon: 'catalog-section-3.svg',
+            title: 'Моно усилители мощности'
+          })
+          +catalog-section({
+            icon: 'catalog-section-4.svg',
+            title: 'Многоканальные усилители'
+          })
+          +catalog-section({
+            icon: 'catalog-section-5.svg',
+            title: 'Усилители для наушников'
+          })
+    +catalog
+

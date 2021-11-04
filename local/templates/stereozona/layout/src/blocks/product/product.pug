@@ -1,0 +1,121 @@
+mixin product(data)
+  .product&attributes(attributes)
+    .container-fluid.its-fade.js-observe
+      .product__top
+        .product__top-left
+          a.product__logo(href="#")
+            img(src="./img/product-logo.svg", alt)
+          +gallery
+        .product__top-right
+          .product__top-mobile
+            .product__badge.product__badge--new NEW
+            //- .product__badge.product__badge--sale Sale
+            h2.mb-10.mb-sm-20.product__title T+A SDV 3100 HV
+            .product__price
+              h3.product__price-current 2 552 100 ₽
+              h3.product__price-old 3 220 100 ₽
+              a.product__price-discount-btn(href="#" data-fancybox data-no-swup data-src="#modalDiscount" data-animation-effect="false" data-touch="false" data-modal="true") Хочу дешевле
+          .product__controls
+            a.btn.btn-primary#popupCart(data-no-swup href="#") В корзину
+            a.btn.btn-secondary(href="#" data-fancybox data-no-swup data-src="#modalClick" data-animation-effect="false" data-touch="false" data-modal="true") Купить в 1 клик
+            a.product__controls-btn.product__controls-compare#popupCompare(href="#" data-no-swup)
+              img(src="./img/icon-items.svg", alt)
+            //- a.product__controls-btn(href="#")
+            //-   img(src="./img/icon-items-add.svg", alt)  
+            a.product__controls-btn.product__controls-favorite#popupFavorite(href="#" data-no-swup)
+              img(src="./img/icon-fav.svg", alt)
+          +dropdown({
+            title: 'Описание'
+          }).dropdown--info
+            p 
+              span.font-weight-medium Предварительный усилитель 
+              | со встроенным универсальным цифро-аналоговым преобразователем и функцией стримера. 
+            ul
+              li Воспроизведение с USB и по Bluetooth
+              li Стриминг с сервисов Tidal, Deezer, Qobuz
+              li Управления с пульта и через приложение для iOS и Android
+              li Встроенный тюнер FM, FM-HD, DAB, DAB+, интернет радио 
+              li Цвет: серебристый титан
+              li Производство: Германия
+          +dropdown({
+            title: 'Характеристики'
+          }).dropdown--info
+            .dropdown__table
+              .dropdown__table-item
+                .dropdown__table-item-left Производитель
+                .dropdown__table-item-right T+A
+              .dropdown__table-item
+                .dropdown__table-item-left Вид усилителя	
+                .dropdown__table-item-right Предварительный усилитель
+              .dropdown__table-item
+                .dropdown__table-item-left Тип усилителя	
+                .dropdown__table-item-right Транзисторный
+              .dropdown__table-item
+                .dropdown__table-item-left Встроенный ЦАП	
+                .dropdown__table-item-right Есть
+              .dropdown__table-item
+                .dropdown__table-item-left Встроенный фонокорректор	
+                .dropdown__table-item-right Нет
+              .dropdown__table-item
+                .dropdown__table-item-left Выход предусилителя	
+                .dropdown__table-item-right Есть
+            a.btn.btn-secondary.btn-sm(href="#" data-no-swup data-product-tab="#product-info") Смотреть все
+          +dropdown({
+            title: 'О производителе'
+          }).dropdown--info
+            p 
+              span.font-weight-medium T+A означает 
+              | «Теория и Практика» в области аудиотехнологий. Компания разрабатывает, дорабатывает и производит компоненты Hi-Fi высочайшего качества для довольных клиентов во всем мире. С 1978 года штаб-квартира компании базируется в Херфорде в Восточной Вестфалии. Создавая свои продукты, инженеры T + A не ставят себе никаких ограничений и не жалеют ни затрат, ни усилий для достижения совершенства в звучании. 
+            a.btn.btn-secondary.btn-sm(href="#" data-no-swup data-product-tab="#product-brand") Подробнее
+          +dropdown({
+            title: 'Доставка и оплата'
+          }).dropdown--info
+            ul
+              li Самовывоз из офиса в Петерубурге
+                +tooltip
+              li Бесплатная доставка по Петербургу
+                +tooltip
+              li Доставка по Москве и России
+                +tooltip
+              li Наличный и безналичный расчет
+            .d-flex.flex-wrap.pt-10.pt-md-15
+              +payment({
+                logo: 'icon-visa.svg'
+              })
+              +payment({
+                logo: 'icon-mastercard.svg'
+              })
+              +payment({
+                logo: 'icon-mir.svg'
+              })
+          +dropdown({
+            title: 'Сервис и возврат'
+          }).dropdown--info
+    .product__tabs.its-fade.js-observe
+      .product__tabs-top
+        .container-fluid
+          ul.nav.nav-tabs(role="tablist")
+            li.nav-item
+              a.nav-link(href='#product-about' data-toggle="tab") Описание
+            li.nav-item
+              a.nav-link(href='#product-info' data-toggle="tab") Характеристики
+            li.nav-item
+              a.nav-link(href='#product-brand' data-toggle="tab") О производителе
+            li.nav-item
+              a.nav-link(href='#product-feedback' data-toggle="tab") Отзывы
+            li.nav-item
+              a.nav-link(href='#product-selection' data-toggle="tab") Как выбрать усилитель
+      .container-fluid
+        .tab-content.tab-content--content
+          .tab-pane.fade#product-about(role="tabpanel")
+            .row
+              .col-md-7
+                h3 T+A SDV 3100 HV – предварительный усилитель с цифро-аналоговым преобразователем и стримером
+              .col-md-5.product-text
+                p В SDV 3100 HV встроен цифро-аналоговый преобразователь, который является еще более сложным, чем все предыдущие преобразователи, что позволяет удваивать предыдущие уровни разрешения до 32-бит / 768 кГц для PCM и DSD 1024 для данных битового потока. Это улучшение потребовало тщательной доработки предыдущих преобразователей и разработки совершенно нового USB-приемника. SDV 3100 HV и SD 3100 HV идентичны по своей механической и электронной конструкции, за исключением секции предварительного усилителя, которая дополнительно оснащен SDV 3100 HV. Управлять SDV 3100 HV, а также полной системой HV можно с помощью пульта дистанционного управления F 3100 или одного из приложений T + A.
+                p Существуют три аспекта, которые имеют решающее влияние на звуковые характеристики высококачественного Hi-Fi оборудования: их механическая конструкция, аналоговые технологии и цифровая обработка сигналов. Только если команда разработчиков полностью уравновешивает все три аспекта, устройство в целом может удовлетворить самые строгие требования. Вот почему все высоковольтные устройства T+A изготовлены из чистого алюминия без каких-либо ферромагнитных материалов и имеют пять отсеков, разделенных и экранированных алюминиевыми перегородками. Ступени тока / напряжения – критически важные для качества звука – которые следуют за ступенями цифро-аналогового преобразователя, имеют полностью дискретную, раздельно-канальную конструкцию и оснащены технологией высокого напряжения, как и аналоговый выходной каскад
+                a(href="#") Пример ссылки
+          .tab-pane.fade#product-info(role="tabpanel")
+          .tab-pane.fade#product-brand(role="tabpanel")
+          .tab-pane.fade#product-feedback(role="tabpanel")
+          .tab-pane.fade#product-selection(role="tabpanel")

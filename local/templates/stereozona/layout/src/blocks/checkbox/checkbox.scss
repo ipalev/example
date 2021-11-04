@@ -1,0 +1,146 @@
+.checkbox {
+
+  .custom-control {
+    padding-left: scaleVW(36, 1920);
+
+    @include media-breakpoint-down(lg) {
+      padding-left: 36px;
+    }
+  }
+
+  .custom-control-label {
+    display: flex;
+    font-size: scaleVW(18, 1920);
+    color: $dark4;
+    cursor: pointer;
+    white-space: pre;
+
+    a {
+      color: $blue;
+    }
+
+    @include media-breakpoint-down(lg) {
+      font-size: 18px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 16px;
+    }
+  }
+
+  .custom-control-input:focus ~ .custom-control-label:before {
+    box-shadow: none;
+  }
+
+  .custom-control-input {
+    top: scaleVW(3, 1920);
+    width: scaleVW(20, 1920);
+    height: scaleVW(20, 1920);
+
+    @include media-breakpoint-down(lg) {
+      top: 3px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .custom-checkbox {
+
+    .custom-control-label {
+
+      &:before {
+        top: scaleVW(3, 1920);
+        left: scaleVW(36, 1920) * (-1);
+        width: scaleVW(20, 1920);
+        height: scaleVW(20, 1920);
+
+        @include media-breakpoint-down(lg) {
+          top: 3px;
+          left: -36px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &:after {
+        top: scaleVW(4, 1920);
+        left: scaleVW(36, 1920) * (-1);
+        width: scaleVW(20, 1920);
+        height: scaleVW(20, 1920);
+
+        @include media-breakpoint-down(lg) {
+          top: 4px;
+          left: -36px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  &__amount {
+    margin-left: scaleVW(2, 1920);
+    font-size: scaleVW(10, 1920);
+
+    @include media-breakpoint-down(lg) {
+      margin-left: 2px;
+      font-size: 10px;
+    }
+  }
+
+  &.checkbox--switch {
+
+    .custom-checkbox {
+      padding-left: 0;
+    }
+
+    .custom-control-input:checked ~ .custom-control-label:before {
+      background-color: transparent;
+      background-image: url("data:image/svg+xml,%3Csvg width='40' height='26' viewBox='0 0 40 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='26' rx='13' fill='%23c3dadd'/%3E%3Crect x='22' y='8' width='10' height='10' rx='5' fill='%231F2020'/%3E%3C/svg%3E");
+      background-size: 100% auto;
+
+      @include media-breakpoint-down(lg) {
+        background-size: 100% auto;
+      }
+    }
+
+    .custom-control-label {
+      display: flex;
+      align-items: center;
+      font-size: scaleVW(18, 1920);
+      color: $dark2;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 18px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+      }
+
+      &:after {
+        display: none;
+      }
+
+      &:before {
+        position: static;
+        margin-right: scaleVW(12, 1920);
+        width: scaleVW(40, 1920);
+        height: scaleVW(26, 1920);
+        background-color: transparent !important;
+        background-image: url("data:image/svg+xml,%3Csvg width='40' height='26' viewBox='0 0 40 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='26' rx='13' fill='%23E0E0E0'/%3E%3Crect opacity='0.4' x='8' y='8' width='10' height='10' rx='5' fill='%231F2020'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% auto;
+        border: 0 none;
+        border-radius: 0;
+
+        @include media-breakpoint-down(lg) {
+          margin-right: 12px;
+          width: 40px;
+          height: 26px;
+        }
+      }
+    }
+  }
+}

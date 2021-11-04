@@ -1,0 +1,9 @@
+.map {
+  position: relative;
+  height: scaleVW(664, 1920);
+  width: 100%;
+
+  @include media-breakpoint-down(sm) {
+    height: 542px;
+  }
+}

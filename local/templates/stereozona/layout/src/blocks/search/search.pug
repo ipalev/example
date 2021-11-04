@@ -1,0 +1,5 @@
+mixin search(data={placeholder:'найти товар'})
+  form.search(action="#", method="POST")&attributes(attributes)
+    input.search__input(type="text", placeholder=data.placeholder)
+    if data.close
+      button(type="button" onclick="searchToggle()").search__close

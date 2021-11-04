@@ -1,0 +1,31 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Профиль",
+		"/personal/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Личные данные",
+		"/personal/data/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Заказы",
+		"/personal/orders/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Избранное",
+		"/personal/wishlist/",
+		Array(),
+		Array(),
+		""
+	),
+);

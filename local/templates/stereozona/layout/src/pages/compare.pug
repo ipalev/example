@@ -1,0 +1,287 @@
+extends ../templates/template.pug
+
+block content
+  div(data-header-classlist="header--white header--border-bottom")
+
+  .compare
+    .compare__top
+      .compare__top-left
+        .container-fluid.px-md-0
+          +breadcrumbs({
+            links: ['Сравнение товаров']
+          })
+          h2 Сравнение товаров
+          +select({
+            placeholder: 'Усилители',
+            amount: '3',
+            products: [
+              { id: 1, name: 'Quad Vena I Play' },
+              { id: 2, name: 'Quad Vena II Play' },
+              { id: 3, name: 'Quad Vena III Play' }
+            ]
+          })
+          +switch
+      .compare__slider-select
+        +select({
+          placeholder: 'Quad Vena II Play',
+        })
+        +select({
+          placeholder: 'Quad Vena II Play',
+        })
+        +select({
+          placeholder: 'Quad Vena II Play',
+        })
+        +select({
+          placeholder: 'Quad Vena II Play',
+        })
+      .compare__slider-controls
+        .compare__slider-arrow.compare__slider-arrow--prev
+        .compare__slider-info
+          span.compare__slider-info--current
+          span.compare__slider-info--separator -
+          span.compare__slider-info--all
+        .compare__slider-arrow.compare__slider-arrow--next
+      .compare__top-items
+        .container-fluid.px-0
+          .compare__items-row
+            +item({
+              title: 'Quad Vena II Play Lancaster Grey',
+              picture: 'item-6.png',
+              price: '87 989₽',
+              modifier: 'compare'
+            }).item--compare
+            +item({
+              title: 'Quad Vena II Play Lancaster Silver',
+              picture: 'item-7.png',
+              price: '87 989₽',
+              modifier: 'compare'
+            }).item--compare
+            +item({
+              title: 'Quad Vena II Lancaster Black',
+              picture: 'item-8.png',
+              price: '80 289₽',
+              modifier: 'compare'
+            }).item--compare
+            +item({
+              title: 'Quad Vena II Lancaster Silver',
+              picture: 'item-9.png',
+              price: '80 289₽',
+              modifier: 'compare'
+            }).item--compare
+    .compare__specs
+      .compare__specs-left
+        .compare__specs-item.compare__specs-item--header Производитель
+        .compare__specs-item.compare__specs-item--header Вид усилителя
+        .compare__specs-item.compare__specs-item--header Тип усилителя
+        .compare__specs-item.compare__specs-item--header Мощность на канал (4 Ом)
+        .compare__specs-item.compare__specs-item--header Мощность на канал (8 Ом)
+        .compare__specs-item.compare__specs-item--header Встроенный ЦАП
+          +tooltip
+        .compare__specs-item.compare__specs-item--header Выход предусилителя
+        .compare__specs-item.compare__specs-item--header Встроенный фонокорректор
+          +tooltip
+        .compare__specs-item.compare__specs-item--header Количество каналов
+        .compare__specs-item.compare__specs-item--header Аналоговые входы
+        .compare__specs-item.compare__specs-item--header Аналоговые выходы
+        .compare__specs-item.compare__specs-item--header.js-equalheight Цифровые входы
+        .compare__specs-item.compare__specs-item--header Выход на наушники
+        .compare__specs-item.compare__specs-item--header Выходы на сабвуфер
+        .compare__specs-item.compare__specs-item--header Bluetooth
+      .compare__specs-right
+        .compare__specs-row-wrap
+          .compare__specs-row(data-index="1")
+            .compare__specs-item.compare__specs-item--header Производитель
+            .compare__specs-item Quad
+          .compare__specs-row(data-index="2")
+            .compare__specs-item.compare__specs-item--header Вид усилителя	
+            .compare__specs-item Интегральный усилитель
+          .compare__specs-row(data-index="3")
+            .compare__specs-item.compare__specs-item--header Тип усилителя	
+            .compare__specs-item Транзисторный
+          .compare__specs-row(data-index="4")
+            .compare__specs-item.compare__specs-item--header Мощность на канал (4 Ом)
+            .compare__specs-item 65 Вт
+          .compare__specs-row(data-index="5")
+            .compare__specs-item.compare__specs-item--header Мощность на канал (8 Ом)
+            .compare__specs-item 45 Вт
+          .compare__specs-row(data-index="6")
+            .compare__specs-item.compare__specs-item--header Встроенный ЦАП
+              +tooltip
+            .compare__specs-item Есть
+          .compare__specs-row(data-index="7")
+            .compare__specs-item.compare__specs-item--header Выход предусилителя	
+            .compare__specs-item Есть
+          .compare__specs-row(data-index="8")
+            .compare__specs-item.compare__specs-item--header Встроенный фонокорректор	
+              +tooltip
+            .compare__specs-item Есть ММ
+          .compare__specs-row(data-index="9")
+            .compare__specs-item.compare__specs-item--header Количество каналов	
+            .compare__specs-item 2
+          .compare__specs-row(data-index="10")
+            .compare__specs-item.compare__specs-item--header Аналоговые входы	
+            .compare__specs-item RCA
+          .compare__specs-row(data-index="11")
+            .compare__specs-item.compare__specs-item--header Аналоговые выходы	
+            .compare__specs-item RCA
+          .compare__specs-row(data-index="12")
+            .compare__specs-item.compare__specs-item--header Цифровые входы
+            .compare__specs-item.js-equalheight LAN, USB, Коаксильный S/PDIF, Оптический Toslink
+          .compare__specs-row(data-index="13")
+            .compare__specs-item.compare__specs-item--header Выход на наушники	
+            .compare__specs-item 6,3 мм
+          .compare__specs-row(data-index="14")
+            .compare__specs-item.compare__specs-item--header Выходы на сабвуфер	
+            .compare__specs-item —
+          .compare__specs-row(data-index="15")
+            .compare__specs-item.compare__specs-item--header Bluetooth
+              +tooltip
+            .compare__specs-item Есть
+        .compare__specs-row-wrap  
+          .compare__specs-row(data-index="1")
+            .compare__specs-item.compare__specs-item--header Производитель
+            .compare__specs-item Quad
+          .compare__specs-row(data-index="2")
+            .compare__specs-item.compare__specs-item--header Вид усилителя	
+            .compare__specs-item Интегральный усилитель
+          .compare__specs-row(data-index="3")
+            .compare__specs-item.compare__specs-item--header Тип усилителя	
+            .compare__specs-item Транзисторный
+          .compare__specs-row(data-index="4")
+            .compare__specs-item.compare__specs-item--header Мощность на канал (4 Ом)
+            .compare__specs-item 65 Вт
+          .compare__specs-row(data-index="5")
+            .compare__specs-item.compare__specs-item--header Мощность на канал (8 Ом)
+            .compare__specs-item 45 Вт
+          .compare__specs-row(data-index="6")
+            .compare__specs-item.compare__specs-item--header Встроенный ЦАП
+              +tooltip
+            .compare__specs-item Есть
+          .compare__specs-row(data-index="7")
+            .compare__specs-item.compare__specs-item--header Выход предусилителя	
+            .compare__specs-item Есть
+          .compare__specs-row(data-index="8")
+            .compare__specs-item.compare__specs-item--header Встроенный фонокорректор	
+              +tooltip
+            .compare__specs-item Есть ММ
+          .compare__specs-row(data-index="9")
+            .compare__specs-item.compare__specs-item--header Количество каналов	
+            .compare__specs-item 2
+          .compare__specs-row(data-index="10")
+            .compare__specs-item.compare__specs-item--header Аналоговые входы	
+            .compare__specs-item RCA
+          .compare__specs-row(data-index="11")
+            .compare__specs-item.compare__specs-item--header Аналоговые выходы	
+            .compare__specs-item RCA
+          .compare__specs-row(data-index="12")
+            .compare__specs-item.compare__specs-item--header Цифровые входы
+            .compare__specs-item.js-equalheight LAN, USB, Коаксильный S/PDIF, Оптический Toslink
+          .compare__specs-row(data-index="13")
+            .compare__specs-item.compare__specs-item--header Выход на наушники	
+            .compare__specs-item 6,3 мм
+          .compare__specs-row(data-index="14")
+            .compare__specs-item.compare__specs-item--header Выходы на сабвуфер	
+            .compare__specs-item —
+          .compare__specs-row(data-index="15")
+            .compare__specs-item.compare__specs-item--header Bluetooth
+              +tooltip
+            .compare__specs-item Есть
+        .compare__specs-row-wrap
+          .compare__specs-row(data-index="1")
+            .compare__specs-item.compare__specs-item--header Производитель
+            .compare__specs-item Quad
+          .compare__specs-row(data-index="2")
+            .compare__specs-item.compare__specs-item--header Вид усилителя	
+            .compare__specs-item Интегральный усилитель
+          .compare__specs-row(data-index="3")
+            .compare__specs-item.compare__specs-item--header Тип усилителя	
+            .compare__specs-item Транзисторный
+          .compare__specs-row(data-index="4")
+            .compare__specs-item.compare__specs-item--header Мощность на канал (4 Ом)
+            .compare__specs-item 65 Вт
+          .compare__specs-row(data-index="5")
+            .compare__specs-item.compare__specs-item--header Мощность на канал (8 Ом)
+            .compare__specs-item 45 Вт
+          .compare__specs-row(data-index="6")
+            .compare__specs-item.compare__specs-item--header Встроенный ЦАП
+              +tooltip
+            .compare__specs-item Есть
+          .compare__specs-row(data-index="7")
+            .compare__specs-item.compare__specs-item--header Выход предусилителя	
+            .compare__specs-item Есть
+          .compare__specs-row(data-index="8")
+            .compare__specs-item.compare__specs-item--header Встроенный фонокорректор	
+              +tooltip
+            .compare__specs-item Есть ММ
+          .compare__specs-row(data-index="9")
+            .compare__specs-item.compare__specs-item--header Количество каналов	
+            .compare__specs-item 2
+          .compare__specs-row(data-index="10")
+            .compare__specs-item.compare__specs-item--header Аналоговые входы	
+            .compare__specs-item RCA
+          .compare__specs-row(data-index="11")
+            .compare__specs-item.compare__specs-item--header Аналоговые выходы	
+            .compare__specs-item RCA
+          .compare__specs-row(data-index="12")
+            .compare__specs-item.compare__specs-item--header Цифровые входы
+            .compare__specs-item.js-equalheight LAN, USB, Коаксильный S/PDIF, Оптический Toslink
+          .compare__specs-row(data-index="13")
+            .compare__specs-item.compare__specs-item--header Выход на наушники	
+            .compare__specs-item 6,3 мм
+          .compare__specs-row(data-index="14")
+            .compare__specs-item.compare__specs-item--header Выходы на сабвуфер	
+            .compare__specs-item —
+          .compare__specs-row(data-index="15")
+            .compare__specs-item.compare__specs-item--header Bluetooth
+              +tooltip
+            .compare__specs-item Есть
+        .compare__specs-row-wrap
+          .compare__specs-row(data-index="1")
+            .compare__specs-item.compare__specs-item--header Производитель
+            .compare__specs-item Quad
+          .compare__specs-row(data-index="2")
+            .compare__specs-item.compare__specs-item--header Вид усилителя	
+            .compare__specs-item Интегральный усилитель
+          .compare__specs-row(data-index="3")
+            .compare__specs-item.compare__specs-item--header Тип усилителя	
+            .compare__specs-item Транзисторный
+          .compare__specs-row(data-index="4")
+            .compare__specs-item.compare__specs-item--header Мощность на канал (4 Ом)
+            .compare__specs-item 65 Вт
+          .compare__specs-row(data-index="5")
+            .compare__specs-item.compare__specs-item--header Мощность на канал (8 Ом)
+            .compare__specs-item 45 Вт
+          .compare__specs-row(data-index="6")
+            .compare__specs-item.compare__specs-item--header Встроенный ЦАП
+              +tooltip
+            .compare__specs-item Есть
+          .compare__specs-row(data-index="7")
+            .compare__specs-item.compare__specs-item--header Выход предусилителя	
+            .compare__specs-item Есть
+          .compare__specs-row(data-index="8")
+            .compare__specs-item.compare__specs-item--header Встроенный фонокорректор	
+              +tooltip
+            .compare__specs-item Есть ММ
+          .compare__specs-row(data-index="9")
+            .compare__specs-item.compare__specs-item--header Количество каналов	
+            .compare__specs-item 2
+          .compare__specs-row(data-index="10")
+            .compare__specs-item.compare__specs-item--header Аналоговые входы	
+            .compare__specs-item RCA
+          .compare__specs-row(data-index="11")
+            .compare__specs-item.compare__specs-item--header Аналоговые выходы	
+            .compare__specs-item RCA
+          .compare__specs-row(data-index="12")
+            .compare__specs-item.compare__specs-item--header Цифровые входы
+            .compare__specs-item.js-equalheight LAN, USB, Коаксильный S/PDIF, Оптический Toslink
+          .compare__specs-row(data-index="13")
+            .compare__specs-item.compare__specs-item--header Выход на наушники	
+            .compare__specs-item 6,3 мм
+          .compare__specs-row(data-index="14")
+            .compare__specs-item.compare__specs-item--header Выходы на сабвуфер	
+            .compare__specs-item —
+          .compare__specs-row(data-index="15")
+            .compare__specs-item.compare__specs-item--header Bluetooth
+              +tooltip
+            .compare__specs-item Есть
+

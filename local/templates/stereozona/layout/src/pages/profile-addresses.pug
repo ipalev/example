@@ -1,0 +1,43 @@
+extends ../templates/template.pug
+block content
+  .profile
+    .profile__left
+      .container-fluid
+        .profile__left-wrapper
+          .profile__left-top
+            h2.profile__name Денис
+            .profile__menu
+              a.profile__menu-link(href="#") Профиль
+              a.profile__menu-link(href="#") Личные данные
+              a.profile__menu-link(href="#") Заказы
+              a.profile__menu-link(href="#") Избранное
+              a.profile__menu-link.profile__menu-link--active(data-no-swup href="#") Адреса
+              a.profile__menu-link(href="#") Реквизиты
+              a.profile__menu-back(href="#")
+          .profile__left-bottom
+            a.profile__logout(href="#") Выйти
+    .profile__wrapper
+      .container-fluid
+        .profile__wrapper-top
+          +badge
+        .profile__content
+          .row
+            .col-xl-8.col-lg-11.offset-lg-1
+              .row
+                .col-lg-6.profile__short-col
+                  .profile__address-header.mb-20
+                    h4 Маяковская, 9
+                    a.profile__address-favorite(href="#")
+                  p.mb-25 192288, Россия, г. Cанкт-Петербург <br>Маяковская, д. 9, кв. 21
+                  a.profile__edit(href="#") Редактировать
+                .col-lg-6.profile__short-col
+                  .profile__address-header.mb-20
+                    h4 Новоизмайловский, 16
+                  p.mb-25 196128, Россия, г. Cанкт-Петербург <br>Новоизмайловский пр., д. 16, кв. 131
+                  a.profile__edit(href="#") Редактировать
+                .col-lg-6.profile__short-col
+                  .profile__address-header.mb-20
+                    h4 Милионная, 11
+                  p.mb-25 191186, Россия, г. Cанкт-Петербург <br>Милионная., д. 11, кв. 18
+                  a.profile__edit(href="#") Редактировать
+

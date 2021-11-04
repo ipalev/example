@@ -1,0 +1,124 @@
+extends ../templates/template.pug
+block content
+  .container-fluid.pr-0
+    form.order(action="#", method="POST")
+      .order__wrapper
+        .order__content
+          +breadcrumbs({
+            links: ['Оформление заказа']
+          })
+          .order__header
+            h2.mb-0 Оформление заказа
+            a.btn.btn-secondary.btn-sm(href="#") Войти
+          .row
+            .col-md-6
+              .form__item.form-group
+                input.input.form-control(type="text" placeholder="Имя")
+            .col-md-6
+              .form__item.form-group
+                input.input.form-control(type="text" placeholder="Фамилия")
+            .col-md-6
+              .form__item.form-group
+                input.input.form-control.js-mask-phone(type="tel" placeholder="Телефон")
+            .col-md-6
+              .form__item.form-group
+                //- input.input.form-control.js-mask-email(type="email" placeholder="Email")
+                input.input.form-control.js-mask-email(data-inputmask="'alias': 'email'" inputmode="email" placeholder="Email")
+            .col-md-6
+              .form__item.form-group
+                input.input.form-control(type="text" placeholder="Адрес доставки в свободной форме")
+            +checkbox({
+              id: 'switch12',
+              title: 'Cоздать аккаунт',
+              checked: true
+            }).checkbox--switch.checkbox--switch-reverse
+          .order__section
+            h3.mb-25 Доставка
+            .row.no-gutters
+              .col-md-3.px-0
+                +option({
+                  id: 'option1',
+                  title: 'Быстрая доставка',
+                  dscr: 'Служба на ваш выбор',
+                  comment: 'Бесплатно',
+                  name: 'delivery'
+                })
+              .col-md-3.px-0
+                +option({
+                  id: 'option2',
+                  title: 'Самовывоз',
+                  dscr: 'Из офиса на Литейном',
+                  comment: 'Бесплатно',
+                  name: 'delivery'
+                })
+              .col-md-3.px-0
+                +option({
+                  id: 'option3',
+                  title: 'Курьер',
+                  dscr: 'Только в центре города',
+                  comment: 'Бесплатно',
+                  name: 'delivery'
+                })
+              .col-md-3.px-0
+                +option({
+                  id: 'option4',
+                  title: 'Международная доставка',
+                  dscr: 'Для далеких отправлений',
+                  comment: 'Зависит от службы',
+                  name: 'delivery'
+                }).option--last
+          .order__section
+            h3.mb-25 Оплата
+            .row.no-gutters
+              .col-md-3.px-0
+                +option({
+                  id: 'option5',
+                  title: 'Онлайн',
+                  name: 'payment'
+                })
+                  span.d-flex.flex-wrap
+                    +payment({
+                      logo: 'icon-apple-pay.svg'
+                    })
+                    +payment({
+                      logo: 'icon-google-pay.svg'
+                    })
+              .col-md-3.px-0
+                +option({
+                  id: 'option6',
+                  title: 'При получении',
+                  dscr: 'Наличными или картой',
+                  name: 'payment'
+                })
+                  span.d-flex.flex-wrap
+                    +payment({
+                      logo: 'icon-visa.svg'
+                    })
+                    +payment({
+                      logo: 'icon-mastercard.svg'
+                    })
+                    +payment({
+                      logo: 'icon-mir.svg'
+                    })
+              .col-md-3.px-0
+                +option({
+                  id: 'option7',
+                  title: 'Безналичный расчет',
+                  name: 'payment'
+                }).option--last
+          .order__section
+            h3 Примечание к заказу
+            .row
+              .col-md-6
+                .form-group.form__item.mb-0
+                  textarea.input.input--textarea.form-control(placeholder="Привет, Stereozona!")
+          .order__section.order__section--overall.d-block.d-md-none
+            a.btn.btn-primary(href="#" data-fancybox data-no-swup data-src="#modalOrder" data-touch="false" data-modal="true") Оформить заказ
+            p
+              | Нажимая на кнопку «Перейти к оплате», даю согласие на отправку и обработку персональных данных
+        +overall({
+          modifier: 'cart',
+          btn: 'Оплатить онлайн',
+          noPromo: true
+        }).overall--no-border
+

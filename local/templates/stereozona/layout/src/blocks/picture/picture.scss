@@ -1,0 +1,97 @@
+.picture {
+  position: relative;
+  margin-bottom: scaleVW(16, 1920);
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 16px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__btn {
+    position: absolute;
+    z-index: 1;
+    right: scaleVW(10, 1920);
+    bottom: scaleVW(10, 1920);
+    display: block;
+    width: scaleVW(30, 1920);
+    height: scaleVW(30, 1920);
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.8'%3E%3Cpath d='M5.33333 2H3.33333C2.97971 2 2.64057 2.14048 2.39052 2.39052C2.14048 2.64057 2 2.97971 2 3.33333V5.33333M14 5.33333V3.33333C14 2.97971 13.8595 2.64057 13.6095 2.39052C13.3594 2.14048 13.0203 2 12.6667 2H10.6667M10.6667 14H12.6667C13.0203 14 13.3594 13.8595 13.6095 13.6095C13.8595 13.3594 14 13.0203 14 12.6667V10.6667M2 10.6667V12.6667C2 13.0203 2.14048 13.3594 2.39052 13.6095C2.64057 13.8595 2.97971 14 3.33333 14H5.33333' stroke='white' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: scaleVW(16, 1920) auto;
+
+    @include media-breakpoint-down(lg) {
+      right: 10px;
+      bottom: 10px;
+      width: 30px;
+      height: 30px;
+      background-size: 16px auto;
+    }
+
+    @include media-breakpoint-down(md) {
+      right: 5px;
+      bottom: 5px;
+    }
+  }
+
+  &__dscr {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: scaleVW(30, 1920) scaleVW(40, 1920);
+    display: none;
+    width: 100%;
+    font-size: scaleVW(14, 1920);
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: .02em;
+    color: #fff;
+    background: rgba(#000, .6);
+
+    @include media-breakpoint-down(lg) {
+      padding: 30px 40px;
+      font-size: 14px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 20px 30px;
+    }
+  }
+
+  &--out {
+    margin-right: scaleVW(-24, 1920);
+    margin-left: scaleVW(-24, 1920);
+
+    @include media-breakpoint-down(lg) {
+      margin-right: -24px;
+      margin-left: -24px;
+    }
+  }
+}
+
+.two-pics {
+
+  & > div {
+    margin-bottom: scaleVW(16, 1920);
+  
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .picture {
+    margin-bottom: 0;
+  }
+
+  .picture,
+  img {
+    @media (min-width: 1200px) {
+      height: 100%;
+    }
+  }
+}

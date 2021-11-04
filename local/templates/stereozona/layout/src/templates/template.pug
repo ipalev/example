@@ -1,0 +1,24 @@
+doctype html
+html(lang='ru')
+  include ../templates/head.pug
+  include ../templates/blocks.pug
+  
+  body
+    block noswupmodals
+
+    #swup-modals
+      block modals
+
+    +header
+    
+    main#swup.page-content
+      block content
+
+    +footer
+
+    +popup
+    
+    div(id="vue-script" data-src="/assets/lib/vue.min.js")
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+    script(src="js/vendor.js")
+    script(src="js/scripts.js")

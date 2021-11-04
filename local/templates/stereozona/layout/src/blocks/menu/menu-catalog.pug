@@ -1,0 +1,52 @@
+.menu__catalog
+  +search({
+    placeholder:'найти товар...',
+    close: true
+  }).search--header#search-header
+
+  a.menu__catalog-link.menu__catalog-link--btn#catalog-btn(href="javascript:;" data-no-swup onclick="catalogToggle(this)") Каталог
+
+  .menu__catalog-content#catalog-menu(v-cloak)
+    .menu__catalog-bg
+
+    .menu__catalog-nav
+      a.menu__back(href="javascript:;" data-no-swup onclick="catalogToggle()") Каталог
+      +search-menu({placeholder: 'поиск в разделе'})(v-model="search")
+
+      div(:class="['menu__catalog-section', { 'menu__catalog-section--hovered': i === activeCategory }]" v-for="(category, i) in filteredList" :key="category.path" @mouseover="onMouseover(i)")
+        template(v-if="category.list && category.list.length > 0")
+          a.menu__catalog-section-btn(:href="category.path" data-no-swup @click.prevent="onSectionBtnClick") {{ category.name }}
+
+          .menu__catalog-section-content
+            .menu__catalog-section-nav
+              a.menu__back(href="javascript:;" data-no-swup @click.prevent="onBackClick") {{ category.name }}
+              +search-menu({placeholder: 'поиск в разделе'})(v-model="listSearch")
+
+              a.menu__catalog-link(v-for="(subcategory, i) in filterList(category.list, listSearch)" :key="subcategory.path" :href="subcategory.path" :style="{ transitionDelay: `${i*50}ms` }") {{ subcategory.name }}
+                span.menu__catalog-link-amount(v-if="subcategory.amount") {{ subcategory.amount }}
+                
+            .menu__catalog-banners(v-if="category.banners && category.banners.length > 0")
+              .menu__catalog-banner
+                a.promo(:href="category.banners[0].url" :target="category.banners[0].url.startsWith('http') ? '_blank' : '_self'")
+                  .promo__bg(:style="{ backgroundImage: `url(${category.banners[0].image})` }")
+                  .promo__content
+                    h2.text-white.mb-10 {{ category.banners[0].title }}
+                    p.mb-0.text-white {{ category.banners[0].text }}
+
+        template(v-else)
+          a.menu__catalog-section-btn(:href="category.path") {{ category.name }}
+      
+    
+    .menu__catalog-banners
+      .menu__catalog-banner
+        +promo({
+          picture: 'promo-2.jpg',
+          title: 'Sennheiser CX 150BT',
+          comment: 'Встречайте лето с новым звуком'
+        })
+      .menu__catalog-banner
+        +promo({
+          picture: 'promo-3.jpg',
+          title: 'Technics EAH-AZ70W',
+          comment: 'Акция с 14 до 21 августа'
+        })

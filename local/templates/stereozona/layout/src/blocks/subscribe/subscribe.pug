@@ -1,0 +1,6 @@
+mixin subscribe(data)
+  form.subscribe(action="#", method="POST")&attributes(attributes)
+    .form__subscribe-content
+      input.subscribe__input(type="text", placeholder="ваш email")
+      button.subscribe__btn(type="submit")
+    p.subscribe__dscr Подписываясь на рассылку, вы соглашаетесь с условиями оферты и политики конфиденциальности
